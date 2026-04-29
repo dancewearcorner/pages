@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DWC Studio Program — For Dance Educators, Studios & Arts Supporters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1410;
+  --ink-md: #3d3228;
+  --ink-lt: #7a6d62;
+  --cream: #faf8f5;
+  --cream-dk: #f2ede6;
+  --border: #e4ddd4;
+  --insider: #2a7a96;
+  --insider-lt: #e8f4f8;
+  --insider-border: #b8dce8;
+  --partner: #b87820;
+  --partner-lt: #fdf5e6;
+  --partner-border: #e8ce a0;
+  --referral: #c8553d;
+  --referral-lt: #fdf0ec;
+  --referral-border: #f0c8bc;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream); color: var(--ink);
+  font-size: 16px; line-height: 1.7; overflow-x: hidden;
+}
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 1.1; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 3rem;
+  background: rgba(250,248,245,.94); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: .82rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-lt); text-decoration: none; transition: color .2s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-cta { background: var(--ink); color: var(--cream); padding: .55rem 1.4rem; border-radius: 2px; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; transition: opacity .2s; }
+.nav-cta:hover { opacity: .8; color: var(--cream); }
+
+/* HERO */
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 8rem 3rem 5rem; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 80% 30%, rgba(184,120,32,.07) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 10% 80%, rgba(42,122,150,.06) 0%, transparent 55%), var(--cream); }
+.hero-rule-left { position: absolute; left: 2.5rem; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, var(--border) 30%, var(--border) 70%, transparent); }
+.hero-rule-right { position: absolute; right: 2.5rem; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, var(--border) 30%, var(--border) 70%, transparent); }
+.hero-inner { position: relative; z-index: 1; text-align: center; max-width: 860px; margin: 0 auto; animation: fadeUp .9s ease both; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: .6rem; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-lt); margin-bottom: 1.8rem; }
+.hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; height: 1px; width: 3rem; background: var(--border); }
+.hero h1 { font-size: clamp(3rem, 7vw, 5.5rem); color: var(--ink); margin-bottom: 1.5rem; letter-spacing: -.01em; }
+.hero h1 em { color: var(--partner); font-style: italic; }
+.hero-sub { font-size: 1.1rem; color: var(--ink-md); max-width: 560px; margin: 0 auto 2.5rem; line-height: 1.65; }
+.hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 0; }
+.btn-primary { display: inline-block; background: var(--ink); color: var(--cream); padding: .9rem 2.4rem; border-radius: 2px; font-size: .88rem; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; transition: all .25s; border: 1px solid var(--ink); }
+.btn-primary:hover { background: transparent; color: var(--ink); }
+.btn-ghost { display: inline-block; background: transparent; color: var(--ink-md); padding: .9rem 2rem; border-radius: 2px; font-size: .88rem; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; transition: all .25s; border: 1px solid var(--border); }
+.btn-ghost:hover { border-color: var(--ink-md); color: var(--ink); }
+
+
+/* DIVIDER */
+.section-divider { display: flex; align-items: center; gap: 1.5rem; padding: 0 3rem; text-transform: uppercase; letter-spacing: .14em; font-size: .68rem; color: var(--ink-lt); }
+.section-divider::before, .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* SECTIONS */
+section { padding: 3rem 3rem; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-header { margin-bottom: 2.5rem; }
+.section-header .eyebrow { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-lt); margin-bottom: .8rem; display: block; }
+.section-header h2 { font-size: clamp(2.2rem, 4vw, 3.4rem); }
+
+/* WHY DWC */
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.why-item { padding: 2rem 1.8rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background .2s; }
+.why-item:hover { background: var(--cream-dk); }
+.why-item:nth-child(3n) { border-right: none; }
+.why-item:nth-child(4), .why-item:nth-child(5), .why-item:nth-child(6) { border-bottom: none; }
+.why-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: .4rem; }
+.why-item p { font-size: .84rem; color: var(--ink-lt); line-height: 1.65; }
+.why-item.has-border-bottom { border-bottom: 2px solid var(--border) !important; }
+
+/* PROGRAMS — light style matching verify-box */
+.programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.prog-card { border-radius: 4px; padding: 2rem 2rem 1.8rem; position: relative; border: 1px solid var(--border); background: var(--cream); transition: box-shadow .25s, transform .25s; }
+.prog-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(26,20,16,.08); }
+.prog-card.insider { border-color: var(--insider-border); background: var(--insider-lt); }
+.prog-card.partner { border-color: #e8cea0; background: var(--partner-lt); }
+.prog-card.referral { border-color: var(--referral-border); background: var(--referral-lt); }
+
+.prog-badge { font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; padding: .28rem .7rem; border-radius: 2px; display: inline-block; margin-bottom: 1.2rem; font-weight: 700; }
+.insider .prog-badge { background: var(--insider); color: #fff; }
+.partner .prog-badge { background: var(--partner); color: #fff; }
+.referral .prog-badge { background: var(--referral); color: #fff; }
+
+.prog-card .best-badge { position: absolute; top: 1.2rem; right: 1.2rem; background: var(--partner); color: #fff; font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .22rem .65rem; border-radius: 2px; }
+
+.prog-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; line-height: 1; margin-bottom: .3rem; }
+.insider .prog-title { color: #1a4a5c; }
+.partner .prog-title { color: #5c3d0a; }
+.referral .prog-title { color: #5c1a2a; }
+
+.prog-for { font-size: .8rem; color: var(--ink-lt); margin-bottom: 1.5rem; }
+.prog-perks { list-style: none; margin-bottom: 1.6rem; }
+.prog-perks li { display: flex; align-items: flex-start; gap: .7rem; font-size: .84rem; color: var(--ink-md); padding: .52rem 0; border-bottom: 1px solid rgba(0,0,0,.07); line-height: 1.5; }
+.prog-perks li:last-child { border-bottom: none; }
+.prog-perks li::before { content: '✓'; flex-shrink: 0; font-size: .75rem; font-weight: 700; margin-top: .15rem; }
+.insider .prog-perks li::before { color: var(--insider); }
+.partner .prog-perks li::before { color: var(--partner); }
+.referral .prog-perks li::before { color: var(--referral); }
+
+.prog-cta { display: block; text-align: center; padding: .85rem 1.5rem; border-radius: 2px; font-size: .82rem; letter-spacing: .07em; text-transform: uppercase; text-decoration: none; transition: filter .2s; font-weight: 600; }
+.insider .prog-cta { background: var(--insider); color: #fff; }
+.partner .prog-cta { background: var(--partner); color: #fff; }
+.referral .prog-cta { background: var(--referral); color: #fff; }
+.prog-cta:hover { filter: brightness(1.1); }
+
+.below-cards { text-align: center; margin-top: 1.6rem; color: var(--ink-lt); font-size: .85rem; }
+.below-cards a { color: var(--ink-md); text-underline-offset: 3px; }
+.brands-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .8rem; }
+.brand-chip { background: var(--cream-dk); border: 1px solid var(--border); border-radius: 2px; padding: .3rem .75rem; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-md); }
+
+/* QUIZ */
+.quiz-outer { background: var(--cream-dk); border: 1px solid var(--border); border-radius: 4px; padding: 2.5rem; max-width: 740px; margin: 0 auto; }
+.quiz-step { display: none; }
+.quiz-step.active { display: block; }
+.quiz-q { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; margin-bottom: .4rem; }
+.quiz-sub { font-size: .84rem; color: var(--ink-lt); margin-bottom: 1.5rem; }
+.quiz-opts { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+.quiz-opt { padding: 1rem 1.2rem; border: 1px solid var(--border); border-radius: 4px; cursor: pointer; background: var(--cream); font-size: .86rem; color: var(--ink-md); transition: all .2s; text-align: left; font-family: 'DM Sans', sans-serif; }
+.quiz-opt:hover { border-color: var(--ink-md); background: #fff; }
+.quiz-opt strong { display: block; color: var(--ink); margin-bottom: .18rem; font-size: .9rem; }
+.quiz-result { text-align: center; }
+.result-icon { font-size: 2.5rem; margin-bottom: .7rem; }
+.result-program { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: .4rem; }
+.result-perks { list-style: none; display: flex; flex-direction: column; gap: .45rem; margin: 1.2rem 0 1.6rem; text-align: left; }
+.result-perks li { display: flex; align-items: center; gap: .75rem; font-size: .86rem; color: var(--ink-md); background: var(--cream); border: 1px solid var(--border); padding: .55rem 1rem; border-radius: 3px; }
+.result-perks li::before { content: '→'; color: var(--partner); }
+.quiz-restart { background: none; border: none; cursor: pointer; font-size: .77rem; color: var(--ink-lt); letter-spacing: .06em; text-transform: uppercase; text-decoration: underline; text-underline-offset: 3px; margin-top: .8rem; font-family: 'DM Sans', sans-serif; }
+
+/* COMMUNITY */
+.community-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; }
+.community-text .eyebrow { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-lt); margin-bottom: .8rem; display: block; }
+.community-text h2 { font-size: clamp(1.9rem, 3.2vw, 2.8rem); margin-bottom: .9rem; }
+.community-text p { color: var(--ink-md); font-size: .9rem; margin-bottom: 1.1rem; line-height: 1.7; }
+.coming-soon { display: inline-block; font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; background: var(--cream-dk); border: 1px solid var(--border); padding: .17rem .52rem; border-radius: 2px; color: var(--ink-lt); margin-left: .4rem; vertical-align: middle; }
+.channel-list { list-style: none; }
+.channel-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.1rem; border: 1px solid var(--border); border-radius: 4px; margin-bottom: .6rem; background: var(--cream); transition: all .2s; cursor: pointer; }
+.channel-item:hover { border-color: var(--ink-md); background: #fff; transform: translateX(4px); }
+.channel-icon { font-size: 1.25rem; width: 2rem; text-align: center; flex-shrink: 0; }
+.channel-info strong { display: block; font-size: .86rem; color: var(--ink); }
+.channel-info span { font-size: .76rem; color: var(--ink-lt); }
+.channel-item .arrow { margin-left: auto; color: var(--border); font-size: .8rem; }
+
+.community-card { background: var(--cream-dk); border: 1px solid var(--border); border-radius: 4px; padding: 2rem; position: relative; overflow: hidden; }
+.community-card::before { content: '"'; position: absolute; top: -1.5rem; right: 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 10rem; color: rgba(0,0,0,.05); line-height: 1; pointer-events: none; }
+.community-card blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.3rem; color: var(--ink); line-height: 1.55; margin-bottom: 1.2rem; position: relative; }
+.testimonial-author { display: flex; align-items: center; gap: 1rem; }
+.author-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: .76rem; color: var(--ink-lt); font-weight: 600; flex-shrink: 0; }
+.author-info strong { display: block; font-size: .84rem; color: var(--ink); }
+.author-info span { font-size: .74rem; color: var(--ink-lt); }
+.testimonials-more { margin-top: 1.2rem; display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+.testi-mini { background: var(--cream); border: 1px solid var(--border); border-radius: 4px; padding: .85rem 1rem; font-size: .78rem; color: var(--ink-md); line-height: 1.55; font-style: italic; }
+.testi-mini strong { display: block; font-style: normal; color: var(--ink-lt); font-size: .69rem; margin-top: .4rem; }
+
+/* PROCESS */
+.process-bg { background: var(--cream-dk); }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+.step-num { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; font-weight: 400; line-height: 1; color: var(--border); margin-bottom: .4rem; }
+.process-step h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: .45rem; }
+.process-step p { font-size: .83rem; color: var(--ink-lt); line-height: 1.65; }
+
+/* VERIFY BOX */
+.verify-box { margin-top: 2.2rem; border: 1px solid var(--border); border-radius: 4px; padding: 1.8rem; background: var(--cream); }
+.verify-box h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 1rem; }
+.verify-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.verify-item { padding: 1.2rem 1.3rem; border-radius: 4px; border: 1px solid var(--border); }
+.verify-item.insider-vi { border-color: var(--insider-border); background: var(--insider-lt); }
+.verify-item.partner-vi { border-color: #e8cea0; background: var(--partner-lt); }
+.verify-item.referral-vi { border-color: var(--referral-border); background: var(--referral-lt); }
+.verify-item .prog-tag { font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; margin-bottom: .45rem; display: block; }
+.insider-tag { color: var(--insider); }
+.partner-tag { color: var(--partner); }
+.referral-tag { color: var(--referral); }
+.verify-item p { font-size: .82rem; color: var(--ink-md); line-height: 1.6; }
+
+/* FAQ */
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.faq-item { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--cream); }
+.faq-q { width: 100%; text-align: left; padding: 1.1rem 1.3rem; background: var(--cream); border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: .87rem; font-weight: 600; color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: background .2s; }
+.faq-q:hover { background: var(--cream-dk); }
+.faq-q .icon { font-size: .8rem; color: var(--ink-lt); flex-shrink: 0; transition: transform .3s; }
+.faq-q.open .icon { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; font-size: .84rem; color: var(--ink-md); line-height: 1.7; }
+.faq-a-inner { padding: 0 1.3rem 1.1rem; }
+
+/* FINAL CTA */
+.final-cta { background: var(--cream-dk); border-top: 1px solid var(--border); }
+.final-cta-inner { text-align: center; max-width: 700px; margin: 0 auto; }
+.final-cta h2 { color: var(--ink); font-size: clamp(2.2rem, 4.5vw, 3.5rem); margin-bottom: .9rem; }
+.final-cta p { color: var(--ink-lt); margin-bottom: 2.2rem; font-size: .92rem; }
+.final-btn-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-bottom: 1.2rem; }
+.final-btn { display: block; padding: 1rem; border-radius: 3px; font-size: .8rem; letter-spacing: .07em; text-transform: uppercase; text-decoration: none; text-align: center; transition: filter .2s; font-weight: 600; }
+.final-btn.insider-btn { border: 1px solid var(--insider-border); color: var(--insider); background: var(--insider-lt); }
+.final-btn.partner-btn { background: var(--partner); border: 1px solid var(--partner); color: #fff; }
+.final-btn.referral-btn { border: 1px solid var(--referral-border); color: var(--referral); background: var(--referral-lt); }
+.final-btn:hover { filter: brightness(1.06); }
+.final-reassure { font-size: .74rem; color: var(--ink-lt); letter-spacing: .04em; }
+
+/* FOOTER */
+footer { background: var(--ink); color: rgba(255,255,255,.4); padding: 2rem 3rem; font-size: .77rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+footer a { color: rgba(255,255,255,.4); text-decoration: none; }
+footer a:hover { color: rgba(255,255,255,.7); }
+.footer-links { display: flex; gap: 1.5rem; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  section { padding: 2.5rem 1.5rem; }
+  .section-divider { padding: 0 1.5rem; }
+  .programs-grid, .why-grid, .verify-grid, .faq-grid { grid-template-columns: 1fr; }
+  .community-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .process-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .final-btn-row { grid-template-columns: 1fr; }
+  .quiz-opts { grid-template-columns: 1fr; }
+  .testimonials-more { grid-template-columns: 1fr; }
+  .why-item { border-right: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Dancewear Corner</a>
+  <ul class="nav-links">
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#programs" class="nav-cta">Apply Now</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-rule-left"></div>
+  <div class="hero-rule-right"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">The DWC Studio Program</div>
+    <h1>Built by <em>dance people</em>,<br>for dance people.</h1>
+    <p class="hero-sub">Exclusive savings, expert support, and a real community for dance educators, studio owners, and supporters of the arts.</p>
+    <div class="hero-actions">
+      <a href="#programs" class="btn-primary">Apply in 2 minutes</a>
+      <a href="#how-it-works" class="btn-ghost">See how it works</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="section-divider">Why DWC</div>
+
+<!-- WHY DWC -->
+<section id="why-dwc">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">What makes us different</span>
+      <h2>We've stood in every pair<br>of shoes you have.</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item">
+        <h4>Every brand you need in one place</h4>
+        <p>Authorized retailer of Bloch, Capezio, Suffolk, Danznmotion, Nikolay, Gaynor Minden, So Danca, Russian Pointe, Merlet, Mirella, and more — all in one order, on one invoice.</p>
+      </div>
+      <div class="why-item">
+        <h4>Family-owned. Dancer-run.</h4>
+        <p>Independently owned. Every person on our team has a dance background — we've been dancers, studio owners, and store owners. We know every side of this business because we've lived it.</p>
+      </div>
+      <div class="why-item">
+        <h4>Dedicated expert support</h4>
+        <p>When you call us, you reach someone who's been on a stage, run a studio, or fit a thousand pointe shoes. No AI scripts. No outsourced help desks. Just dance people solving dance problems.</p>
+      </div>
+      <div class="why-item has-border-bottom">
+        <h4>Built for how studios buy</h4>
+        <p>Multi-brand orders on a single PO. Bulk-friendly. Fast restocking on dress code essentials. Easy size exchanges. A real human on your account if you're a Studio Partner.</p>
+      </div>
+      <div class="why-item has-border-bottom">
+        <h4>Service that scales with you</h4>
+        <p>Whether you're a new dance educator buying for your first class or a studio of 400 dancers, we treat you like the only account we work with. Our program rewards loyalty as your volume grows.</p>
+      </div>
+      <div class="why-item">
+        <h4>25+ years in the dance community</h4>
+        <p>We've been here through every dance trend, every brand change, every recital season. That institutional knowledge is your competitive advantage when you work with us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">The Programs</div>
+
+<!-- PROGRAMS -->
+<section id="programs">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">Choose your path</span>
+      <h2>Three programs.<br>One DWC family.</h2>
+    </div>
+
+    <div class="programs-grid reveal">
+      <!-- INSIDER -->
+      <div class="prog-card insider">
+        <span class="prog-badge">Studio Insider</span>
+        <div class="prog-title">Insider</div>
+        <div class="prog-for">For individual dance educators</div>
+        <ul class="prog-perks">
+          <li>Save up to 15% on every order</li>
+          <li>Free shipping on orders $75+</li>
+          <li>Become an affiliate and earn cash back by curating your favorite styles</li>
+          <li>Member pricing across all 13 authorized brands</li>
+          <li>Early access to new arrivals and sales</li>
+        </ul>
+        <a href="#how-it-works" class="prog-cta">Apply as an Educator</a>
+      </div>
+      <!-- PARTNER -->
+      <div class="prog-card partner">
+        <span class="prog-badge">Studio Partner</span>
+        <span class="best-badge">Most Popular</span>
+        <div class="prog-title">Partner</div>
+        <div class="prog-for">For studio owners and operators</div>
+        <ul class="prog-perks">
+          <li>15% off from day one — jumps to 20% after $1,500 in purchases (rolling 12 months)</li>
+          <li>Your own branded Dress Code Store — we build it for you</li>
+          <li>Dedicated studio rep with real dance industry expertise</li>
+          <li>Private community access for studio owners</li>
+          <li>Expert-led webinars on business, pointe fitting &amp; more</li>
+        </ul>
+        <a href="#how-it-works" class="prog-cta">Apply as a Studio</a>
+      </div>
+      <!-- REFERRAL -->
+      <div class="prog-card referral">
+        <span class="prog-badge">Studio Referral</span>
+        <div class="prog-title">Referral</div>
+        <div class="prog-for">For arts supporters, creators &amp; advocates</div>
+        <ul class="prog-perks">
+          <li>Your own curated DWC page — built by our team</li>
+          <li>Earn 12% cash back on every referred order</li>
+          <li>No purchase required — sign up and start sharing</li>
+          <li>Monthly payouts via PayPal, ACH, or store credit</li>
+          <li>Open to parents, alumni, influencers &amp; dance advocates</li>
+        </ul>
+        <a href="#how-it-works" class="prog-cta">Get Your Page</a>
+      </div>
+    </div>
+
+    <div class="below-cards reveal">
+      Not sure which fits? <a href="#quiz">Take the 30-second quiz ↓</a> &nbsp;·&nbsp; Or <a href="#faq">talk to our team</a> — we'll help you choose.
+    </div>
+
+    <div class="reveal">
+      <p style="font-size:.71rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-lt);margin-top:1.8rem;margin-bottom:.7rem">Member discounts apply across all authorized brands</p>
+      <div class="brands-row">
+        <span class="brand-chip">Bloch</span><span class="brand-chip">Capezio</span><span class="brand-chip">Suffolk</span>
+        <span class="brand-chip">Danznmotion</span><span class="brand-chip">Oh La La</span><span class="brand-chip">Nikolay</span>
+        <span class="brand-chip">Gaynor Minden</span><span class="brand-chip">Jule Dancewear</span><span class="brand-chip">So Danca</span>
+        <span class="brand-chip">Mirella</span><span class="brand-chip">Russian Pointe</span><span class="brand-chip">Merlet</span><span class="brand-chip">Lulli</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider" id="quiz">Which program is right for me? 30-second quiz</div>
+
+<!-- QUIZ -->
+<section>
+  <div class="section-inner">
+    <div class="quiz-outer reveal">
+      <!-- Step 1 -->
+      <div class="quiz-step active" id="q1">
+        <div class="quiz-q">Which best describes you?</div>
+        <div class="quiz-sub">Pick the option that fits best — you can always layer programs later.</div>
+        <div class="quiz-opts">
+          <button class="quiz-opt" onclick="quiz(2,'educator')"><strong>I'm a dance educator</strong>Studio faculty, convention teacher, or private instructor</button>
+          <button class="quiz-opt" onclick="quiz(2,'owner')"><strong>I own or run a studio</strong>Responsible for dress codes, bulk orders, or studio operations</button>
+          <button class="quiz-opt" onclick="quiz(2,'advocate')"><strong>I'm a supporter of the arts</strong>Parent, alumna, dance advocate, or industry content creator</button>
+          <button class="quiz-opt" onclick="quiz(2,'both')"><strong>More than one of these</strong>I wear several hats in the dance world</button>
+        </div>
+      </div>
+      <!-- Step 2 -->
+      <div class="quiz-step" id="q2">
+        <div class="quiz-q">How do you typically buy dancewear?</div>
+        <div class="quiz-sub">This helps us find the program with the best ROI for you.</div>
+        <div class="quiz-opts">
+          <button class="quiz-opt" onclick="quiz(3,'self')"><strong>Mostly for myself</strong>Personal orders, occasional student referrals</button>
+          <button class="quiz-opt" onclick="quiz(3,'self-students')"><strong>For myself + a few students</strong>Small-scale, educator-led buying</button>
+          <button class="quiz-opt" onclick="quiz(3,'volume')"><strong>For my studio in volume</strong>Dress codes, class outfitting, bulk POs</button>
+          <button class="quiz-opt" onclick="quiz(3,'share')"><strong>I mostly share — don't buy</strong>I recommend to others more than I buy for myself</button>
+        </div>
+      </div>
+      <!-- Step 3 -->
+      <div class="quiz-step" id="q3">
+        <div class="quiz-q">What matters most to you?</div>
+        <div class="quiz-sub">Last question — we promise.</div>
+        <div class="quiz-opts">
+          <button class="quiz-opt" onclick="showResult('insider')"><strong>Best price on every order</strong>I want my discount applied automatically, every time</button>
+          <button class="quiz-opt" onclick="showResult('partner')"><strong>Tools to outfit my whole studio</strong>Dress code store, dedicated rep, volume savings</button>
+          <button class="quiz-opt" onclick="showResult('referral')"><strong>Earning while I share what I love</strong>Cash back, curated page, zero purchase required</button>
+          <button class="quiz-opt" onclick="showResult('partner')"><strong>All of the above</strong>I want savings + store + community + income</button>
+        </div>
+      </div>
+      <!-- Result -->
+      <div class="quiz-step" id="result">
+        <div class="quiz-result">
+          <div class="result-icon" id="result-icon">🎉</div>
+          <div class="result-program" id="result-title">Studio Partner</div>
+          <p id="result-desc" style="color:var(--ink-lt);font-size:.87rem;margin:.4rem 0">Based on your answers, this is the best fit for you.</p>
+          <ul class="result-perks" id="result-perks"></ul>
+          <a href="#how-it-works" class="btn-primary" id="result-cta" style="display:inline-block">Apply Now →</a><br>
+          <button class="quiz-restart" onclick="resetQuiz()">Start over / See all programs</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">Community</div>
+
+<!-- COMMUNITY -->
+<section id="community">
+  <div class="section-inner">
+    <div class="community-layout reveal">
+      <div class="community-text">
+        <span class="eyebrow">More than a discount</span>
+        <h2>A real community for dance professionals.</h2>
+        <p>A space where dance educators, studio owners, and arts supporters connect, share, and learn from each other — built and led by people who've stood in every pair of dance shoes you have.</p>
+        <p>Expert-led webinars are coming soon — sessions on pointe shoe fitting, dressing different body types, running a studio business, recital season planning, and more. <span class="coming-soon">Coming soon</span></p>
+        <p style="margin-bottom:1rem">Until our webinar series launches, here's where the DWC community is already active:</p>
+        <ul class="channel-list">
+          <li class="channel-item" onclick="window.open('#','_blank')">
+            <div class="channel-icon">💼</div>
+            <div class="channel-info"><strong>LinkedIn</strong><span>For studio owners and dance professionals talking shop</span></div>
+            <span class="arrow">→</span>
+          </li>
+          <li class="channel-item" onclick="window.open('#','_blank')">
+            <div class="channel-icon">👥</div>
+            <div class="channel-info"><strong>Facebook Group</strong><span>Peer-to-peer questions and recital season support</span></div>
+            <span class="arrow">→</span>
+          </li>
+          <li class="channel-item" onclick="window.open('#','_blank')">
+            <div class="channel-icon">📸</div>
+            <div class="channel-info"><strong>Instagram Channel</strong><span>Daily updates, events, and member spotlights</span></div>
+            <span class="arrow">→</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="community-card">
+          <blockquote>"DWC has been with us through six locations and twenty-two years. They know our dress code better than some of our educators do."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div class="author-info"><strong>Maria R.</strong><span>Studio Partner · Tampa, FL · 22 years with DWC</span></div>
+          </div>
+          <div class="testimonials-more">
+            <div class="testi-mini">"The Referral program is genuinely brilliant — more cash back in 3 months than I expected in a full year." <strong>Jess T. — Arts Advocate &amp; Referral Member</strong></div>
+            <div class="testi-mini">"My rep knows my dancers' sizing. I don't have to re-explain my studio every time I call." <strong>Dana K. — Studio Insider, Chicago</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">Process</div>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="process-bg">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">Next steps</span>
+      <h2>Your path into<br>the DWC family.</h2>
+    </div>
+    <div class="process-grid reveal">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h4>Apply</h4>
+        <p>Choose Insider, Partner, or Referral and complete the short application — about 2 minutes. Tell us who you are and how you work with the dance community.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h4>Get verified</h4>
+        <p>We confirm your status. Insider &amp; Referral: 1–2 business days. Partner: 3–5 business days. Curated Referral pages go live within 5–7 business days.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h4>Welcome in</h4>
+        <p>Confirmation email with your member dashboard, personal links, discount auto-applied at checkout, and access to community and education resources.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h4>Save or earn</h4>
+        <p>Shop across all 13 brands at your member rate. Refer and earn 12% back. Partners: your Dress Code Store goes live within a week.</p>
+      </div>
+    </div>
+
+    <div class="verify-box reveal">
+      <h4>What to have ready for verification</h4>
+      <div class="verify-grid">
+        <div class="verify-item insider-vi">
+          <span class="prog-tag insider-tag">Studio Insider</span>
+          <p>A URL to a studio website where you're listed as faculty or educator, <em>or</em> a convention/competition listing showing you as faculty.</p>
+        </div>
+        <div class="verify-item partner-vi">
+          <span class="prog-tag partner-tag">Studio Partner</span>
+          <p>Studio ownership document (proof of registered business entity), <em>or</em> a reseller license — whichever is most convenient.</p>
+        </div>
+        <div class="verify-item referral-vi">
+          <span class="prog-tag referral-tag">Studio Referral</span>
+          <p>No documents needed. Sign up with email, tell us a little about you, and our team builds your curated page within 5–7 business days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">FAQ</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">Common questions</span>
+      <h2>Everything you need<br>to know.</h2>
+    </div>
+    <div class="faq-grid reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How much will I save? <span class="icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Members save up to 20% depending on program and volume. Specific rates are disclosed in your member dashboard after approval to remain MAP-compliant across all authorized brands.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is there a cost to join? <span class="icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">All three programs are completely free — no setup fees, no monthly charges, no catch. Studio Partner has a soft annual spend target to maintain status, with an 18-month grace period for new accounts.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What's the difference between Insider and Partner? <span class="icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Insider is built for individual dance educators — a personal discount, free shipping threshold, and referral earnings. Partner is built for studios — 15% off from day one, jumping to 20% after $1,500 in purchases on a rolling 12-month basis, plus a DWC-built Dress Code Store, a dedicated rep, and private community access. If you own a studio, Partner is almost always the right choice.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I be in more than one program? <span class="icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes — many members layer programs. A studio owner can apply as a Partner and also use the Referral program to earn on content they share. Apply to whichever tier fits your primary role, then talk to us about layering.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What brands are included? <span class="icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Your member discount applies across every brand we carry — Bloch, Capezio, Suffolk, Danznmotion, Oh La La, Nikolay, Gaynor Minden, Jule Dancewear, So Danca, Mirella, Russian Pointe, Merlet, and Lulli.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if a public sale beats my member discount? <span class="icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">You always get the better deal. Member discounts and sitewide consumer promotions don't stack, but at checkout the system applies whichever is more favorable — so if a public sale beats your member rate, you automatically pay the lower price.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How do I get paid for referrals? <span class="icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Cash back is paid monthly via PayPal, ACH direct deposit, or store credit — your choice. Track earnings in real-time through your member dashboard. Minimum payout threshold is $25.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do you offer fit kits? <span class="icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes — talk to your rep and request the fit kit you need (pointe shoes, leotards, tights, shoes). We'll do our best to facilitate based on availability. Fit kit access is a Studio Partner benefit.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if my studio's dress code changes? <span class="icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Your dedicated rep updates your Dress Code Store anytime — just send the changes. Style updates, new items, color swaps, seasonal refreshes — we handle it. Typical turnaround is 3–5 business days.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is the Referral curated page, exactly? <span class="icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Think LTK or Amazon Storefront — but for the dance world. Our team builds you a personal page on DWC's site featuring products you select. Share your link, earn 12% on every order that comes through it. No coding, no tech setup — we do the build.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="section-inner">
+    <div class="final-cta-inner reveal">
+      <h2>Ready to join<br>the DWC family?</h2>
+      <p>Apply in 2 minutes. Get verified. Start saving and earning alongside a community that actually gets it.</p>
+      <div class="final-btn-row">
+        <a href="#how-it-works" class="final-btn insider-btn">Apply as an Educator →</a>
+        <a href="#how-it-works" class="final-btn partner-btn">Apply as a Studio →</a>
+        <a href="#how-it-works" class="final-btn referral-btn">Get Your Referral Page →</a>
+      </div>
+      <div class="final-reassure">Free to join &nbsp;·&nbsp; No minimums to start &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; No catch</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Dancewear Corner — Family-owned &amp; dancer-run</span>
+  <div class="footer-links">
+    <a href="#">About</a><a href="#">Contact</a><a href="#">Returns</a><a href="#">Privacy</a><a href="#">Terms</a>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+function toggleFaq(btn) {
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => { q.classList.remove('open'); q.nextElementSibling.style.maxHeight = '0'; });
+  if (!isOpen) { btn.classList.add('open'); btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px'; }
+}
+
+let quizPath = {};
+function quiz(nextStep, answer) {
+  quizPath['q' + (nextStep - 1)] = answer;
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('q' + nextStep).classList.add('active');
+}
+function showResult(program) {
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('result').classList.add('active');
+  const programs = {
+    insider: { icon: '🩰', title: 'Studio Insider', desc: 'Based on your answers, Insider is your best fit — great savings on every order with referral earnings on the side.', perks: ['Save up to 15% on every order', 'Free shipping on orders $75+', 'Earn cash back when your students shop your link'], cta: 'Apply as an Educator' },
+    partner: { icon: '⭐', title: 'Studio Partner', desc: 'Based on your answers, Partner is the right move — built for studios that want the full toolkit.', perks: ['15% off from day one, jumps to 20% after $1,500', 'Your own branded Dress Code Store', 'Dedicated rep + private community access'], cta: 'Apply as a Studio' },
+    referral: { icon: '💰', title: 'Studio Referral', desc: 'Based on your answers, Referral is a perfect fit — earn 12% cash back just by sharing what you love.', perks: ['Your own curated DWC page — we build it', 'Earn 12% on every referred order', 'Monthly payout via PayPal, ACH, or store credit'], cta: 'Get Your Page' }
+  };
+  const p = programs[program];
+  document.getElementById('result-icon').textContent = p.icon;
+  document.getElementById('result-title').textContent = p.title;
+  document.getElementById('result-desc').textContent = p.desc;
+  document.getElementById('result-cta').textContent = p.cta + ' →';
+  document.getElementById('result-perks').innerHTML = p.perks.map(perk => `<li>${perk}</li>`).join('');
+}
+function resetQuiz() {
+  quizPath = {};
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('q1').classList.add('active');
+}
+</script>
+</body>
+</html>
