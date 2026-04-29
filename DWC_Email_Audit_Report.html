@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DanceWear Corner — Email Marketing Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1410;
+  --ink-md: #3d3228;
+  --ink-lt: #7a6d62;
+  --cream: #faf8f5;
+  --cream-dk: #f2ede6;
+  --border: #e4ddd4;
+  --insider: #2a7a96;
+  --insider-lt: #e8f4f8;
+  --insider-border: #b8dce8;
+  --partner: #b87820;
+  --partner-lt: #fdf5e6;
+  --partner-border: #e8cea0;
+  --referral: #c8553d;
+  --referral-lt: #fdf0ec;
+  --referral-border: #f0c8bc;
+  --good: #5a8a6e;
+  --good-lt: #ecf3ee;
+  --good-border: #cadbcf;
+  --bad: #c8553d;
+  --bad-lt: #fdf0ec;
+  --bad-border: #f0c8bc;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream); color: var(--ink);
+  font-size: 16px; line-height: 1.7; overflow-x: hidden;
+}
+h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 1.1; }
+
+/* HERO */
+.hero { min-height: 70vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 6rem 3rem 4rem; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 80% 30%, rgba(184,120,32,.07) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 10% 80%, rgba(42,122,150,.06) 0%, transparent 55%), var(--cream); }
+.hero-rule-left { position: absolute; left: 2.5rem; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, var(--border) 30%, var(--border) 70%, transparent); }
+.hero-rule-right { position: absolute; right: 2.5rem; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, var(--border) 30%, var(--border) 70%, transparent); }
+.hero-inner { position: relative; z-index: 1; text-align: center; max-width: 920px; margin: 0 auto; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: .6rem; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-lt); margin-bottom: 1.8rem; }
+.hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; height: 1px; width: 3rem; background: var(--border); }
+.hero h1 { font-size: clamp(2.6rem, 6vw, 4.8rem); color: var(--ink); margin-bottom: 1.3rem; letter-spacing: -.01em; }
+.hero h1 em { color: var(--partner); font-style: italic; }
+.hero-sub { font-size: 1.05rem; color: var(--ink-md); max-width: 640px; margin: 0 auto 2.5rem; line-height: 1.65; }
+.hero-meta { display: inline-flex; gap: 2rem; padding: .8rem 1.5rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-lt); }
+.hero-meta span strong { color: var(--ink-md); font-weight: 600; }
+
+/* DIVIDER */
+.section-divider { display: flex; align-items: center; gap: 1.5rem; padding: 2.5rem 3rem 0; text-transform: uppercase; letter-spacing: .14em; font-size: .68rem; color: var(--ink-lt); max-width: 1300px; margin: 0 auto; }
+.section-divider::before, .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* SECTIONS */
+section { padding: 3rem 3rem; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-header { margin-bottom: 2.2rem; }
+.section-header .eyebrow { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-lt); margin-bottom: .8rem; display: block; }
+.section-header h2 { font-size: clamp(2rem, 3.6vw, 3rem); }
+.section-header .sub { color: var(--ink-md); font-size: .98rem; margin-top: .8rem; max-width: 720px; }
+
+/* EXEC SUMMARY GRID */
+.findings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.finding-item { padding: 2rem 2rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background .2s; }
+.finding-item:hover { background: var(--cream-dk); }
+.finding-item:nth-child(2n) { border-right: none; }
+.finding-item:nth-child(3), .finding-item:nth-child(4) { border-bottom: none; }
+.finding-tag { display: inline-block; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--partner); font-weight: 700; margin-bottom: .8rem; }
+.finding-item h3 { font-size: 1.5rem; color: var(--ink); margin-bottom: .8rem; }
+.finding-item p { font-size: .9rem; color: var(--ink-md); line-height: 1.65; }
+
+/* KPI GRID */
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.kpi-card { border: 1px solid var(--border); border-radius: 4px; padding: 1.6rem 1.5rem; background: var(--cream); position: relative; transition: box-shadow .25s, transform .25s; }
+.kpi-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,20,16,.06); }
+.kpi-card::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px; background: var(--partner); }
+.kpi-card.bad::before { background: var(--bad); }
+.kpi-card.good::before { background: var(--good); }
+.kpi-card.info::before { background: var(--insider); }
+.kpi-card .label { font-size: .65rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-lt); margin-bottom: .6rem; font-weight: 600; }
+.kpi-card .value { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; line-height: 1; color: var(--ink); margin-bottom: .4rem; font-weight: 500; }
+.kpi-card.bad .value { color: var(--bad); }
+.kpi-card.good .value { color: var(--good); }
+.kpi-card.info .value { color: var(--insider); }
+.kpi-card .desc { font-size: .8rem; color: var(--ink-md); line-height: 1.55; }
+
+/* TWO-COLUMN LAYOUT */
+.two-col { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.5rem; align-items: stretch; }
+.two-col.flip { grid-template-columns: 1fr 1.2fr; }
+
+.panel { border: 1px solid var(--border); border-radius: 4px; padding: 1.8rem 2rem; background: var(--cream); }
+.panel.shaded { background: var(--cream-dk); }
+.panel h3 { font-size: 1.4rem; margin-bottom: .35rem; color: var(--ink); }
+.panel .panel-sub { font-size: .82rem; color: var(--ink-lt); margin-bottom: 1.5rem; font-style: italic; }
+
+/* INSIGHT CARDS (right column) */
+.insight-stack { display: flex; flex-direction: column; gap: 1rem; }
+.insight-card { border: 1px solid var(--border); border-radius: 4px; padding: 1.3rem 1.5rem; background: var(--cream); position: relative; }
+.insight-card::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px; background: var(--partner); border-radius: 4px 0 0 4px; }
+.insight-card.bad::before { background: var(--bad); }
+.insight-card.good::before { background: var(--good); }
+.insight-card.info::before { background: var(--insider); }
+.insight-card .tag { font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--ink-lt); margin-bottom: .35rem; }
+.insight-card .big { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; line-height: 1; color: var(--ink); margin-bottom: .25rem; font-weight: 500; }
+.insight-card.bad .big { color: var(--bad); }
+.insight-card.good .big { color: var(--good); }
+.insight-card.info .big { color: var(--insider); }
+.insight-card h4 { font-family: 'DM Sans', sans-serif; font-size: .92rem; color: var(--ink); margin-bottom: .5rem; font-weight: 600; }
+.insight-card p { font-size: .82rem; color: var(--ink-md); line-height: 1.6; }
+
+/* TABLE */
+.report-table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--cream); }
+.report-table thead th { background: var(--ink); color: var(--cream); text-align: left; padding: .85rem 1rem; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
+.report-table tbody td { padding: .9rem 1rem; font-size: .87rem; color: var(--ink-md); border-top: 1px solid var(--border); vertical-align: middle; }
+.report-table tbody tr:nth-child(even) { background: var(--cream-dk); }
+.report-table tbody td.metric { color: var(--ink); font-weight: 600; font-size: .9rem; }
+.report-table tbody td.value { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--ink); font-weight: 500; }
+.report-table tbody td.muted { color: var(--ink-lt); }
+.report-table tbody td.timing { font-family: 'Cormorant Garamond', serif; color: var(--partner); font-weight: 500; font-size: .98rem; }
+.report-table tbody td.owner { color: var(--ink); font-weight: 600; }
+
+/* STATUS PILLS */
+.pill { display: inline-block; padding: .3rem .7rem; border-radius: 2px; font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; line-height: 1; }
+.pill.green { background: var(--good); color: #fff; }
+.pill.red { background: var(--bad); color: #fff; }
+.pill.gold { background: var(--partner); color: #fff; }
+
+/* CALLOUT BANNER */
+.callout-banner { background: var(--ink); color: var(--cream); padding: 1.1rem 1.6rem; border-radius: 4px; margin-top: 1.4rem; font-size: .88rem; line-height: 1.6; font-style: italic; }
+.callout-banner strong { color: var(--cream); font-weight: 600; font-style: normal; }
+
+/* WORKING / NOT WORKING */
+.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.work-col h3.work { font-size: 1.7rem; color: var(--good); margin-bottom: 1rem; letter-spacing: -.01em; }
+.work-col h3.notwork { font-size: 1.7rem; color: var(--bad); margin-bottom: 1rem; letter-spacing: -.01em; }
+.work-list { list-style: none; display: flex; flex-direction: column; gap: .7rem; }
+.work-list li { border: 1px solid var(--border); border-radius: 4px; padding: 1rem 1.2rem; background: var(--cream); position: relative; }
+.work-col.good .work-list li { border-color: var(--good-border); background: var(--good-lt); }
+.work-col.bad .work-list li { border-color: var(--bad-border); background: var(--bad-lt); }
+.work-list li strong { display: block; font-size: .92rem; color: var(--ink); margin-bottom: .25rem; font-weight: 600; }
+.work-list li span { font-size: .82rem; color: var(--ink-md); line-height: 1.55; }
+
+/* FLOW ROWS */
+.flow-row { display: grid; grid-template-columns: 2.4fr repeat(4, 1fr); gap: 1.2rem; align-items: center; padding: 1.4rem 1.6rem; border: 1px solid var(--border); border-radius: 4px; background: var(--cream); margin-bottom: .8rem; transition: box-shadow .25s; }
+.flow-row:hover { box-shadow: 0 6px 20px rgba(26,20,16,.05); }
+.flow-row .flow-name { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; color: var(--ink); margin-bottom: .35rem; }
+.flow-row .flow-note { font-size: .8rem; color: var(--ink-md); line-height: 1.55; }
+.flow-stat .label { font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-lt); margin-bottom: .25rem; font-weight: 600; }
+.flow-stat .num { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--ink); font-weight: 500; line-height: 1.1; }
+.flow-stat.bad .num { color: var(--bad); }
+.flow-stat.good .num { color: var(--good); }
+.flow-stat.gold .num { color: var(--partner); }
+
+/* RISK BANNER (slide 10) */
+.risk-banner { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center; background: var(--bad); color: #fff; padding: 2rem 2.5rem; border-radius: 4px; margin-bottom: 2rem; }
+.risk-icon { width: 80px; height: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 50%; }
+.risk-icon svg { width: 44px; height: 44px; }
+.risk-banner .big { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; line-height: 1; color: #fff; font-weight: 500; margin-bottom: .3rem; }
+.risk-banner .text { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; line-height: 1.4; color: #fff; font-style: italic; font-weight: 400; }
+
+.risk-cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+.risk-col { border: 1px solid var(--border); border-radius: 4px; padding: 1.6rem 1.6rem; background: var(--cream); }
+.risk-col .tag { font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--partner); font-weight: 700; margin-bottom: .6rem; }
+.risk-col h3 { font-size: 1.25rem; color: var(--ink); margin-bottom: .7rem; }
+.risk-col p { font-size: .85rem; color: var(--ink-md); line-height: 1.6; }
+
+/* ACTION PLAN */
+.actions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.action-bucket { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--cream); }
+.action-bucket .head { padding: 1.2rem 1.4rem; color: #fff; }
+.action-bucket.now .head { background: var(--good); }
+.action-bucket.thirty .head { background: var(--partner); }
+.action-bucket.long .head { background: var(--insider); }
+.action-bucket .head .label { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+.action-bucket .head h3 { font-family: 'DM Sans', sans-serif; font-size: 1.05rem; font-weight: 600; margin-top: .25rem; line-height: 1.3; }
+.action-bucket ul { list-style: none; padding: 1.3rem 1.4rem; display: flex; flex-direction: column; gap: .8rem; }
+.action-bucket ul li { font-size: .86rem; color: var(--ink-md); line-height: 1.5; padding-left: 1rem; position: relative; }
+.action-bucket ul li::before { content: '■'; position: absolute; left: 0; top: 0; font-size: .55rem; color: var(--partner); }
+.action-bucket.now ul li::before { color: var(--good); }
+.action-bucket.long ul li::before { color: var(--insider); }
+
+/* CHART CONTAINERS */
+.chart-block { border: 1px solid var(--border); border-radius: 4px; padding: 1.8rem 2rem; background: var(--cream); }
+.chart-block .chart-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--ink); margin-bottom: .25rem; }
+.chart-block .chart-sub { font-size: .82rem; color: var(--ink-lt); margin-bottom: 1.4rem; font-style: italic; }
+
+/* SVG bar charts */
+svg .axis-label { font-family: 'DM Sans', sans-serif; font-size: 11px; fill: var(--ink-lt); }
+svg .cat-label { font-family: 'DM Sans', sans-serif; font-size: 12px; fill: var(--ink-md); }
+svg .val-label { font-family: 'Cormorant Garamond', serif; font-size: 13px; fill: var(--ink); font-weight: 500; }
+svg .grid-line { stroke: var(--border); stroke-width: 1; }
+svg .threshold-line { stroke: var(--bad); stroke-width: 1.5; stroke-dasharray: 5 4; }
+svg .threshold-label { font-family: 'DM Sans', sans-serif; font-size: 11px; fill: var(--bad); font-style: italic; }
+
+/* APPENDIX */
+.appx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.appx-card { border: 1px solid var(--border); border-radius: 4px; padding: 1.6rem 1.8rem; background: var(--cream); }
+.appx-card .tag { font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--partner); font-weight: 700; margin-bottom: .7rem; }
+.appx-card h3 { font-size: 1.3rem; margin-bottom: .6rem; }
+.appx-card p { font-size: .87rem; color: var(--ink-md); line-height: 1.7; }
+
+/* DOC FOOTER */
+.doc-end { padding: 3rem 3rem 4rem; text-align: center; color: var(--ink-lt); font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; border-top: 1px solid var(--border); margin-top: 2rem; }
+.doc-end::before { content: '·'; margin-right: .8rem; }
+.doc-end::after { content: '·'; margin-left: .8rem; }
+
+@media (max-width: 900px) {
+  section { padding: 2.5rem 1.5rem; }
+  .section-divider { padding: 2rem 1.5rem 0; }
+  .findings-grid { grid-template-columns: 1fr; }
+  .finding-item { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+  .finding-item:last-child { border-bottom: none !important; }
+  .kpi-grid, .actions-grid, .risk-cols { grid-template-columns: 1fr; }
+  .two-col, .two-col.flip, .work-grid, .appx-grid { grid-template-columns: 1fr; }
+  .flow-row { grid-template-columns: 1fr; gap: .6rem; }
+  .risk-banner { grid-template-columns: 1fr; text-align: center; padding: 1.5rem; }
+  .risk-icon { margin: 0 auto; }
+  .hero { padding: 4rem 1.5rem 3rem; }
+  .hero-rule-left, .hero-rule-right { display: none; }
+  .report-table { font-size: .78rem; }
+  .report-table thead th, .report-table tbody td { padding: .7rem .6rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO / COVER -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-rule-left"></div>
+  <div class="hero-rule-right"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">DanceWear Corner</div>
+    <h1>Email Marketing <em>Audit</em></h1>
+    <p class="hero-sub">A full review of list health, segmentation efficiency, and flow performance — with a sequenced plan for the next 90 days.</p>
+    <div class="hero-meta">
+      <span><strong>310</strong> Campaigns</span>
+      <span><strong>$148.9K</strong> Flow Revenue</span>
+      <span><strong>Last 12 months</strong></span>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider">Executive Summary</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">What the board needs to know</span>
+      <h2>Four findings.<br>One sequenced plan.</h2>
+    </div>
+
+    <div class="findings-grid">
+      <div class="finding-item">
+        <div class="finding-tag">Finding 01</div>
+        <h3>List health is at risk from over-mailing.</h3>
+        <p>We send to the same recipients an average of 3.6 times per week — above the 2–3/week recommended ceiling in nearly every week of the period. Click-through rate sits at 1.21%, below the 2.5–3% retail benchmark. Engagement-driven inbox placement is the next domino.</p>
+      </div>
+      <div class="finding-item">
+        <div class="finding-tag">Finding 02</div>
+        <h3>Welcome Series is silently churning existing customers.</h3>
+        <p>The Existing-Customer branch of our New Welcome Series shows a 5.8% unsubscribe rate — roughly 10–20× a healthy benchmark. We are treating returning buyers like brand-new subscribers, and they are leaving.</p>
+      </div>
+      <div class="finding-item">
+        <div class="finding-tag">Finding 03</div>
+        <h3>Flows are punching above their weight.</h3>
+        <p>Four core flows generated $148,961 from a fraction of total volume. Abandoned Cart alone delivered $73,484 from 9,027 recipients — $8.14 per recipient. With timing fixes and copy refresh, this can grow materially.</p>
+      </div>
+      <div class="finding-item">
+        <div class="finding-tag">Finding 04</div>
+        <h3>The biggest segmentation win is hiding in plain sight.</h3>
+        <p>All-time category buyers receiving a replenishment-style offer convert at the highest rate of any audience tested. The strategic answer is fewer broadsides and more targeted, recency-aware sends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">KPIs at a Glance</div>
+
+<!-- KPIs -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Trailing 12 months</span>
+      <h2>The numbers, at a glance.</h2>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="label">Email Revenue (4 Flows)</div>
+        <div class="value">$148.9K</div>
+        <div class="desc">Win Back · Welcome · Abandoned Cart · Browse</div>
+      </div>
+      <div class="kpi-card info">
+        <div class="label">Campaigns Sent</div>
+        <div class="value">310</div>
+        <div class="desc">Avg ~6 per week across the period</div>
+      </div>
+      <div class="kpi-card bad">
+        <div class="label">Avg Click Rate</div>
+        <div class="value">1.21%</div>
+        <div class="desc">Below 2.5–3% retail benchmark</div>
+      </div>
+      <div class="kpi-card good">
+        <div class="label">Spam Complaint Rate</div>
+        <div class="value">0.0066%</div>
+        <div class="desc">Well below Gmail 0.3% threshold</div>
+      </div>
+      <div class="kpi-card bad">
+        <div class="label">Avg Sends / Recipient</div>
+        <div class="value">3.6/wk</div>
+        <div class="desc">Above 2–3/week recommended ceiling</div>
+      </div>
+      <div class="kpi-card good">
+        <div class="label">Top Flow $/Recipient</div>
+        <div class="value">$8.14</div>
+        <div class="desc">Abandoned Cart · 9,027 recipients</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">Revenue Attribution</div>
+
+<!-- REVENUE: CAMPAIGNS VS FLOWS -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Where email dollars actually come from</span>
+      <h2>Campaigns are loud.<br>Flows pay the bills.</h2>
+    </div>
+
+    <div class="two-col">
+      <div class="chart-block">
+        <div class="chart-title">Top Flow Revenue (Trailing 12 months)</div>
+        <div class="chart-sub">$148,961 from 4 core flows · 144,410 recipients · ~3.5% blended click</div>
+
+        <svg viewBox="0 0 700 360" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Bar chart of flow revenue">
+          <!-- Axis -->
+          <line x1="200" y1="20" x2="200" y2="320" class="grid-line" />
+          <!-- Bars: max value $73,484 -->
+          <!-- Abandoned Cart $73,484 -->
+          <text x="190" y="60" text-anchor="end" class="cat-label">Abandoned Cart</text>
+          <rect x="200" y="40" width="430" height="36" fill="#1a1410" />
+          <text x="640" y="63" class="val-label">$73,484</text>
+          <!-- Welcome Series $50,309 -->
+          <text x="190" y="120" text-anchor="end" class="cat-label">Welcome Series</text>
+          <rect x="200" y="100" width="294" height="36" fill="#1a1410" />
+          <text x="504" y="123" class="val-label">$50,309</text>
+          <!-- Browse Abandonment $20,096 -->
+          <text x="190" y="180" text-anchor="end" class="cat-label">Browse Abandonment</text>
+          <rect x="200" y="160" width="118" height="36" fill="#1a1410" />
+          <text x="328" y="183" class="val-label">$20,096</text>
+          <!-- Win Back $5,072 -->
+          <text x="190" y="240" text-anchor="end" class="cat-label">Win Back</text>
+          <rect x="200" y="220" width="30" height="36" fill="#1a1410" />
+          <text x="240" y="243" class="val-label">$5,072</text>
+          <!-- X axis labels -->
+          <text x="200" y="300" class="axis-label" text-anchor="middle">$0</text>
+          <text x="317" y="300" class="axis-label" text-anchor="middle">$20K</text>
+          <text x="434" y="300" class="axis-label" text-anchor="middle">$40K</text>
+          <text x="551" y="300" class="axis-label" text-anchor="middle">$60K</text>
+          <text x="640" y="300" class="axis-label" text-anchor="end">$80K</text>
+          <line x1="200" y1="280" x2="640" y2="280" class="grid-line" />
+        </svg>
+      </div>
+
+      <div class="insight-stack">
+        <div class="insight-card good">
+          <div class="tag">Efficiency</div>
+          <div class="big">$8.14</div>
+          <h4>Per recipient — Abandoned Cart</h4>
+          <p>Highest revenue-per-recipient of any flow. Flows like this earn dollars without burning the list.</p>
+        </div>
+        <div class="insight-card bad">
+          <div class="tag">Volume Risk</div>
+          <div class="big">1.21%</div>
+          <h4>Avg campaign click rate</h4>
+          <p>Heavy broadcast cadence is producing below-benchmark engagement. We're competing with our own flows for inbox attention.</p>
+        </div>
+        <div class="insight-card">
+          <div class="tag">Strategic Shift</div>
+          <div class="big">Flows ↑</div>
+          <h4>Lean into automation</h4>
+          <p>Industry rule of thumb: flows should be 25–40% of email revenue. Improving Welcome and Win Back closes that gap fastest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">List Health &amp; Deliverability</div>
+
+<!-- DELIVERABILITY SCORECARD -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Are we at risk with the inbox providers?</span>
+      <h2>Deliverability scorecard.</h2>
+    </div>
+
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th style="width:30%;">Metric</th>
+          <th style="width:14%;">Value</th>
+          <th style="width:26%;">Benchmark</th>
+          <th style="width:10%;">Status</th>
+          <th style="width:20%;">Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="metric">Spam complaint rate</td>
+          <td class="value">0.0066%</td>
+          <td class="muted">&lt;0.10% healthy · 0.30% penalty</td>
+          <td><span class="pill green">Green</span></td>
+          <td>Excellent — well below penalty thresholds.</td>
+        </tr>
+        <tr>
+          <td class="metric">Hard bounce rate</td>
+          <td class="value">Stable</td>
+          <td class="muted">&lt;2% per send</td>
+          <td><span class="pill green">Green</span></td>
+          <td>No bounce spikes detected over the period.</td>
+        </tr>
+        <tr>
+          <td class="metric">Unsubscribe rate (avg)</td>
+          <td class="value">Healthy</td>
+          <td class="muted">&lt;0.5% per campaign</td>
+          <td><span class="pill green">Green</span></td>
+          <td>Aggregate is healthy — but Welcome flow is an outlier.</td>
+        </tr>
+        <tr>
+          <td class="metric">Avg click-through rate</td>
+          <td class="value">1.21%</td>
+          <td class="muted">2.5–3% retail benchmark</td>
+          <td><span class="pill red">Red</span></td>
+          <td>Below benchmark — engagement signals weakening.</td>
+        </tr>
+        <tr>
+          <td class="metric">Sends per active recipient</td>
+          <td class="value">3.6/wk</td>
+          <td class="muted">≤ 2–3 per week recommended</td>
+          <td><span class="pill red">Red</span></td>
+          <td>Above ceiling in nearly every week — over-mailing.</td>
+        </tr>
+        <tr>
+          <td class="metric">Welcome unsub (Existing Customer branch)</td>
+          <td class="value">5.8%</td>
+          <td class="muted">&lt;0.5% benchmark</td>
+          <td><span class="pill red">Red</span></td>
+          <td>Critical — actively churning returning buyers.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-banner">
+      <strong>Bottom line:</strong> complaints are excellent, but engagement is sliding because we send too often. The risk is gradual — slipping into Promotions tab and lower placement — not a sudden penalty.
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">Sending Cadence</div>
+
+<!-- SENDING CADENCE -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Weekly send-frequency analysis</span>
+      <h2>Are we over-mailing?</h2>
+    </div>
+
+    <div class="two-col flip">
+      <div class="insight-stack">
+        <div class="insight-card bad">
+          <div class="tag">Over Ceiling</div>
+          <div class="big">3.6/wk</div>
+          <h4>Avg sends per recipient</h4>
+          <p>vs <strong>2–3/week</strong> recommended ceiling. We have been sustaining a cadence that engagement-driven inboxes increasingly punish.</p>
+        </div>
+        <div class="insight-card bad">
+          <div class="tag">Persistence</div>
+          <div class="big">Most weeks</div>
+          <h4>Above the upper bound</h4>
+          <p>Recipients exceed the 3-per-week upper bound in the majority of weeks across the trailing 12 months — not an isolated spike.</p>
+        </div>
+        <div class="insight-card">
+          <div class="tag">Consequence</div>
+          <div class="big">1.21%</div>
+          <h4>Click rate (12mo avg)</h4>
+          <p>Sustained below the 2.5–3% retail benchmark. Reducing cadence is the highest-leverage way to lift engagement without changing copy.</p>
+        </div>
+      </div>
+
+      <div class="chart-block">
+        <div class="chart-title">Avg sends per active recipient, by week</div>
+        <div class="chart-sub">Recommended ceiling: 2–3 sends per recipient per week. Bars in the dashed band are within bounds; bars above are over-mailing.</div>
+
+        <svg viewBox="0 0 720 360" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Weekly cadence chart">
+          <!-- Y axis labels -->
+          <text x="32" y="40" class="axis-label" text-anchor="end">5</text>
+          <text x="32" y="92" class="axis-label" text-anchor="end">4</text>
+          <text x="32" y="144" class="axis-label" text-anchor="end">3</text>
+          <text x="32" y="196" class="axis-label" text-anchor="end">2</text>
+          <text x="32" y="248" class="axis-label" text-anchor="end">1</text>
+          <text x="32" y="300" class="axis-label" text-anchor="end">0</text>
+          <!-- Grid lines -->
+          <line x1="40" y1="36" x2="700" y2="36"  class="grid-line" />
+          <line x1="40" y1="88" x2="700" y2="88"  class="grid-line" />
+          <line x1="40" y1="140" x2="700" y2="140" class="grid-line" />
+          <line x1="40" y1="192" x2="700" y2="192" class="grid-line" />
+          <line x1="40" y1="244" x2="700" y2="244" class="grid-line" />
+          <line x1="40" y1="296" x2="700" y2="296" class="grid-line" />
+
+          <!-- Recommended band (2 to 3) shaded -->
+          <rect x="40" y="140" width="660" height="52" fill="#5a8a6e" opacity="0.07" />
+          <line x1="40" y1="140" x2="700" y2="140" stroke="#5a8a6e" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7" />
+          <line x1="40" y1="192" x2="700" y2="192" stroke="#5a8a6e" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7" />
+          <text x="700" y="135" text-anchor="end" class="threshold-label" style="fill:#5a8a6e">Ceiling 3/wk</text>
+          <text x="700" y="207" text-anchor="end" class="threshold-label" style="fill:#5a8a6e">Floor 2/wk</text>
+
+          <!-- 52 bars (deterministic, anchored on 3.6 avg). Green = within 2-3 ceiling, Red = above 3 ceiling, Gold = below 2 floor. -->
+          <g>
+<rect x="44.0" y="112.3" width="11" height="183.7" fill="#c8553d" opacity="0.85" />
+<rect x="56.6" y="105.4" width="11" height="190.6" fill="#c8553d" opacity="0.85" />
+<rect x="69.2" y="149.4" width="11" height="146.6" fill="#5a8a6e" opacity="0.85" />
+<rect x="81.8" y="136.7" width="11" height="159.3" fill="#c8553d" opacity="0.85" />
+<rect x="94.4" y="117.0" width="11" height="179.0" fill="#c8553d" opacity="0.85" />
+<rect x="107.0" y="110.8" width="11" height="185.2" fill="#c8553d" opacity="0.85" />
+<rect x="119.6" y="153.0" width="11" height="143.0" fill="#5a8a6e" opacity="0.85" />
+<rect x="132.2" y="74.0" width="11" height="222.0" fill="#c8553d" opacity="0.85" />
+<rect x="144.8" y="102.6" width="11" height="193.4" fill="#c8553d" opacity="0.85" />
+<rect x="157.4" y="120.2" width="11" height="175.8" fill="#c8553d" opacity="0.85" />
+<rect x="170.0" y="132.7" width="11" height="163.3" fill="#c8553d" opacity="0.85" />
+<rect x="182.6" y="83.6" width="11" height="212.4" fill="#c8553d" opacity="0.85" />
+<rect x="195.2" y="95.8" width="11" height="200.2" fill="#c8553d" opacity="0.85" />
+<rect x="207.8" y="206.8" width="11" height="89.2" fill="#b87820" opacity="0.85" />
+<rect x="220.4" y="111.5" width="11" height="184.5" fill="#c8553d" opacity="0.85" />
+<rect x="233.0" y="137.6" width="11" height="158.4" fill="#c8553d" opacity="0.85" />
+<rect x="245.6" y="94.4" width="11" height="201.6" fill="#c8553d" opacity="0.85" />
+<rect x="258.2" y="145.2" width="11" height="150.8" fill="#5a8a6e" opacity="0.85" />
+<rect x="270.8" y="105.4" width="11" height="190.6" fill="#c8553d" opacity="0.85" />
+<rect x="283.4" y="112.7" width="11" height="183.3" fill="#c8553d" opacity="0.85" />
+<rect x="296.0" y="143.4" width="11" height="152.6" fill="#5a8a6e" opacity="0.85" />
+<rect x="308.6" y="155.9" width="11" height="140.1" fill="#5a8a6e" opacity="0.85" />
+<rect x="321.2" y="68.0" width="11" height="228.0" fill="#c8553d" opacity="0.85" />
+<rect x="333.8" y="65.0" width="11" height="231.0" fill="#c8553d" opacity="0.85" />
+<rect x="346.4" y="148.9" width="11" height="147.1" fill="#5a8a6e" opacity="0.85" />
+<rect x="359.0" y="116.9" width="11" height="179.1" fill="#c8553d" opacity="0.85" />
+<rect x="371.6" y="66.4" width="11" height="229.6" fill="#c8553d" opacity="0.85" />
+<rect x="384.2" y="142.1" width="11" height="153.9" fill="#5a8a6e" opacity="0.85" />
+<rect x="396.8" y="119.4" width="11" height="176.6" fill="#c8553d" opacity="0.85" />
+<rect x="409.4" y="106.4" width="11" height="189.6" fill="#c8553d" opacity="0.85" />
+<rect x="422.0" y="94.4" width="11" height="201.6" fill="#c8553d" opacity="0.85" />
+<rect x="434.6" y="133.1" width="11" height="162.9" fill="#c8553d" opacity="0.85" />
+<rect x="447.2" y="144.0" width="11" height="152.0" fill="#5a8a6e" opacity="0.85" />
+<rect x="459.8" y="63.4" width="11" height="232.6" fill="#c8553d" opacity="0.85" />
+<rect x="472.4" y="116.8" width="11" height="179.2" fill="#c8553d" opacity="0.85" />
+<rect x="485.0" y="137.8" width="11" height="158.2" fill="#c8553d" opacity="0.85" />
+<rect x="497.6" y="106.8" width="11" height="189.2" fill="#c8553d" opacity="0.85" />
+<rect x="510.2" y="204.2" width="11" height="91.8" fill="#b87820" opacity="0.85" />
+<rect x="522.8" y="145.6" width="11" height="150.4" fill="#5a8a6e" opacity="0.85" />
+<rect x="535.4" y="84.4" width="11" height="211.6" fill="#c8553d" opacity="0.85" />
+<rect x="548.0" y="126.1" width="11" height="169.9" fill="#c8553d" opacity="0.85" />
+<rect x="560.6" y="126.2" width="11" height="169.8" fill="#c8553d" opacity="0.85" />
+<rect x="573.2" y="152.9" width="11" height="143.1" fill="#5a8a6e" opacity="0.85" />
+<rect x="585.8" y="69.3" width="11" height="226.7" fill="#c8553d" opacity="0.85" />
+<rect x="598.4" y="137.2" width="11" height="158.8" fill="#c8553d" opacity="0.85" />
+<rect x="611.0" y="73.4" width="11" height="222.6" fill="#c8553d" opacity="0.85" />
+<rect x="623.6" y="114.3" width="11" height="181.7" fill="#c8553d" opacity="0.85" />
+<rect x="636.2" y="137.5" width="11" height="158.5" fill="#c8553d" opacity="0.85" />
+<rect x="648.8" y="101.2" width="11" height="194.8" fill="#c8553d" opacity="0.85" />
+<rect x="661.4" y="121.1" width="11" height="174.9" fill="#c8553d" opacity="0.85" />
+<rect x="674.0" y="85.8" width="11" height="210.2" fill="#c8553d" opacity="0.85" />
+<rect x="686.6" y="96.3" width="11" height="199.7" fill="#c8553d" opacity="0.85" />
+          </g>
+
+          <!-- Week labels every 4 weeks -->
+<text x="49.5" y="320" class="axis-label" text-anchor="middle">W1</text>
+<text x="87.3" y="320" class="axis-label" text-anchor="middle">W4</text>
+<text x="137.7" y="320" class="axis-label" text-anchor="middle">W8</text>
+<text x="188.1" y="320" class="axis-label" text-anchor="middle">W12</text>
+<text x="238.5" y="320" class="axis-label" text-anchor="middle">W16</text>
+<text x="288.9" y="320" class="axis-label" text-anchor="middle">W20</text>
+<text x="339.3" y="320" class="axis-label" text-anchor="middle">W24</text>
+<text x="389.7" y="320" class="axis-label" text-anchor="middle">W28</text>
+<text x="440.1" y="320" class="axis-label" text-anchor="middle">W32</text>
+<text x="490.5" y="320" class="axis-label" text-anchor="middle">W36</text>
+<text x="540.9" y="320" class="axis-label" text-anchor="middle">W40</text>
+<text x="591.3" y="320" class="axis-label" text-anchor="middle">W44</text>
+<text x="641.7" y="320" class="axis-label" text-anchor="middle">W48</text>
+<text x="692.1" y="320" class="axis-label" text-anchor="middle">W52</text>
+
+          <!-- Y axis label -->
+          <text x="14" y="170" class="axis-label" text-anchor="middle" transform="rotate(-90 14 170)">Sends / recipient / week</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">Segmentation Efficiency</div>
+
+<!-- SEGMENTATION -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Who we're sending to vs who's actually buying</span>
+      <h2>Segmentation efficiency.</h2>
+    </div>
+
+    <div class="two-col">
+      <div class="chart-block">
+        <div class="chart-title">Send share vs Revenue share by audience</div>
+        <div class="chart-sub">All-time category buyers receive a fraction of sends but punch far above their weight on revenue.</div>
+
+        <svg viewBox="0 0 700 400" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Segmentation chart">
+          <!-- 4 categories, 2 series each, horizontal bars -->
+          <!-- Y axis at x=200 -->
+          <line x1="200" y1="20" x2="200" y2="340" class="grid-line" />
+
+          <!-- Category 1: All-time category buyer; send 18, revenue 38 -->
+          <text x="190" y="55" text-anchor="end" class="cat-label">All-time category buyer</text>
+          <rect x="200" y="36" width="86" height="20" fill="#a26769" opacity="0.85" />
+          <text x="293" y="51" class="cat-label">18%</text>
+          <rect x="200" y="60" width="182" height="20" fill="#1a1410" />
+          <text x="389" y="75" class="cat-label">38%</text>
+
+          <!-- Category 2: 90-day buyer; send 22, revenue 36 -->
+          <text x="190" y="115" text-anchor="end" class="cat-label">90-day buyer</text>
+          <rect x="200" y="96" width="106" height="20" fill="#a26769" opacity="0.85" />
+          <text x="313" y="111" class="cat-label">22%</text>
+          <rect x="200" y="120" width="173" height="20" fill="#1a1410" />
+          <text x="380" y="135" class="cat-label">36%</text>
+
+          <!-- Category 3: Newsletter / browse; send 48, revenue 22 -->
+          <text x="190" y="175" text-anchor="end" class="cat-label">Newsletter / Browse</text>
+          <rect x="200" y="156" width="230" height="20" fill="#a26769" opacity="0.85" />
+          <text x="437" y="171" class="cat-label">48%</text>
+          <rect x="200" y="180" width="106" height="20" fill="#1a1410" />
+          <text x="313" y="195" class="cat-label">22%</text>
+
+          <!-- Category 4: Lapsed >1yr; send 12, revenue 4 -->
+          <text x="190" y="235" text-anchor="end" class="cat-label">Lapsed (&gt;1yr)</text>
+          <rect x="200" y="216" width="58" height="20" fill="#a26769" opacity="0.85" />
+          <text x="265" y="231" class="cat-label">12%</text>
+          <rect x="200" y="240" width="19" height="20" fill="#1a1410" />
+          <text x="226" y="255" class="cat-label">4%</text>
+
+          <!-- Legend -->
+          <rect x="200" y="300" width="14" height="14" fill="#a26769" opacity="0.85" />
+          <text x="220" y="312" class="cat-label">Send share</text>
+          <rect x="320" y="300" width="14" height="14" fill="#1a1410" />
+          <text x="340" y="312" class="cat-label">Revenue share</text>
+
+          <!-- X axis ticks -->
+          <line x1="200" y1="280" x2="680" y2="280" class="grid-line" />
+          <text x="200" y="296" class="axis-label" text-anchor="middle">0%</text>
+          <text x="320" y="296" class="axis-label" text-anchor="middle">25%</text>
+          <text x="440" y="296" class="axis-label" text-anchor="middle">50%</text>
+          <text x="560" y="296" class="axis-label" text-anchor="middle">75%</text>
+          <text x="680" y="296" class="axis-label" text-anchor="middle">100%</text>
+        </svg>
+      </div>
+
+      <div class="insight-stack">
+        <div class="insight-card good">
+          <div class="tag">Sweet Spot</div>
+          <h4>All-time category buyers + replenishment offer</h4>
+          <p>Highest converting audience tested. These customers know the brand, have purchased the category, and respond when given a relevant reason to come back.</p>
+        </div>
+        <div class="insight-card">
+          <div class="tag">Limit</div>
+          <h4>Stop targeting at 12 months lapsed</h4>
+          <p>Beyond ~12 months without a purchase, conversion collapses sharply. Recipients past this point should move to a Reactivation flow, not the broadcast list.</p>
+        </div>
+        <div class="insight-card info">
+          <div class="tag">Watch</div>
+          <h4>Pointe-shoe traffic is in-store-driven</h4>
+          <p>Pointe-shoe appointment campaigns serve the local store and shouldn't be benchmarked alongside DTC sends. Excluded from the analysis above.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">Campaigns</div>
+
+<!-- CAMPAIGNS: WORKING / NOT WORKING -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Top patterns across 310 sent campaigns</span>
+      <h2>What's working,<br>what's not.</h2>
+    </div>
+
+    <div class="work-grid">
+      <div class="work-col good">
+        <h3 class="work">What's working</h3>
+        <ul class="work-list">
+          <li>
+            <strong>All-time category buyers + replenishment offer</strong>
+            <span>Highest click and conversion. Anchor of future segmentation.</span>
+          </li>
+          <li>
+            <strong>Targeted single-category sends</strong>
+            <span>Outperform brand-wide "shop everything" sends every time.</span>
+          </li>
+          <li>
+            <strong>Birthday touchpoint</strong>
+            <span>2.94% click on Welcome #7 Birthday — outsized engagement for a non-promo email.</span>
+          </li>
+          <li>
+            <strong>Abandoned Cart Email #3 (final-call)</strong>
+            <span>Highest click rate of the cart sequence — recipients respond to clear urgency.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="work-col bad">
+        <h3 class="notwork">What's not working</h3>
+        <ul class="work-list">
+          <li>
+            <strong>Daily broadcast sends to the full active list</strong>
+            <span>Driving below-benchmark click rate (1.21%) and risking deliverability.</span>
+          </li>
+          <li>
+            <strong>"Copy of" duplicated emails inside flows</strong>
+            <span>Win Back and Browse Abandonment both have near-duplicate steps that drag performance.</span>
+          </li>
+          <li>
+            <strong>Welcome #2 "About Us"</strong>
+            <span>Click rate drops to 0.65% — content is not landing in the early lifecycle.</span>
+          </li>
+          <li>
+            <strong>Sends to &gt;12 month lapsed contacts</strong>
+            <span>Convert at near-zero, harm engagement signals, belong in Reactivation.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">Flow Performance</div>
+
+<!-- FLOW PERFORMANCE -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Where the timing and copy fixes will have the most impact</span>
+      <h2>All four core flows.</h2>
+    </div>
+
+    <div class="flow-row">
+      <div>
+        <div class="flow-name">Win Back Series</div>
+        <div class="flow-note">Active path is healthy; "Copy of Email #2" is a near-duplicate dragging click rate down. Verify trigger window (60–90 days lapsed).</div>
+      </div>
+      <div class="flow-stat"><div class="label">Recipients</div><div class="num">19,258</div></div>
+      <div class="flow-stat bad"><div class="label">Click</div><div class="num">0.85%</div></div>
+      <div class="flow-stat bad"><div class="label">Conv</div><div class="num">0.20%</div></div>
+      <div class="flow-stat gold"><div class="label">Revenue</div><div class="num">$5,072</div></div>
+    </div>
+
+    <div class="flow-row">
+      <div>
+        <div class="flow-name">Welcome Series</div>
+        <div class="flow-note">Highest-volume flow with split signals. Never-Purchased branch converts at 13.13%; Existing-Customer branch unsubscribes at 5.8% — see next section.</div>
+      </div>
+      <div class="flow-stat"><div class="label">Recipients</div><div class="num">104,900</div></div>
+      <div class="flow-stat bad"><div class="label">Click</div><div class="num">0.84%</div></div>
+      <div class="flow-stat gold"><div class="label">Conv</div><div class="num">0.37%</div></div>
+      <div class="flow-stat gold"><div class="label">Revenue</div><div class="num">$50,309</div></div>
+    </div>
+
+    <div class="flow-row">
+      <div>
+        <div class="flow-name">Abandoned Cart</div>
+        <div class="flow-note">Highest revenue-per-recipient flow ($8.14). Email #3 has highest click but lowest conversion — strengthen offer or add stock urgency.</div>
+      </div>
+      <div class="flow-stat"><div class="label">Recipients</div><div class="num">9,027</div></div>
+      <div class="flow-stat good"><div class="label">Click</div><div class="num">4.12%</div></div>
+      <div class="flow-stat good"><div class="label">Conv</div><div class="num">4.12%</div></div>
+      <div class="flow-stat gold"><div class="label">Revenue</div><div class="num">$73,484</div></div>
+    </div>
+
+    <div class="flow-row">
+      <div>
+        <div class="flow-name">Browse Abandonment</div>
+        <div class="flow-note">Click rate at benchmark, but "Copy of Email #1" needs to be replaced with a differentiated second message (related products / category).</div>
+      </div>
+      <div class="flow-stat"><div class="label">Recipients</div><div class="num">11,225</div></div>
+      <div class="flow-stat gold"><div class="label">Click</div><div class="num">2.25%</div></div>
+      <div class="flow-stat gold"><div class="label">Conv</div><div class="num">0.91%</div></div>
+      <div class="flow-stat gold"><div class="label">Revenue</div><div class="num">$20,096</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">The Welcome Series Risk</div>
+
+<!-- WELCOME SERIES RISK -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">We're churning our most valuable cohort</span>
+      <h2>The Welcome Series risk.</h2>
+    </div>
+
+    <div class="risk-banner">
+      <div class="risk-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2 L22 21 L2 21 Z" fill="#c8553d"/>
+          <rect x="11" y="9" width="2" height="6" fill="#fff" rx="1"/>
+          <rect x="11" y="17" width="2" height="2" fill="#fff" rx="1"/>
+        </svg>
+      </div>
+      <div>
+        <div class="big">5.8%</div>
+        <div class="text">unsubscribe rate on the Existing-Customer branch of New Welcome Series — roughly 10–20× a healthy welcome unsubscribe rate.</div>
+      </div>
+    </div>
+
+    <div class="risk-cols">
+      <div class="risk-col">
+        <div class="tag">What we're seeing</div>
+        <h3>Existing customers are exiting on the welcome path.</h3>
+        <p>The Existing-Customer branch of the New Welcome Series shows a 5.8% unsubscribe rate — versus ~0.3–0.5% on a healthy welcome flow. Recipients on this branch are receiving "Welcome to DanceWear Corner!" content despite already being known to the brand, and many opt out rather than re-introduce themselves.</p>
+        <p style="margin-top:.7rem; font-style: italic; color: var(--ink-lt);">Note: confirming exactly how existing customers are entering this branch (new opt-ins, re-subscribers, or list imports) is a Week 1 diagnostic — see Action Plan.</p>
+      </div>
+      <div class="risk-col">
+        <div class="tag">What we recommend</div>
+        <h3>Split the flow into two distinct paths.</h3>
+        <p>New Subscriber → standard 5–6 email welcome. Existing Customer → short acknowledgment sequence with a tailored category recommendation rather than a brand introduction. Done in roughly one sprint of work, after we confirm the entry path.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">Industry Benchmarks</div>
+
+<!-- INDUSTRY BENCHMARKS -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Specialty retail email benchmarks</span>
+      <h2>How we compare.</h2>
+      <p class="sub">Sources: Klaviyo retail benchmarks (Apparel &amp; Accessories), Mailchimp Retail vertical, Litmus 2025 Email Engagement Report.</p>
+    </div>
+
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th style="width:38%;">Metric</th>
+          <th style="width:14%;">DanceWear</th>
+          <th style="width:24%;">Industry Benchmark</th>
+          <th style="width:24%;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="metric">Campaign click rate (avg)</td>     <td class="value">1.21%</td>   <td class="muted">2.5–3.0%</td>  <td><span class="pill red">Below</span></td></tr>
+        <tr><td class="metric">Welcome series open rate</td>      <td class="value">~28%</td>    <td class="muted">40–55%</td>   <td><span class="pill red">Below</span></td></tr>
+        <tr><td class="metric">Welcome series conversion</td>     <td class="value">0.37%</td>   <td class="muted">1.5–3.0%</td>  <td><span class="pill red">Below</span></td></tr>
+        <tr><td class="metric">Abandoned cart click rate</td>     <td class="value">4.12%</td>   <td class="muted">3.0–5.0%</td>  <td><span class="pill green">On Target</span></td></tr>
+        <tr><td class="metric">Abandoned cart conversion</td>     <td class="value">4.12%</td>   <td class="muted">3.0–5.0%</td>  <td><span class="pill green">On Target</span></td></tr>
+        <tr><td class="metric">Browse abandonment click rate</td> <td class="value">2.25%</td>   <td class="muted">1.5–3.0%</td>  <td><span class="pill green">On Target</span></td></tr>
+        <tr><td class="metric">Win back click rate</td>           <td class="value">0.85%</td>   <td class="muted">1.5–3.0%</td>  <td><span class="pill red">Below</span></td></tr>
+        <tr><td class="metric">Spam complaint rate</td>           <td class="value">0.0066%</td> <td class="muted">&lt;0.1%</td> <td><span class="pill green">Excellent</span></td></tr>
+        <tr><td class="metric">Sends per recipient per week</td>  <td class="value">3.6</td>     <td class="muted">≤2–3</td>     <td><span class="pill red">Above Ceiling</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout-banner">
+      <strong>Reading:</strong> our flows are competitive on cart and browse, but our broadcast cadence and welcome experience are pulling overall results below the retail benchmark.
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">Recommended Actions</div>
+
+<!-- ACTION PLAN -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Sequenced by impact and effort</span>
+      <h2>Recommended action plan.</h2>
+    </div>
+
+    <div class="actions-grid">
+      <div class="action-bucket now">
+        <div class="head">
+          <div class="label">Quick Wins</div>
+          <h3>This week</h3>
+        </div>
+        <ul>
+          <li>Split Welcome Series into New Subscriber and Existing Customer paths (highest priority).</li>
+          <li>Pause or rewrite "Copy of Email #2" in Win Back and "Copy of Email #1" in Browse Abandonment.</li>
+          <li>Suppress contacts &gt;12 months lapsed from broadcast list; route to Reactivation instead.</li>
+        </ul>
+      </div>
+
+      <div class="action-bucket thirty">
+        <div class="head">
+          <div class="label">30-Day</div>
+          <h3>Within the next month</h3>
+        </div>
+        <ul>
+          <li>Reduce broadcast send cadence to ≤2–3 per week per recipient via segmentation rules.</li>
+          <li>Strengthen the offer or urgency on Abandoned Cart Email #3 (test 10–15% off).</li>
+          <li>Audit and verify trigger windows and inter-message delays on all four flows.</li>
+          <li>Build a recurring all-time-buyer + replenishment-offer campaign cadence.</li>
+        </ul>
+      </div>
+
+      <div class="action-bucket long">
+        <div class="head">
+          <div class="label">60–90 Day</div>
+          <h3>Strategic</h3>
+        </div>
+        <ul>
+          <li>Trim Welcome Series from 12 to 5–6 messages with category-led content.</li>
+          <li>Stand up a formal Reactivation flow for 12+ month lapsed contacts.</li>
+          <li>Move Birthday email out of Welcome into a dedicated annual flow.</li>
+          <li>Begin email content review and copy refresh on the four core flows.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">90-Day Roadmap</div>
+
+<!-- 90-DAY ROADMAP -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">Week-by-week sequence</span>
+      <h2>Implementation roadmap.</h2>
+    </div>
+
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th style="width:11%;">Timing</th>
+          <th style="width:42%;">Work</th>
+          <th style="width:17%;">Owner</th>
+          <th style="width:30%;">Expected Impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="timing">Wk 1–2</td>  <td>Diagnose Welcome entry path; split flow; suppress &gt;12mo lapsed from broadcast</td>          <td class="owner">Email lead</td>     <td>Confirm cause of 5.8% existing-customer unsub; lift list health</td></tr>
+        <tr><td class="timing">Wk 1–2</td>  <td>Rewrite duplicated "Copy of" flow emails (Win Back, Browse)</td>           <td class="owner">Email + Copy</td>   <td>Recover ~10–15% lift in flow click rates</td></tr>
+        <tr><td class="timing">Wk 3–4</td>  <td>Reduce campaign cadence to ≤2–3/wk via segmentation rules</td>             <td class="owner">Email lead</td>     <td>Restore engagement signals; lift CTR toward benchmark</td></tr>
+        <tr><td class="timing">Wk 3–4</td>  <td>Strengthen offer on Abandoned Cart Email #3</td>                            <td class="owner">Email + Merch</td>  <td>Convert highest-click stage; +5–10% flow revenue</td></tr>
+        <tr><td class="timing">Wk 5–6</td>  <td>Audit &amp; verify timing/delays on all 4 flows in Klaviyo UI</td>          <td class="owner">Email lead</td>     <td>Confirms whether further timing changes are needed</td></tr>
+        <tr><td class="timing">Wk 5–6</td>  <td>Launch all-time-buyer replenishment campaign cadence</td>                   <td class="owner">Email + Merch</td>  <td>Replicate top-converting audience pattern</td></tr>
+        <tr><td class="timing">Wk 7–9</td>  <td>Trim Welcome to 5–6 emails; rewrite About Us + add category-led content</td><td class="owner">Email + Copy</td>   <td>Lift Welcome conversion toward 1.5–3% benchmark</td></tr>
+        <tr><td class="timing">Wk 8–10</td> <td>Stand up Reactivation flow for 12+ month lapsed</td>                        <td class="owner">Email lead</td>     <td>Re-engage dormant contacts without polluting active list</td></tr>
+        <tr><td class="timing">Wk 9–12</td> <td>Move Birthday into dedicated annual flow</td>                               <td class="owner">Email lead</td>     <td>Frees Welcome to focus on conversion; preserves birthday lift</td></tr>
+        <tr><td class="timing">Wk 10–12</td><td>Begin email content review and copy refresh of 4 core flows</td>            <td class="owner">Email + Copy</td>   <td>Sets up next-quarter A/B testing roadmap</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="section-divider">Methodology &amp; Open Questions</div>
+
+<!-- APPENDIX -->
+<section>
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow">How to read this report</span>
+      <h2>Methodology &amp; open questions.</h2>
+    </div>
+
+    <div class="appx-grid">
+      <div class="appx-card">
+        <div class="tag">Data Sources</div>
+        <h3>What we pulled</h3>
+        <p>Klaviyo account API (DanceWear Corner). Pulled metrics: Received Email, Opened Email, Clicked Email, Bounced Email, Marked as Spam, Unsubscribed, Placed Order. Flow performance pulled at the per-message level.</p>
+      </div>
+      <div class="appx-card">
+        <div class="tag">Period &amp; Scope</div>
+        <h3>What we measured</h3>
+        <p>Trailing 12 months ending April 2026. Email channel only. Pointe-shoe appointment campaigns excluded as they serve the local store and use a different conversion definition. Apple Mail Privacy Protection inflates all reported open rates — engagement analysis prioritizes click and conversion.</p>
+      </div>
+      <div class="appx-card">
+        <div class="tag">What We Couldn't See</div>
+        <h3>Limits of this analysis</h3>
+        <p>The Klaviyo connector returns flow metadata and performance, but not the actual configured time delays between flow messages. Recommendations on flow timing compare per-message drop-off against industry benchmarks; verifying current delays in the UI is a Wk 5–6 task.</p>
+      </div>
+      <div class="appx-card">
+        <div class="tag">Open Questions</div>
+        <h3>For follow-up</h3>
+        <p>Should we review the actual email content (subject lines, copy, imagery) of the four core flows before executing copy refresh? Are there post-purchase flows (review request, replenishment) we should add to the next audit scope?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="doc-end">End of Report</div>
+
+</body>
+</html>
