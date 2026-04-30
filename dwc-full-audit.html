@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Dancewear Corner — Complete Site & Marketing Audit 2026</title>
+<script>
+(function() {
+  const PASSWORD = "dwc2026";
+  const SESSION_KEY = "dwc_audit_auth";
+  function showGate() {
+    document.documentElement.style.visibility = "hidden";
+    document.addEventListener("DOMContentLoaded", function() {
+      if (sessionStorage.getItem(SESSION_KEY) === "true") {
+        document.documentElement.style.visibility = "visible";
+        return;
+      }
+      document.documentElement.style.visibility = "visible";
+      const gate = document.createElement("div");
+      gate.id = "pw-gate";
+      gate.style.cssText = "position:fixed;inset:0;background:#f8f7f5;display:flex;align-items:center;justify-content:center;z-index:99999;font-family:'DM Sans',sans-serif";
+      gate.innerHTML = `
+        <div style="background:#fff;border:1px solid #e0deda;border-radius:16px;padding:2.5rem 2.5rem 2rem;max-width:380px;width:90%;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,.06)">
+          <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#888;margin-bottom:1rem">Confidential Document</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.6rem;font-weight:400;color:#111;margin-bottom:.5rem">Dancewear Corner</div>
+          <div style="font-size:.85rem;color:#555;margin-bottom:1.8rem">Site & Marketing Audit 2026</div>
+          <input id="pw-input" type="password" placeholder="Enter password" style="width:100%;border:1px solid #e0deda;border-radius:8px;padding:.7rem 1rem;font-size:.9rem;font-family:inherit;color:#111;outline:none;margin-bottom:.75rem;box-sizing:border-box">
+          <button id="pw-btn" style="width:100%;background:#c8553d;color:#fff;border:none;border-radius:8px;padding:.75rem;font-size:.9rem;font-weight:600;cursor:pointer;font-family:inherit">Access Document →</button>
+          <div id="pw-error" style="color:#c0392b;font-size:.78rem;margin-top:.6rem;min-height:1rem"></div>
+        </div>`;
+      document.body.appendChild(gate);
+      const input = document.getElementById("pw-input");
+      const btn = document.getElementById("pw-btn");
+      const error = document.getElementById("pw-error");
+      function attempt() {
+        if (input.value === PASSWORD) {
+          sessionStorage.setItem(SESSION_KEY, "true");
+          gate.style.opacity = "0";
+          gate.style.transition = "opacity .3s ease";
+          setTimeout(() => gate.remove(), 300);
+        } else {
+          error.textContent = "Incorrect password. Please try again.";
+          input.value = "";
+          input.focus();
+        }
+      }
+      btn.addEventListener("click", attempt);
+      input.addEventListener("keydown", function(e) { if (e.key === "Enter") attempt(); });
+      input.focus();
+    });
+  }
+  showGate();
+})();
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap');
+:root {
+  --black:#111; --gray-dk:#2d2d2d; --gray-md:#555; --gray-lt:#888; --gray-border:#e0deda;
+  --bg:#f8f7f5; --white:#fff;
+  --red:#c0392b; --red-lt:#fdecea;
+  --amber:#b5621e; --amber-lt:#fdf0e6;
+  --green:#2d6a4f; --green-lt:#e8f4f0;
+  --blue:#1e4d8c; --blue-lt:#eaf0fa;
+  --accent:#c8553d; --accent-lt:#f4ede9;
+  --purple:#6b4fa8; --purple-lt:#f0edf9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.75;color:var(--black);background:var(--white);max-width:1020px;margin:0 auto;padding:0 2rem 8rem}
+
+/* COVER */
+.cover{padding:5rem 0 3.5rem;border-bottom:1px solid var(--gray-border);margin-bottom:3.5rem}
+.cover-eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-lt);margin-bottom:1.4rem}
+.cover h1{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:400;line-height:1.1;margin-bottom:1.4rem}
+.cover h1 em{color:var(--accent);font-style:normal}
+.cover-sub{font-size:.97rem;color:var(--gray-md);max-width:600px;margin-bottom:2rem;line-height:1.7}
+.cover-stats{display:flex;gap:2.5rem;flex-wrap:wrap}
+.cover-stat{display:flex;flex-direction:column;gap:.15rem}
+.cover-stat .val{font-size:1.5rem;font-weight:600;color:var(--black);font-family:'DM Serif Display',serif}
+.cover-stat .lbl{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-lt)}
+
+/* TOC */
+.toc{background:var(--bg);border:1px solid var(--gray-border);border-radius:14px;padding:2rem;margin-bottom:4rem}
+.toc-heading{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--gray-lt);margin-bottom:1rem}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:.25rem 2rem}
+.toc a{font-size:.88rem;color:var(--gray-md);text-decoration:none;display:flex;align-items:baseline;gap:.5rem;padding:.3rem 0;border-bottom:1px dashed transparent}
+.toc a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.toc-n{font-size:.75rem;font-weight:700;color:var(--gray-border);min-width:1.5rem}
+
+/* SECTIONS */
+.section{margin-bottom:5rem}
+.sec-label{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:20px;margin-bottom:1.3rem;font-weight:600}
+.sec-label.red{color:var(--red);background:var(--red-lt)}
+.sec-label.amber{color:var(--amber);background:var(--amber-lt)}
+.sec-label.green{color:var(--green);background:var(--green-lt)}
+.sec-label.blue{color:var(--blue);background:var(--blue-lt)}
+.sec-label.purple{color:var(--purple);background:var(--purple-lt)}
+.sec-label.default{color:var(--accent);background:var(--accent-lt)}
+h2{font-family:'DM Serif Display',serif;font-size:1.85rem;font-weight:400;line-height:1.2;margin-bottom:1.2rem}
+h3{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gray-lt);margin:2.5rem 0 .9rem;padding-bottom:.5rem;border-bottom:1.5px solid var(--gray-border)}
+h4{font-size:.9rem;font-weight:600;color:var(--black);margin-bottom:.4rem;line-height:1.3}
+p{color:var(--gray-dk);margin-bottom:1rem;font-size:.94rem}
+
+/* CALLOUT */
+.callout{border-left:3px solid var(--accent);background:var(--accent-lt);border-radius:0 10px 10px 0;padding:1rem 1.3rem;margin:1.5rem 0;font-size:.88rem;color:var(--gray-dk)}
+.callout.green{border-left-color:var(--green);background:var(--green-lt)}
+.callout.blue{border-left-color:var(--blue);background:var(--blue-lt)}
+.callout.amber{border-left-color:var(--amber);background:var(--amber-lt)}
+.callout strong{color:var(--black)}
+
+/* ISSUE CARDS */
+.issue-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:1rem;margin:1.5rem 0}
+.icard{border:1px solid var(--gray-border);border-radius:10px;padding:1.2rem 1.4rem;background:var(--white);position:relative}
+.icard .sev{position:absolute;top:1.1rem;right:1.1rem;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .6rem;border-radius:20px}
+.sev.crit{background:#fdecea;color:#c0392b}
+.sev.high{background:#fdf0e6;color:#b5621e}
+.sev.med{background:#eaf0fa;color:#1e4d8c}
+.sev.low{background:var(--green-lt);color:var(--green)}
+.icard p{font-size:.83rem;color:var(--gray-lt);line-height:1.6;margin:0}
+.icard h4{padding-right:4.5rem}
+
+/* REC LIST */
+.recs{list-style:none;margin:1rem 0}
+.recs li{display:flex;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--gray-border);align-items:flex-start}
+.recs li:last-child{border-bottom:none}
+.rn{flex-shrink:0;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:.73rem;font-weight:700;color:var(--gray-lt);margin-top:.1rem}
+.recs li strong{display:block;font-size:.88rem;font-weight:600;color:var(--black);margin-bottom:.2rem}
+.recs li span{font-size:.83rem;color:var(--gray-md);line-height:1.55}
+
+/* COMPARISON TABLE */
+.ct{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.83rem}
+.ct th{text-align:left;padding:.6rem .8rem;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;font-weight:600;color:var(--gray-lt);border-bottom:2px solid var(--gray-border)}
+.ct td{padding:.7rem .8rem;border-bottom:1px solid var(--gray-border);vertical-align:top;color:var(--gray-dk);line-height:1.5}
+.ct tr:hover td{background:var(--bg)}
+.ct .cs{font-weight:600;color:var(--black);width:130px}
+.pill{display:inline-block;font-size:.7rem;font-weight:700;padding:.18rem .55rem;border-radius:10px}
+.pill.yes{background:var(--green-lt);color:var(--green)}
+.pill.no{background:var(--red-lt);color:var(--red)}
+.pill.part{background:var(--amber-lt);color:var(--amber)}
+.pill.new{background:var(--blue-lt);color:var(--blue)}
+
+/* BEFORE/AFTER */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+.ba-box{border:1px solid var(--gray-border);border-radius:10px;overflow:hidden}
+.ba-head{padding:.6rem 1rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.ba-head.b4{background:var(--red-lt);color:var(--red)}
+.ba-head.af{background:var(--green-lt);color:var(--green)}
+.ba-body{padding:1rem;font-size:.83rem;line-height:1.7;color:var(--gray-dk)}
+.lbl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-lt);margin-top:.8rem;margin-bottom:.2rem}
+.lbl:first-child{margin-top:0}
+.val.strike{text-decoration:line-through;color:var(--red)}
+.val.ok{color:var(--green)}
+
+/* NAV WIREFRAME */
+.nav-wf{background:var(--bg);border:1px solid var(--gray-border);border-radius:12px;padding:1.5rem;margin:1.5rem 0;font-size:.82rem}
+.ann-bar{background:var(--accent);color:#fff;text-align:center;padding:.45rem .8rem;border-radius:7px;font-size:.76rem;margin-bottom:.9rem}
+.nav-bar{background:#111;border-radius:8px;padding:.7rem 1rem;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
+.nav-logo{width:34px;height:34px;border-radius:6px;background:#2a2a2a;border:1px solid #444;display:flex;align-items:center;justify-content:center;font-size:9px;color:#aaa;font-weight:800;flex-shrink:0}
+.ni{padding:.3rem .65rem;border-radius:6px;color:#ccc;font-size:.76rem;cursor:pointer;white-space:nowrap}
+.ni.active{background:var(--accent);color:#fff}
+.ni.sale{color:#ff9a79;font-weight:600}
+.ni.new{color:#7dd3c8;font-weight:500}
+.ni.ghost{color:#555}
+.nav-spacer{flex:1}
+.nav-icons{display:flex;gap:.4rem}
+.nav-icons span{width:28px;height:28px;border-radius:6px;background:#1e1e1e;border:1px solid #333;display:flex;align-items:center;justify-content:center;font-size:12px}
+.dd{background:var(--white);border:1px solid var(--gray-border);border-radius:9px;padding:1.2rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.2rem}
+.dd-h{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-lt);font-weight:700;margin-bottom:.5rem}
+.dd a{display:block;font-size:.77rem;color:var(--gray-dk);padding:.18rem 0;text-decoration:none}
+.dd a:hover{color:var(--accent)}
+.dd a.cta{color:var(--accent);font-weight:600;margin-top:.3rem}
+.dd-promo{margin-top:.8rem;padding:.7rem;background:var(--bg);border-radius:7px;font-size:.74rem;color:var(--gray-dk)}
+.wf-cap{font-size:.76rem;color:var(--gray-lt);text-align:center;margin-top:.7rem;font-style:italic}
+
+/* PRIORITY TABLE */
+.pt{width:100%;border-collapse:collapse;font-size:.83rem;margin:1.5rem 0}
+.pt th{text-align:left;padding:.55rem .7rem;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-lt);border-bottom:2px solid var(--gray-border)}
+.pt td{padding:.65rem .7rem;border-bottom:1px solid var(--gray-border);vertical-align:top}
+.pt tr:hover td{background:var(--bg)}
+.pt td:first-child{font-size:.78rem;font-weight:700;color:var(--gray-border);width:2rem}
+.eff{font-size:.73rem;font-weight:700;padding:.18rem .52rem;border-radius:10px;white-space:nowrap}
+.eff.l{background:var(--green-lt);color:var(--green)}
+.eff.m{background:var(--amber-lt);color:var(--amber)}
+.eff.h{background:var(--red-lt);color:var(--red)}
+.imp{font-size:.73rem;font-weight:700;padding:.18rem .52rem;border-radius:10px;background:var(--blue-lt);color:var(--blue);white-space:nowrap}
+
+/* FUNNEL DIAGRAM */
+.funnel{margin:1.5rem 0;display:flex;flex-direction:column;gap:0}
+.funnel-row{display:flex;align-items:stretch;gap:0}
+.funnel-stage{flex:1;padding:.9rem 1.1rem;font-size:.82rem;position:relative}
+.funnel-stage:first-child{border-radius:10px 0 0 10px}
+.funnel-stage:last-child{border-radius:0 10px 10px 0}
+.funnel-stage .fs-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem}
+.funnel-stage .fs-issue{font-size:.78rem;color:inherit;opacity:.85}
+.f-awareness{background:#f0edf9;color:var(--purple);border:1px solid #ddd8f0}
+.f-discovery{background:var(--blue-lt);color:var(--blue);border:1px solid #c5d8f5}
+.f-consider{background:var(--amber-lt);color:var(--amber);border:1px solid #f0d8bc}
+.f-convert{background:var(--green-lt);color:var(--green);border:1px solid #b8ddd1}
+.f-retain{background:var(--accent-lt);color:var(--accent);border:1px solid #f0cfc6}
+
+/* EMAIL WIREFRAME */
+.email-wf{border:1px solid var(--gray-border);border-radius:12px;overflow:hidden;margin:1.5rem 0;max-width:480px}
+.email-head{background:#111;color:#fff;padding:1rem 1.2rem;font-size:.85rem;font-weight:500}
+.email-body{padding:1.5rem;background:var(--white)}
+.email-input{width:100%;border:1px solid var(--gray-border);border-radius:7px;padding:.6rem .9rem;font-size:.83rem;color:var(--gray-dk);margin-bottom:.7rem;font-family:inherit}
+.email-btn{background:var(--accent);color:#fff;border:none;border-radius:7px;padding:.65rem 1.4rem;font-size:.85rem;font-weight:600;cursor:pointer;width:100%;font-family:inherit}
+.email-note{font-size:.72rem;color:var(--gray-lt);margin-top:.6rem;line-height:1.5}
+
+/* LOYALTY SYSTEM DIAGRAM */
+.loyalty-diagram{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray-border);border:1px solid var(--gray-border);border-radius:12px;overflow:hidden;margin:1.5rem 0}
+.ld-cell{background:var(--white);padding:1rem;font-size:.82rem}
+.ld-cell.header{background:var(--bg);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-lt);padding:.6rem 1rem}
+.ld-cell .ld-name{font-weight:600;color:var(--black);font-size:.88rem;margin-bottom:.3rem}
+.ld-cell .ld-tag{font-size:.7rem;font-weight:700;padding:.15rem .5rem;border-radius:8px;display:inline-block;margin-bottom:.5rem}
+.tag-problem{background:var(--red-lt);color:var(--red)}
+.tag-ok{background:var(--green-lt);color:var(--green)}
+.tag-warn{background:var(--amber-lt);color:var(--amber)}
+.ld-cell p{font-size:.78rem;color:var(--gray-md);margin:0;line-height:1.5}
+
+/* COLLECTION FILTER GAP TABLE */
+.filter-gap{display:grid;grid-template-columns:auto 1fr 1fr;gap:1px;background:var(--gray-border);border:1px solid var(--gray-border);border-radius:10px;overflow:hidden;margin:1.5rem 0;font-size:.83rem}
+.fg-cell{background:var(--white);padding:.7rem 1rem}
+.fg-cell.head{background:var(--bg);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-lt);padding:.55rem 1rem}
+.fg-cell.cat{font-weight:600;color:var(--black)}
+
+/* SECTION DIVIDER */
+hr{border:none;border-top:1px solid var(--gray-border);margin:4rem 0}
+
+/* FOOTER */
+.doc-footer{text-align:center;color:var(--gray-lt);font-size:.75rem;padding-top:2rem;border-top:1px solid var(--gray-border);margin-top:3rem}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ COVER ══════════════ -->
+<div class="cover">
+  <div class="cover-eyebrow">Confidential Internal Strategy Document · April 2026</div>
+  <h1>Dancewear Corner<br><em>Complete Site & Marketing Audit</em></h1>
+  <p class="cover-sub">A seven-part review covering site-wide UX issues, navigation redesign benchmarked against competitors, product metadata gaps, marketing & loyalty program restructure, collection filtering deficiencies, email/acquisition strategy, and a master priority action plan. Goal hierarchy: customer acquisition → margin → AOV.</p>
+  <div class="cover-stats">
+    <div class="cover-stat"><span class="val">47</span><span class="lbl">Issues identified</span></div>
+    <div class="cover-stat"><span class="val">35</span><span class="lbl">Recommendations</span></div>
+    <div class="cover-stat"><span class="val">12</span><span class="lbl">Quick wins (&lt;1 day)</span></div>
+    <div class="cover-stat"><span class="val">4</span><span class="lbl">Sections audited</span></div>
+  </div>
+</div>
+
+<!-- ══════════════ TOC ══════════════ -->
+<div class="toc">
+  <div class="toc-heading">Table of Contents</div>
+  <div class="toc-grid">
+    <a href="#s1"><span class="toc-n">01</span>High-Level Site Issues</a>
+    <a href="#s2"><span class="toc-n">02</span>Navigation Redesign</a>
+    <a href="#s3"><span class="toc-n">03</span>Product Metadata Deep-Dive</a>
+    <a href="#s4"><span class="toc-n">04</span>Marketing & Loyalty Review</a>
+    <a href="#s5"><span class="toc-n">05</span>Collection Filtering & SEO</a>
+    <a href="#s6"><span class="toc-n">06</span>Email & Acquisition Strategy</a>
+    <a href="#s7"><span class="toc-n">07</span>Action To-Do List</a>
+  </div>
+</div>
+
+<!-- ══════════════ S1: HIGH-LEVEL ISSUES ══════════════ -->
+<div class="section" id="s1">
+  <div class="sec-label default">01 — Site Review</div>
+  <h2>High-Level Site Issues</h2>
+  <p>DWC has genuine market strengths: 25+ years of operation, a physical Orlando retail store with pointe shoe fitting expertise, a broad multi-brand catalog, and loyalty infrastructure. There are opportunities to address several site-wide patterns: friction points for new visitors, areas where competitive advantages aren't fully surfaced, and key incentives that are currently buried behind jargon and clutter.</p>
+
+  <h3>Critical Issues</h3>
+  <div class="issue-grid">
+    <div class="icard">
+      <span class="sev crit">Critical</span>
+      <h4>No visible value proposition on homepage load</h4>
+      <p>The hero immediately showcases a brand collection (Ballet Rosa 2026) rather than DWC's own story. First-time visitors have no reason to choose DWC over Amazon or brand-direct. The "Get 20% Back" floating bubble appears immediately but explains nothing about the mechanic or who DWC is.</p>
+    </div>
+    <div class="icard">
+      <span class="sev crit">Critical</span>
+      <h4>Four overlapping incentive systems with no unified story</h4>
+      <p>Customers encounter simultaneously: a floating "Get X% Back" widget, an announcement bar with Checkout+ claims, on-page Rewards points, and BOGO tights. None are connected, which results in a confusing first impression. Covered in depth in Section 4.</p>
+    </div>
+    <div class="icard">
+      <span class="sev crit">Critical</span>
+      <h4>Product descriptions hidden in collapsed accordion</h4>
+      <p>Every product page collapses the description by default. Critical buying info (fabric, fit, care) is invisible until the customer actively clicks. This is a conversion and SEO problem — Google may not crawl JS-rendered collapsed content reliably.</p>
+    </div>
+    <div class="icard">
+      <span class="sev crit">Critical</span>
+      <h4>Collection filtering is critically under-developed</h4>
+      <p>The Pointe Shoes collection has 169 products but ONLY filters for Brand, Size, and Price. No shank hardness, box shape, skill level, vamp height, or toe shape. The Dancewear collection has 559 products with the same 3 filters. This can result in significant conversion challenges — dancers cannot narrow to what they need. Covered in depth in Section 5.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>Homepage layout is collection-first with no customer-need navigation</h4>
+      <p>The homepage currently scrolls through brand collections (new arrivals and curated brand showcases), but offers no entry point for customers navigating by dance style, age group, skill level, or dance parent guidance. A first-time visitor who doesn't already know the brands carried has no clear path to what they need.</p>
+      <p style="margin-top:.6rem">The most effective dance retail homepage structure follows this order: (1) <strong>Hero with clear value proposition</strong> — who DWC is and why shop here; (2) <strong>New Arrivals carousel</strong> — fresh product discovery; (3) <strong>Shop by Need</strong> — style, age group, skill level, and occasion entry points; (4) <strong>Brand logo strip</strong> — a quick visual inventory of carried brands for recognition and trust; (5) <strong>Social proof</strong> — customer reviews or UGC. Reorganizing around this structure would serve both first-time visitors and returning customers more effectively.</p>
+      <p style="margin-top:.6rem"><strong>Note:</strong> The announcement bar and the navigation bar are both solid black, making it visually difficult to distinguish where one ends and the other begins. Using a slightly different shade, a subtle border, or a contrasting background for the announcement bar would improve readability and help each message stand on its own.</p>
+    </div>
+
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>Announcement bar is misleading about Checkout+</h4>
+      <p>"FREE EXCHANGES, RETURNS & PACKAGE PROTECTION WITH CHECKOUT+" implies these are free benefits. They are not — Checkout+ is a paid add-on at checkout. This creates false expectations and erodes trust when customers discover the cost.</p>
+      <p style="margin-top:.6rem">Checkout+ is a genuinely useful feature for high-value orders — pointe shoes, costumes, or bulk studio purchases where package protection and easy returns have clear value. However, for smaller purchases below the $100 threshold, the added cost is likely to feel disproportionate and create friction at the most critical moment in the purchase journey.</p>
+      <p style="margin-top:.6rem">A significant concern is that the Checkout+ box is <strong>pre-checked by default</strong> during checkout. For customers who don't notice, this adds an unexpected charge to their order total. For those who do notice, the discovery of an opt-out add-on they weren't expecting — especially after an announcement bar implied the benefits were free — is one of the most common causes of cart abandonment. Consider making this opt-in only, and reserving the announcement bar messaging for genuinely free benefits.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>No dance-style or skill-level navigation</h4>
+      <p>A parent buying for a beginner ballet student, a tap dancer, or a jazz student cannot navigate by discipline. The entire nav is product-category-based. All three key competitors (Capezio, Bloch, Dancewear Solutions) offer Shop by Style navigation.</p>
+    </div>
+    <div class="icard">
+      <span class="sev low">Low</span>
+      <h4>Size labeling varies across brands and categories</h4>
+      <p>Leotards show "Adult X-Small (36)", pointe shoes show "Adult 2 / 1X", and tights use their own sizing scale. This is largely inherent to carrying multiple brands — each brand publishes sizing in their own format and a retailer has limited control over how that data is structured at the source. A full site-wide sizing unification would be a significant development effort with uncertain ROI. A more practical lower-effort approach would be ensuring each product category links clearly to its relevant sizing guide, which helps customers self-serve without requiring a platform-wide overhaul. Not recommended as a priority item.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>Rewards points shown without dollar value conversion</h4>
+      <p>"Earn 405 Rewards when you buy this item" / "Earn 630 Rewards" — these numbers are meaningless without the conversion rate. The value is invisible, making the loyalty incentive feel abstract and low-trust.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>"Book a Pointe Shoe Fitting" links offsite from main nav</h4>
+      <p>This top-level CTA links to Setmore (a third-party scheduling tool), causing a jarring context switch. More importantly, it is occupying a prime nav slot that industry data consistently shows should belong to Sale or New Arrivals — the two most clicked navigation items across dance and apparel retail. Every visit where a deal-seeking or trend-driven shopper can't immediately find Sale or New in the nav is a missed engagement opportunity. Moving "Book a Fitting" into the Pointe Shoes dropdown as a contextual CTA card would serve the right audience at the right moment, while freeing top-level real estate for higher-traffic destinations.</p>
+    </div>
+    <div class="icard">
+      <span class="sev med">Medium</span>
+      <h4>App install CTA is too aggressive and poorly timed</h4>
+      <p>The "GET OUR DWC APP" sticky button appears immediately to every visitor. App installs should be requested after purchase or deep engagement, not on a first visit before the customer has seen a product.</p>
+    </div>
+    <div class="icard">
+      <span class="sev med">Medium</span>
+      <h4>Very few cross-sell recommendations throughout the buying process</h4>
+      <p>There are very limited complementary product suggestions at the product page, cart, or checkout stages. A customer buying pointe shoes, for example, isn't prompted to add toe pads, ribbons, or elastics. A leotard buyer isn't shown matching tights or a warm-up. Cross-sells at the consideration and cart stage are one of the most reliable AOV drivers in dance retail — the natural bundling of dancer essentials makes this category particularly well-suited for "you may also need" recommendations.</p>
+    </div>
+    <div class="icard">
+      <span class="sev med">Medium</span>
+      <h4>Social proof is under-utilized and SEO footer copy may be doing more harm than good</h4>
+      <p>The 25-year authority claim, brand credibility, and key differentiators are buried in a dense SEO copy block at the bottom of the homepage. This approach — large paragraphs of keyword-stuffed text appended to the footer — was a common SEO tactic in the early 2010s but is increasingly considered outdated and potentially counterproductive. Google's algorithms have become sophisticated enough to recognize boilerplate SEO copy, and a wall of text that no real visitor reads can signal low-quality content rather than authority.</p>
+      <p style="margin-top:.6rem">More importantly, the genuine trust signals DWC has earned — 25+ years in business, a physical Orlando store, expert pointe shoe fitting, a broad brand catalog — deserve to live where customers actually see them: near the hero, adjacent to primary CTAs, or woven naturally into product and collection page copy. No star ratings, review counts, or trust badges are currently visible near add-to-cart buttons. The homepage UGC video carousel exists but is not connected to a conversion action. These are the placements where social proof actually influences purchasing decisions.</p>
+    </div>
+    <div class="icard">
+      <span class="sev med">Medium</span>
+      <h4>Homepage meta description contains outdated copy</h4>
+      <p>The homepage meta reads: "…retailer of dancewear including pointe shoes, dance leotards, dance tights, liturgical and more." The word "liturgical" (praise/worship dancewear) is included — suggesting this is residual text from an older site state. If DWC no longer sells liturgical wear prominently, this misleads searchers and wastes keyword relevance.</p>
+    </div>
+  </div>
+
+  <h3>Customer Journey — Where the Site Loses Visitors</h3>
+  <div class="funnel">
+    <div class="funnel-row">
+      <div class="funnel-stage f-awareness">
+        <div class="fs-label">Awareness</div>
+        <div class="fs-issue">Google / social ad lands on homepage. No clear "why DWC" message. Brand-showcase hero creates confusion for first-time visitors.</div>
+      </div>
+      <div class="funnel-stage f-discovery">
+        <div class="fs-label">Discovery</div>
+        <div class="fs-issue">Visitor tries to navigate. No "by dance style" option. 3 filter options on 559-product collections. Pointe Shoes duplicated inside Dance Shoes dropdown.</div>
+      </div>
+      <div class="funnel-stage f-consider">
+        <div class="fs-label">Consideration</div>
+        <div class="fs-issue">Product page loaded. Description hidden. No size guide link. Rewards points shown as abstract number. Multiple competing offers create noise. Very few cross-sell or complementary product recommendations throughout the buying process, missing AOV opportunities at the most engaged stage of the journey.</div>
+      </div>
+      <div class="funnel-stage f-convert">
+        <div class="fs-label">Conversion</div>
+        <div class="fs-issue">Checkout+ value unclear. "Free returns" claim in announcement bar is misleading. Announcement bar and float widget contradict each other.</div>
+      </div>
+      <div class="funnel-stage f-retain">
+        <div class="fs-label">Retention</div>
+        <div class="fs-issue">Rewards tier structure is non-additive (Silver loses the $5 coupon). Points expiry policy (12 months inactivity) is punitive for seasonal buyers.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ══════════════ S2: NAVIGATION ══════════════ -->
+<div class="section" id="s2">
+  <div class="sec-label amber">02 — Navigation</div>
+  <h2>Navigation Redesign</h2>
+  <p>DWC's five-item nav (Pointe Shoes / Dance Shoes / Dance Tights / Dancewear / Accessories) speaks in inventory language, not customer-need language. It omits every entry point that competitors use to capture intent-driven traffic.</p>
+
+  <h3>Current Nav vs. Competitors</h3>
+  <table class="ct">
+    <tr><th>Feature</th><th>Capezio</th><th>Bloch</th><th>Dancewear Solutions</th><th>DWC Current</th></tr>
+    <tr><td>Sale / Clearance top-level</td><td><span class="pill yes">Yes</span></td><td><span class="pill yes">Yes</span></td><td><span class="pill yes">Yes</span></td><td><span class="pill no">No</span></td></tr>
+    <tr><td>New Arrivals top-level</td><td><span class="pill yes">Yes</span></td><td><span class="pill part">In-menu</span></td><td><span class="pill yes">Yes</span></td><td><span class="pill no">No</span></td></tr>
+    <tr><td>Shop by Dance Style</td><td><span class="pill yes">Yes</span></td><td><span class="pill yes">Yes</span></td><td><span class="pill yes">Yes</span></td><td><span class="pill no">No</span></td></tr>
+    <tr><td>Shop by Age / Level</td><td><span class="pill part">Partial</span></td><td><span class="pill yes">Yes (Women/Men/Kids)</span></td><td><span class="pill part">Partial</span></td><td><span class="pill no">No</span></td></tr>
+    <tr><td>Gifts as dedicated nav entry</td><td><span class="pill part">Partial</span></td><td><span class="pill no">No</span></td><td><span class="pill part">Partial</span></td><td><span class="pill no">Buried in Accessories</span></td></tr>
+    <tr><td>Duplicate items across menus</td><td><span class="pill yes">Clean</span></td><td><span class="pill yes">Clean</span></td><td><span class="pill yes">Clean</span></td><td><span class="pill no">Pointe Shoes duplicated in Dance Shoes dropdown</span></td></tr>
+    <tr><td>Promo surfaced in nav</td><td><span class="pill yes">Yes</span></td><td><span class="pill yes">Yes</span></td><td><span class="pill yes">Yes</span></td><td><span class="pill part">Only on hover (tights BOGO)</span></td></tr>
+    <tr><td>Max dropdown items in one column</td><td>~8</td><td>~7</td><td>~9</td><td><span class="pill no">14 (Accessories)</span></td></tr>
+  </table>
+
+  <h3>Specific Issues in Current Dropdowns</h3>
+  <table class="ct">
+    <tr><th>Menu Item</th><th>Problem</th><th>Fix</th></tr>
+    <tr><td class="cs">Pointe Shoes</td><td>DWC's top-level Pointe Shoes nav is a genuine competitive strength — they are widely recognized as one of the last retailers carrying the full breadth of pointe shoe brands, and having it broken out at the top level reflects that positioning correctly. The main issue is "Book a Fitting" occupying a top-level nav slot, linking offsite to a third-party scheduler, and taking space that should belong to Sale or New Arrivals.</td><td>Keep Pointe Shoes as a standalone top-level item. Move "Book a Fitting" inside the dropdown as a prominent CTA card. Free the nav slot it currently occupies for Sale or New.</td></tr>
+    <tr><td class="cs">Dance Shoes</td><td>Dance Shoes is correctly positioned as a standalone category. The main issue is that "Pointe Shoes" appears again as a sub-item here — a direct duplicate of the top-level item that creates confusion about where to shop.</td><td>Remove the Pointe Shoes sub-item from the Dance Shoes dropdown. Add a "Shop by Style" column (Ballet / Tap / Jazz / Hip-Hop / Ballroom / Contemporary) to serve customers navigating by discipline.</td></tr>
+    <tr><td class="cs">Dance Tights</td><td>Dance Tights is a primary keyword with real search volume and DWC has a strong offer here (BOGO deal). Keeping it as a top-level item is defensible and maintains visibility for one of DWC's best promotions. The main issue is that the BOGO deal is only visible on hover — the best offer is the most hidden.</td><td>Keep Dance Tights at top-level. Surface the BOGO deal in the announcement bar rotation and in the dropdown as a prominent promo panel rather than burying it behind a hover state.</td></tr>
+    <tr><td class="cs">Dancewear</td><td>Two issues observed. First, almost every collection page displays a large block of descriptive copy above the product grid — this keyword-heavy text block is a relic of early 2010s SEO practice. Google's algorithms have become much better at understanding page context, and walls of text that real visitors scroll past without reading can actually signal low-quality content today. The formatting also has notable issues: large gaps between sections and overly tight line spacing within paragraphs make it hard to read. Second, the dropdown text uses very wide letter spacing — the letters in navigation items are spread so far apart they become harder to read quickly, which slows down shoppers scanning for their category.</td><td>Audit the collection page copy blocks — consider replacing them with shorter, naturally written introductions that serve real visitors rather than search crawlers. Fix the letter spacing in dropdown navigation text to a tighter, more readable setting. Ensure collection page copy is formatted with consistent line height and paragraph spacing.</td></tr>
+    <tr><td class="cs">Accessories</td><td>No changes recommended at this time.</td><td>Leave as-is for now.</td></tr>
+  </table>
+
+  <h3>Proposed Nav Structure (Wireframe)</h3>
+  <div class="nav-wf">
+    <div class="ann-bar">🩰 Buy 2 Get 1 Free Tights &nbsp;·&nbsp; Free shipping over $100 &nbsp;·&nbsp; Earn DWC Cash Back on every order</div>
+    <div class="nav-bar">
+      <div class="nav-logo">DWC</div>
+      <div class="ni active">Pointe Shoes</div>
+      <div class="ni">Dance Shoes</div>
+      <div class="ni">Dance Tights</div>
+      <div class="ni">Dancewear</div>
+      <div class="ni">Accessories</div>
+      <div class="ni new">New</div>
+      <div class="ni sale">Sale</div>
+      <div class="nav-spacer"></div>
+      <div class="nav-icons">
+        <span>🔍</span><span>👤</span><span>🛒</span>
+      </div>
+    </div>
+    <div class="dd">
+      <div>
+        <div class="dd-h">Shop by Brand</div>
+        <a href="#">Bloch</a><a href="#">Capezio</a><a href="#">Gaynor Minden</a>
+        <a href="#">Suffolk</a><a href="#">Nikolay</a><a href="#">Merlet</a>
+        <a href="#">Russian Pointe</a><a href="#">So Danca</a>
+        <a href="#" class="cta">→ All brands</a>
+      </div>
+      <div>
+        <div class="dd-h">Pointe Accessories</div>
+        <a href="#">Ribbons &amp; Elastics</a>
+        <a href="#">Toe Pads &amp; Cushions</a>
+        <a href="#">Jet Glue &amp; Sewing Kits</a>
+        <a href="#">Toe Tape &amp; Lamb's Wool</a>
+        <a href="#">Pointe Shoe Bags</a>
+        <a href="#">Rosin &amp; Adhesive Spray</a>
+        <a href="#" class="cta">→ All Pointe Accessories</a>
+        <div class="dd-promo"><strong>📍 Book a Fitting</strong><br>Expert fitting at our Orlando store. Free with any purchase.</div>
+      </div>
+      <div>
+        <div class="dd-h">Featured</div>
+        <a href="#" style="font-weight:600">🏆 Top Sellers</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Staff Picks</a>
+        <a href="#">Skintone / Skin-tone options</a>
+        <div class="dd-promo"><strong>Buy 4, Get 5th Free</strong><br>Year-round bulk program for studios &amp; frequent dancers. Mix brands!</div>
+      </div>
+    </div>
+    <div class="wf-cap">Proposed Pointe Shoes mega-menu — brand browsing + guidance + featured + fitting CTA all in one view</div>
+  </div>
+
+  <h3>Recommended Nav Restructure</h3>
+  <ul class="recs">
+    <li><div class="rn">1</div><div><strong>Add "Sale" and "New Arrivals" as permanent top-level items</strong><span>All three competitors have visible Sale in the top nav. Style "Sale" in a warm accent color. "New" in a cool/teal to signal freshness. These are the two most clicked navigation items across dance and apparel retail — they deserve primary real estate and are currently absent entirely.</span></div></li>
+    <li><div class="rn">2</div><div><strong>Keep Pointe Shoes, Dance Shoes, Dance Tights, and Dancewear as standalone top-level items</strong><span>The existing top-level structure reflects DWC's actual product strengths and keyword positioning. Pointe Shoes in particular signals DWC's market authority. Dance Tights is a primary search term with a strong promotional offer. The priority is to add Sale and New, and free the slot currently used by "Book a Fitting."</span></div></li>
+    <li><div class="rn">3</div><div><strong>Move "Book a Fitting" from top-level nav into the Pointe Shoes dropdown</strong><span>A contextual CTA inside the Pointe Shoes mega-menu ("📍 Book a Fitting at our Orlando Store") is more effective and better contextualized than a top-level text link. This frees one of the most valuable nav slots, which should be used for Sale or New Arrivals.</span></div></li>
+    <li><div class="rn">4</div><div><strong>Add "Shop by Dance Style" columns to Dance Shoes and Dancewear</strong><span>Add a style column: Ballet / Tap / Jazz / Hip-Hop & Street / Contemporary / Ballroom / Praise. This directly serves customers who navigate by discipline rather than product type — the most common approach for students and parents.</span></div></li>
+    <li><div class="rn">5</div><div><strong>Remove the duplicate "Pointe Shoes" sub-item from Dance Shoes dropdown</strong><span>Pointe Shoes appearing both as a top-level item and as a sub-item inside Dance Shoes creates confusion about which path to use. Remove it from the Dance Shoes dropdown entirely — the top-level item is the correct home.</span></div></li>
+    <li><div class="rn">6</div><div><strong>Surface the BOGO Tights deal in the Dance Tights dropdown and announcement bar</strong><span>The best promotional offer on the site is currently only visible on hover inside the Dance Tights dropdown. Add it to the announcement bar rotation and as a prominent panel inside the dropdown so it reaches every visitor, not just those who happen to hover over the right item.</span></div></li>
+    <li><div class="rn">7</div><div><strong>Fix letter spacing in dropdown navigation text</strong><span>The text in dropdown menu items currently uses very wide letter spacing, which spreads letters so far apart that they become harder to scan quickly. Tightening this to a standard reading spacing would make the menu easier and faster to use for all visitors.</span></div></li>
+    <li><div class="rn">8</div><div><strong>Rotate the announcement bar — 3 messages, not 2 crammed into one line</strong><span>Message 1: Free shipping over $100. Message 2: Buy 2 Get 1 Free Tights. Message 3: Earn DWC Cash Back on every order. Each gets full attention on a 4-second rotation rather than competing in a single cramped line.</span></div></li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- ══════════════ S3: PRODUCT METADATA ══════════════ -->
+<div class="section" id="s3">
+  <div class="sec-label green">03 — Product Metadata</div>
+  <h2>Product Metadata Deep-Dive</h2>
+  <p>Product metadata is DWC's single most impactful unconverted opportunity. The issues span SEO (collapsed descriptions), conversion (no fabric %, no size guide links), trust (inconsistent sizing language), and customer satisfaction (return rates from sizing mismatches).</p>
+
+  <h3>Issues Observed</h3>
+  <div class="issue-grid">
+    <div class="icard"><span class="sev crit">Critical</span><h4>Descriptions collapsed by default on all product pages</h4><p>Accordion is closed on page load. Product descriptions are not in the visible DOM for SEO crawl and require a click that most shoppers won't take — especially on mobile.</p></div>
+    <div class="icard"><span class="sev crit">Critical</span><h4>No fabric/fiber composition listed anywhere</h4><p>Ballet Rosa Mollie mentions "Microfiber or Matte Lycra and Stretch Lace" with no percentages. FTC Textile Fiber Products Identification Act requires garment fiber content disclosure. Absence also increases returns and erodes confidence.</p></div>
+
+    <div class="icard"><span class="sev high">High</span><h4>No care instructions on any product reviewed</h4><p>Hand wash cold, lay flat dry — standard for dancewear. Not present on any of the product pages reviewed. Absence contributes to garment damage, returns, and negative reviews.</p></div>
+
+    <div class="icard"><span class="sev high">High</span><h4>No size charts on product pages — and EU sizing shown without context</h4><p>DWC has sizing guides for Bodywear, Adult Tights, and Child Tights, but these are not linked from product pages where customers actually need them. A shopper selecting a size has no reference point at the moment of decision — which is the primary driver of sizing-related returns and exchanges.</p><p style="margin-top:.6rem">This is compounded by EU sizing numbers appearing in size selectors (e.g. "Adult X-Small (36)") with no explanation. On their own these numbers are confusing to US customers, but with an accessible size chart linked directly next to the size selector, both issues resolve together. Adding a "📏 Size Guide →" link inline next to every SIZE selector is the single highest-ROI metadata fix for reducing returns across all apparel categories.</p></div>
+
+    <div class="icard"><span class="sev high">High</span><h4>Rewards shown as raw points with no dollar translation</h4><p>"Earn 405 Rewards when you buy this item" and "Earn 630 Rewards" — without the conversion rate (500 pts = $5), these numbers are meaningless. The incentive is real but invisible. Change to "Earn 405 pts (~$4 back)".</p></div>
+    <div class="icard"><span class="sev high">High</span><h4>SKU displayed prominently at near-title weight</h4><p>"1272MF-OLV-10" and "ES0160L-PNK-2-1X" appear immediately below the product name in similar visual weight. For a customer, this is the first thing they see after the product title — a string of alphanumeric code that means nothing to them and immediately creates confusion about what they are looking at.</p><p style="margin-top:.6rem">From an SEO perspective this is also damaging. Search engines give significant weight to content that appears early and prominently on a page. Having a SKU code occupy that prime position dilutes the SEO value of the product title and pushes meaningful descriptive content — the words that match what customers actually search for — further down the page hierarchy. SKUs should be de-emphasized to small secondary text or moved to a collapsed technical details section where they are available for those who need them without interfering with the primary customer experience.</p></div>
+    <div class="icard"><span class="sev med">Medium</span><h4>Pointe shoe descriptions are narrative-only — no structured specs</h4><p>After reviewing how brand sites and competing retailers present pointe shoe information, the picture is nuanced. Bloch's own product pages are also primarily narrative — they describe characteristics like platform width, vamp shape, and shank flexibility in prose rather than a structured table, and most Bloch retailers follow the same format. So for Bloch products specifically, DWC is largely in line with industry practice.</p><p style="margin-top:.6rem">Gaynor Minden is the notable exception. Because GM shoes are highly customizable — shoppers select shank stiffness, box size, vamp height, and heel height as separate options — retailers who carry GM typically do present these as structured selectors or attribute lists. DWC's GM product pages should reflect this level of detail to match the buying experience customers expect for that brand.</p><p style="margin-top:.6rem">The medium priority rating reflects that this is a brand-specific issue rather than a site-wide gap, and that Bloch's own narrative format sets the norm for most of the catalog. Focusing structured spec improvements on Gaynor Minden pages first would have the highest impact for the least effort.</p></div>
+    <div class="icard"><span class="sev med">Medium</span><h4>Meta descriptions are generic and waste 160 characters</h4><p>Bloch page meta: "Comfortably stay en pointe with the Bloch ES0160L 'European Balance' Pointe Shoes - Pink - from Dancewear Corner!" Wastes space on product name repetition. Should include: skill level, key spec, and a DWC differentiator (free fitting help, rewards).</p></div>
+    <div class="icard"><span class="sev med">Medium</span><h4>No product videos on pages that would benefit most</h4><p>DWC has video content (visible on homepage carousel). None embedded on pointe shoe or leotard product pages. Bloch and Capezio both embed fit/movement videos on key products — a proven conversion driver for apparel and footwear.</p></div>
+  </div>
+
+  <h3>Before / After — Product Page Standard</h3>
+  <div class="ba">
+    <div class="ba-box">
+      <div class="ba-head b4">❌ Current — Ballet Rosa Mollie Leotard</div>
+      <div class="ba-body">
+        <div class="lbl">Page Title</div><div class="val strike">Ballet Rosa Mollie Tank Leotard</div>
+        <div class="lbl">SKU</div><div class="val strike">1275LM-NOI-10 — shown at title-level prominence</div>
+        <div class="lbl">Colors</div><div class="val strike">No color swatches displayed — color names only, no visual chips</div>
+        <div class="lbl">Sizes</div><div class="val strike">Youth 10 / Adult X-Small (36) / … — EU number unexplained, no size guide link</div>
+        <div class="lbl">Description</div><div class="val strike">Collapsed accordion. 1 narrative paragraph. No fabric %, no care, no fit note.</div>
+        <div class="lbl">Rewards callout</div><div class="val strike">"Earn 350 Rewards when you buy this item" — no dollar value</div>
+        <div class="lbl">Meta description</div><div class="val strike">Generic — no key specs, no audience fit, no DWC hook</div>
+      </div>
+    </div>
+    <div class="ba-box">
+      <div class="ba-head af">✅ Recommended</div>
+      <div class="ba-body">
+        <div class="lbl">Page Title</div><div class="val ok">Ballet Rosa Mollie Tank Leotard — Women's Ballet Leotard</div>
+        <div class="lbl">SKU</div><div class="val ok">De-emphasized below title (small, secondary color). Out of first visual hierarchy.</div>
+        <div class="lbl">Colors</div><div class="val ok">Color swatch chips displayed alongside color names for quick visual identification</div>
+        <div class="lbl">Sizes</div><div class="val ok">Youth 10 / XS (EU 36) / S (EU 38) / … + "📏 Size Guide →" inline link</div>
+        <div class="lbl">Description</div><div class="val ok">Open by default. Format: short headline → Fabric: 82% Nylon, 18% Spandex / Stretch Lace overlay → Care: Hand wash cold, lay flat → Fit note: True to size, convertible strap → Best for: Ballet, contemporary.</div>
+        <div class="lbl">Rewards callout</div><div class="val ok">"Earn 350 pts (~$3.50 back on your next order) 🎁"</div>
+        <div class="lbl">Meta description</div><div class="val ok">"Ballet Rosa Mollie tank leotard — open back, lace shoulders. 82% nylon. Sizes XS–XL. Free returns &amp; reward points at Dancewear Corner."</div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<hr>
+
+<!-- ══════════════ S4: MARKETING & LOYALTY ══════════════ -->
+<div class="section" id="s4">
+  <div class="sec-label blue">04 — Marketing & Loyalty Review</div>
+  <h2>Marketing & Loyalty Program Review</h2>
+  <p>DWC currently runs four overlapping incentive programs. Each makes sense in isolation — together they create a confusing, trust-eroding customer experience. Given the goal of acquisition-first, the entire system needs simplification before it can serve as a growth tool.</p>
+
+  <h3>The Four Programs — Audit</h3>
+  <div class="loyalty-diagram">
+    <div class="ld-cell header">Program</div>
+    <div class="ld-cell header">What it actually is</div>
+    <div class="ld-cell header">Where customer sees it</div>
+    <div class="ld-cell header">Key problems</div>
+
+    <div class="ld-cell"><div class="ld-name">DWC Rewards Points</div><span class="ld-tag tag-warn">Loyalty program</span></div>
+    <div class="ld-cell"><p>Earn 5 pts per $1 spent. 4 tiers (Bronze/Silver/Gold/Platinum). Points redeem for $5/$10/$25/$50 coupons. Free to join.</p></div>
+    <div class="ld-cell"><p>Footer link · On-page "Earn X Rewards" callout · Homepage promo image</p></div>
+    <div class="ld-cell"><p>Points shown without dollar value. Tier structure is NOT additive (Silver loses the $5 coupon). 12-month inactivity expiry punishes seasonal buyers.</p></div>
+
+    <div class="ld-cell"><div class="ld-name">Checkout+</div><span class="ld-tag tag-problem">Paid add-on</span></div>
+    <div class="ld-cell"><p>Optional paid upgrade at checkout. Provides: free returns, shipping protection, priority exchange support.</p></div>
+    <div class="ld-cell"><p>Announcement bar · Footer link · Dedicated info page</p></div>
+    <div class="ld-cell"><p>Announcement bar says "FREE EXCHANGES, RETURNS & PACKAGE PROTECTION WITH CHECKOUT+" — implies free. Is NOT free. Dedicated page doesn't disclose the cost.</p></div>
+
+    <div class="ld-cell"><div class="ld-name">"Get X% Back" Widget</div><span class="ld-tag tag-problem">Floating popup</span></div>
+    <div class="ld-cell"><p>Floating left sidebar showing "Get 20% Back" on collections, "Get $9.59 Back" on product pages. Likely a Growave or similar cashback app.</p></div>
+    <div class="ld-cell"><p>Persistent on ALL pages · Cannot be dismissed permanently</p></div>
+    <div class="ld-cell"><p>Unclear if same as Rewards or separate program. "20% Back" doesn't match Rewards (5 pts/$1 = 1% back at $5/$500 rate). Contradicts/confuses the Rewards program. Adds clutter on every page.</p></div>
+
+    <div class="ld-cell"><div class="ld-name">BOGO Tights</div><span class="ld-tag tag-ok">Promo deal</span></div>
+    <div class="ld-cell"><p>Buy 2 pairs, get 1 free. Mix styles, must be same brand. Running year-round.</p></div>
+    <div class="ld-cell"><p>Only visible on hover in Dance Tights dropdown image</p></div>
+    <div class="ld-cell"><p>The BEST and clearest offer DWC has — and the most buried. Not in announcement bar, not on homepage. Tights are a high-frequency repurchase item — this should be a primary acquisition driver.</p></div>
+  </div>
+
+  <div class="callout">
+    <strong>Root problem:</strong> A first-time visitor simultaneously sees (1) "Get 20% Back" popup — unexplained, (2) "Free returns with Checkout+" announcement bar — misleading, (3) "Earn 350 Rewards" on product — meaningless without context, and (4) a separate Rewards program in the footer. None of these connect. The effect is confusion, not motivation.
+  </div>
+
+  <h3>Language Fixes Required Immediately</h3>
+  <div class="ba">
+    <div class="ba-box">
+      <div class="ba-head b4">❌ Current — misleading or confusing</div>
+      <div class="ba-body">
+        <div class="lbl">Announcement bar</div>
+        <div class="val strike">"FREE EXCHANGES, RETURNS & PACKAGE PROTECTION WITH CHECKOUT+"</div>
+        <div style="font-size:.76rem;color:var(--red);margin:2px 0 8px">→ Implies free. Requires paying for Checkout+. Legally and ethically problematic.</div>
+        <div class="lbl">Float widget</div>
+        <div class="val strike">"Get 20% Back" / "Get $9.59 Back"</div>
+        <div style="font-size:.76rem;color:var(--red);margin:2px 0 8px">→ 20% back ≠ how Rewards works (5 pts/$1). Creates false impression and contradicts on-page messaging.</div>
+        <div class="lbl">Product page</div>
+        <div class="val strike">"Earn 405 Rewards when you buy this item"</div>
+        <div style="font-size:.76rem;color:var(--red);margin:2px 0 8px">→ 405 rewards = nothing to a new customer. No conversion rate shown.</div>
+        <div class="lbl">Tier: Bronze → Silver progression</div>
+        <div class="val strike">Bronze: $5 off coupon. Silver: free shipping coupon (no $5 coupon).</div>
+        <div style="font-size:.76rem;color:var(--red);margin:2px 0 8px">→ Silver gets LESS than Bronze in cash terms. Demotivates loyalty growth.</div>
+      </div>
+    </div>
+    <div class="ba-box">
+      <div class="ba-head af">✅ Recommended fixes</div>
+      <div class="ba-body">
+        <div class="lbl">Announcement bar (accurate version)</div>
+        <div class="val ok">"Add Checkout+ at checkout for free returns, exchanges &amp; package protection"</div>
+        <div class="lbl">Float widget (eliminate or fix)</div>
+        <div class="val ok">Remove the floating widget entirely. Fold into product-page rewards callout. If kept, message must match Rewards: "Earn points on this order — redeem for cash off your next purchase"</div>
+        <div class="lbl">Product page rewards callout</div>
+        <div class="val ok">"Earn 405 pts with this purchase (~$4 off your next order) →"</div>
+        <div class="lbl">Tier structure — make it additive</div>
+        <div class="val ok">Bronze: $5 coupon. Silver: $5 coupon + free shipping coupon. Gold: $10 coupon + free shipping. Platinum: $15 coupon + free shipping + $25 annual gift card.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Strategic Recommendations</h3>
+  <ul class="recs">
+    <li><div class="rn">1</div><div><strong>Unify the story: "Shop DWC, earn real cash back"</strong><span>Pick one clear, memorable message for first-time visitors: every order earns points that convert to dollars off. Free to join, works in-store and online. Retire or hide the technical tier language from the acquisition journey — show it only to logged-in members on their account page.</span></div></li>
+    <li><div class="rn">2</div><div><strong>Eliminate the floating "Get X% Back" widget</strong><span>It's redundant with on-page rewards messaging, contradicts the actual Rewards rate, and creates noise on every page. Remove it. Invest that visibility into making the on-page rewards callout more prominent and dollar-translated.</span></div></li>
+    <li><div class="rn">3</div><div><strong>Surface the BOGO Tights offer everywhere — it's your best acquisition hook</strong><span>Put it in the announcement bar rotation. Add it to the homepage as a dedicated banner. Create a dedicated landing page for paid ads. "Buy 2, Get 1 Free on tights" is concrete, easy to understand, and targets tights — which are a high-frequency repurchase item that can convert casual visitors into loyal customers.</span></div></li>
+    <li><div class="rn">4</div><div><strong>Add a first-order welcome incentive: 15% off first purchase on sign-up</strong><span>New Rewards members will receive 15% off their first purchase when they join. The current Bronze tier requires 500 pts ($100 spend) before any reward is redeemable — a high bar with no instant gratification for a new customer. A 15% welcome discount creates an immediate, concrete reason to sign up and complete that first purchase, while naturally introducing customers to the Rewards program from the very start of their relationship with DWC.</span></div></li>
+    <li><div class="rn">5</div><div><strong>Fix the Checkout+ info page — show the price</strong><span>The dedicated Checkout+ page explains benefits thoroughly but never discloses the cost. This creates skepticism. Every customer who can't find the price thinks "what's the catch?" — and many will leave rather than add to cart just to see it. Transparency drives conversion for optional paid upgrades.</span></div></li>
+    <li><div class="rn">6</div><div><strong>Rebuild the tier structure to be strictly additive</strong><span>Currently Silver (3,500 pts) gets free shipping but loses the $5 coupon from Bronze. This means accumulating more points can feel like losing a perk. Every tier should include everything from the tier below it, plus something new.</span></div></li>
+    <li><div class="rn">7</div><div><strong>Rename the program to something memorable and benefit-led</strong><span>"DWC Rewards Points Program" is generic and descriptive. Consider "DWC Dance Dollars" or "DWC Cash Back" — names that communicate the core benefit (you get money back) rather than the mechanics (points). For acquisition, the name is the pitch.</span></div></li>
+    <li><div class="rn">8</div><div><strong>Clarify the points expiry policy for seasonal buyers</strong><span>The program uses a rolling 12-month expiration tied to account activity, which is a reasonable structure. However, this is not clearly communicated to customers — the current language "points expire after 12 months of inactivity" can feel punitive without the context that the window resets with each purchase. Making this explicit in the Rewards program description ("your points stay active as long as you shop at least once every 12 months") would reduce anxiety around expiry and reinforce the value of staying engaged with the program, particularly for seasonal buyers who purchase in September and December.</span></div></li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- ══════════════ S5: COLLECTION FILTERING & SEO ══════════════ -->
+<div class="section" id="s5">
+  <div class="sec-label purple">05 — Collection Filtering & SEO</div>
+  <h2>Collection Filtering & SEO Gaps</h2>
+  <p>This is one of DWC's most critical and most fixable problems. Large product collections with minimal filtering make it nearly impossible for serious buyers to narrow to the right product — and make it impossible for Google to index category-level intent pages that could drive massive organic traffic.</p>
+
+  <h3>Current Filtering vs. What's Needed</h3>
+  <div class="filter-gap">
+    <div class="fg-cell head">Collection</div>
+    <div class="fg-cell head">Current filters</div>
+    <div class="fg-cell head">Missing filters (high priority)</div>
+    <div class="fg-cell cat">Pointe Shoes (169 products)</div>
+    <div class="fg-cell">Brand · Size · Price</div>
+    <div class="fg-cell" style="color:var(--red)">Shank strength · Box shape · Vamp height · Skill level · Toe shape · Width · Color/skintone</div>
+    <div class="fg-cell cat">Dancewear (559 products)</div>
+    <div class="fg-cell">Brand · Size · Price</div>
+    <div class="fg-cell" style="color:var(--red)">Category (leotard/top/bottom/skirt) · Dance style · Sleeve type · Neckline · Color · Age group · Closure type</div>
+    <div class="fg-cell cat">Dance Shoes</div>
+    <div class="fg-cell">Brand · Size · Price</div>
+    <div class="fg-cell" style="color:var(--red)">Style (ballet/tap/jazz etc.) · Sole type · Closure · Material · Gender · Age</div>
+    <div class="fg-cell cat">Dance Tights</div>
+    <div class="fg-cell">Brand · Size · Price</div>
+    <div class="fg-cell" style="color:var(--red)">Leg style (convertible/footed/footless/stirrup) · Color/skintone · Gender · Age · Fabric weight</div>
+    <div class="fg-cell cat">Accessories</div>
+    <div class="fg-cell">Brand · Price</div>
+    <div class="fg-cell" style="color:var(--red)">Category (bags/shoe accessories/jewelry/care) · Dance style relevance · Price under $X</div>
+  </div>
+
+  <div class="callout">
+    <strong>The pointe shoe filtering gap is the most damaging.</strong> A dancer looking for a "medium shank tapered box pointe shoe" or a "soft shank beginner pointe shoe" cannot filter for these on DWC. They CAN on pointe-shoe-specialist sites. DataPointes Lab — a dedicated pointe shoe discovery platform — lets shoppers filter across 400+ models by box shape, shank strength, vamp length, and more. DanceSupplies.com lists structured shank and spec attributes directly on product pages and links to a Bloch sizing chart inline. Gaynor Minden's own site and the retailers who carry them well (such as DancewearNYC and The Dance Shoppe) present shank, box, vamp, and heel as selectable structured options rather than narrative copy. Even Discount Dance, a mass-market retailer, has created dedicated SEO landing pages for "soft shank pointe shoes" that DWC cannot currently compete with because no filterable equivalent exists. With 169 products, the default "Best selling" sort means relevant products for a specific need are buried on page 3. This drives high-intent buyers — the most valuable visitors DWC attracts — to sites that can answer their specific question.
+  </div>
+
+  <h3>SEO Issues Found</h3>
+  <div class="issue-grid">
+    <div class="icard">
+      <span class="sev crit">Critical</span>
+      <h4>/collections/leotards redirects to homepage</h4>
+      <p>Navigating to dancewearcorner.com/collections/leotards redirects to the homepage with no error. This means any inbound link to this URL (a highly valuable SEO target — "leotards" is a major search term) sends traffic to the homepage instead. Either a dedicated /collections/leotards page needs to exist, or the URL needs to 301 to the correct collection.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>Homepage has two H1 tags</h4>
+      <p>The homepage renders both "DanceWear Corner" and "Welcome to Dancewear Corner: Your One-Stop Dance Store" as H1 elements. A page should have exactly one H1 for SEO clarity. The second H1 is from the visible SEO copy block — it should be an H2.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>Homepage meta description includes "liturgical"</h4>
+      <p>The homepage meta reads "…retailer of dancewear including pointe shoes, dance leotards, dance tights, liturgical and more." If liturgical/praise dancewear is no longer a primary category, this wastes keyword space and misrepresents the store to searchers.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>Collection page titles are bare — no brand or context</h4>
+      <p>The Dancewear collection page title is simply "Dancewear" — no brand name, no descriptor. Best practice: "Dance Leotards, Tops & Dancewear | Dancewear Corner." The Pointe Shoes collection title should be: "Pointe Shoes — Bloch, Gaynor Minden, Suffolk & More | DWC."</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>No SEO-targetable subcategory pages for filtering combos</h4>
+      <p>Competitors have SEO-indexed pages for "beginner pointe shoes," "medium shank pointe shoes," "black leotard for ballet" etc. DWC's filter system (Brand/Size/Price only) means there are no indexable URLs for these high-intent queries. Adding proper filter attributes creates crawlable, rankable facet URLs.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>Excessive VideoObject structured data on homepage — SEO and GEO concern</h4>
+      <p>The homepage contains 30+ VideoObject structured data entries for the UGC video carousel. While technically valid — Google does allow multiple VideoObject entries on a single page — the volume and placement create real concerns across both traditional SEO and emerging Generative Engine Optimization (GEO).</p>
+      <p style="margin-top:.6rem"><strong>SEO impact:</strong> Google allocates a crawl budget to every site — a finite amount of time and resources it will spend crawling and processing a page. Bloated structured data on the homepage, the most-crawled page on the site, forces Googlebot to parse 30+ video entries before reaching the content signals that actually matter for rankings: Product schema, BreadcrumbList, and Review data on product and collection pages. This means the pages with the highest commercial intent may be crawled less efficiently and indexed more slowly. The homepage is also sending a confusing signal about what the site is primarily about — Google may increasingly interpret it as a video content destination rather than a dancewear retailer.</p>
+      <p style="margin-top:.6rem"><strong>GEO impact:</strong> AI-powered answer engines (Google AI Overviews, ChatGPT, Perplexity) rely heavily on structured data to understand what a site sells, who it serves, and what makes it authoritative. Clean, well-structured schema — Organization, Product, Review, BreadcrumbList — helps these systems cite and recommend DWC accurately. A homepage dominated by VideoObject entries gives AI systems an incomplete and potentially misleading picture of the business, reducing the likelihood of appearing in AI-generated shopping recommendations or answer summaries.</p>
+      <p style="margin-top:.6rem">The fix is straightforward: reduce VideoObject entries to the 3–5 most valuable videos, and prioritize implementing correct Product, Review, and BreadcrumbList schema on product and collection pages where it drives direct commercial results.</p>
+    </div>
+    <div class="icard">
+      <span class="sev med">Medium</span>
+      <h4>Collection description copy is generic and not keyword-optimized</h4>
+      <p>The Pointe Shoes collection description reads well but is generic: "Whether you're just beginning your pointe journey or you're a seasoned professional…" It doesn't mention specific brands, specific shoe characteristics, or include the natural keyword phrases searchers use (e.g., "wide width pointe shoes," "beginner pointe shoes for pre-pointe dancers").</p>
+    </div>
+    <div class="icard">
+      <span class="sev med">Medium</span>
+      <h4>Product image alt text likely auto-generated</h4>
+      <p>Alt text appears to be pulling from the product title (e.g., "Bloch ES0160L European Balance Pointe Shoes - Pink"). While not empty, this misses an opportunity to include descriptive, keyword-rich alt text that aids image search traffic: "Bloch European Balance pointe shoe medium shank tapered box pink" vs just the product name.</p>
+    </div>
+  </div>
+
+  <h3>Filtering Recommendations</h3>
+  <ul class="recs">
+    <li><div class="rn">1</div><div><strong>Add pointe shoe filters: Shank Strength, Box Shape, Skill Level, Vamp Height, Width</strong><span>These are the five most critical decision factors for every pointe shoe purchase. Adding these as Shopify product metafields and exposing them as collection filters would directly convert the significant portion of visitors who arrive knowing what spec they need but can't filter for it. This is a 2–3 day Shopify development task that would have ongoing compounding returns.</span></div></li>
+    <li><div class="rn">2</div><div><strong>Add dancewear filters: Garment Type, Dance Style, Color, Age Group, Sleeve Length</strong><span>559 products with Brand/Size/Price is insufficient filtering that creates a poor user experience. At minimum: a Garment Type filter (Leotard / Top / Bottom / Skirt / Warm-Up / Undergarment) would cut the relevant product count by 80% for most shoppers. Dance Style (Ballet / Contemporary / Jazz / Tap) would refine further.</span></div></li>
+    <li><div class="rn">3</div><div><strong>Fix /collections/leotards — create or redirect this URL</strong><span>This is a zero-effort SEO fix with immediate impact. Create a "Leotards" collection in Shopify that pulls all leotard products, or 301-redirect /collections/leotards to the correct leotard sub-collection URL. Every external site linking to "dancewear corner leotards" is currently sending traffic to the homepage.</span></div></li>
+    <li><div class="rn">4</div><div><strong>Fix homepage dual H1 — demote SEO copy block to H2</strong><span>The "Welcome to Dancewear Corner: Your One-Stop Dance Store" heading in the bottom SEO copy block should be an H2, not H1. This is a single HTML tag change with immediate SEO benefit.</span></div></li>
+    <li><div class="rn">5</div><div><strong>Update collection page title and meta template</strong><span>Formula: [Primary keyword — plural] — [Brands or descriptors] | Dancewear Corner. E.g.: "Pointe Shoes — Bloch, Gaynor Minden, Suffolk, Capezio & More | Dancewear Corner." Meta: "[Product type] from [top brands]. Free fitting consultations &amp; DWC Rewards on every order."</span></div></li>
+    <li><div class="rn">6</div><div><strong>Enable Shopify faceted search with SEO-friendly URLs</strong><span>When filters are added, ensure the Shopify theme is configured to generate crawlable, canonical URLs for filter combinations (e.g., /collections/pointe-shoes?shank=medium&skill=beginner). These facet pages can rank for long-tail queries that currently have no DWC page to land on.</span></div></li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- ══════════════ S6: EMAIL & ACQUISITION ══════════════ -->
+<div class="section" id="s6">
+  <div class="sec-label red">06 — Email & Acquisition Strategy</div>
+  <h2>Email Signup & Acquisition Strategy</h2>
+  <p>DWC's email and acquisition infrastructure has significant friction at the entry point and misses several high-value capture opportunities throughout the customer journey.</p>
+
+  <h3>Current Email Signup — Critical Issues</h3>
+  <div class="issue-grid">
+    <div class="icard">
+      <span class="sev crit">Critical</span>
+      <h4>Email signup form has 5 required fields including phone number</h4>
+      <p>The "Join the DWC list!" page asks for: First Name, Last Name, Email, State, AND Phone Number (with SMS consent). This is an extremely high-friction form for top-of-funnel email acquisition. Industry benchmark: every additional required field reduces form completion by 10–20%. Asking for a phone number for an email newsletter signup is unusual and trust-damaging.</p>
+    </div>
+    <div class="icard">
+      <span class="sev crit">Critical</span>
+      <h4>No offer or incentive for signing up</h4>
+      <p>The form copy says "Get insider access to new products and promotions." This is a commodity value proposition — every retailer says this. There is no concrete offer (no discount, no free shipping on first order, no double points) to motivate a first-time visitor to hand over their email.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>Email form is on a standalone page — not embedded in the conversion flow</h4>
+      <p>The signup form lives at /pages/newsletter — a dedicated page linked only from the footer. It's not a popup, not a footer embed, not a cart-stage capture. It will capture almost exclusively people who actively go looking for it — not a broad acquisition tool.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>No exit-intent capture or cart-abandonment email setup visible</h4>
+      <p>No exit-intent popup was observed. No clear cart abandonment sequence. These are table-stakes email automation flows for a Shopify store — cart abandonment alone typically recovers 5–15% of abandoned carts.</p>
+    </div>
+    <div class="icard">
+      <span class="sev high">High</span>
+      <h4>No post-purchase review request email visible</h4>
+      <p>Many products show "No reviews." Automated post-purchase review request emails (sent 7–14 days after delivery) are the primary way e-commerce stores generate review volume. With 500+ products and 25 years of customers, DWC should have hundreds of reviews on every major product.</p>
+    </div>
+    <div class="icard">
+      <span class="sev med">Medium</span>
+      <h4>Rewards sign-up and email sign-up are separate flows</h4>
+      <p>A customer can sign up for the DWC email list without joining Rewards, and vice versa. For acquisition, these should be the same action: joining the email list automatically creates a Rewards account (or prompts to do so), and vice versa. Unified sign-up reduces friction and maximizes data capture.</p>
+    </div>
+  </div>
+
+  <h3>Email Signup — Before vs. After</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0;align-items:start">
+    <div>
+      <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--red);margin-bottom:.6rem">❌ Current signup form</p>
+      <div class="email-wf">
+        <div class="email-head">Join the DWC list!</div>
+        <div class="email-body">
+          <p style="font-size:.78rem;color:var(--gray-md);margin-bottom:1rem">Get insider access to new products and promotions.</p>
+          <input class="email-input" placeholder="First Name" readonly>
+          <input class="email-input" placeholder="Last Name" readonly>
+          <input class="email-input" placeholder="Email address" readonly>
+          <input class="email-input" placeholder="State" readonly>
+          <input class="email-input" placeholder="📱 Phone Number" readonly>
+          <button class="email-btn">SIGN ME UP</button>
+          <div class="email-note">5 required fields including phone · No incentive offered · No clear value exchange · Standalone page only</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin-bottom:.6rem">✅ Recommended signup experience</p>
+      <div class="email-wf">
+        <div class="email-head" style="background:var(--accent)">Get 15% off your first order</div>
+        <div class="email-body">
+          <p style="font-size:.78rem;color:var(--gray-dk);margin-bottom:.8rem"><strong>Step 1 of 3</strong> — Join DWC Rewards and get <strong>15% off your first purchase</strong> plus earn points on every order.</p>
+          <input class="email-input" placeholder="First name" readonly>
+          <input class="email-input" placeholder="Email address" readonly>
+          <button class="email-btn">Claim my 15% off →</button>
+          <div class="email-note" style="color:var(--green)"><strong>Step 2</strong> (optional, after name + email submitted): Phone number for SMS alerts &amp; exclusive offers<br><strong>Step 3</strong> (profile): Tell us about yourself — I am a: Dancer · Dance Parent · Dance Teacher / Studio Owner · Dance Team / Group · Just browsing — then: Primary dance style (Ballet / Tap / Jazz / Contemporary / Hip-Hop / Multiple) · Age group shopping for (Child / Teen / Adult). This mirrors the segmentation approach used by DanceSupplies.com to personalize follow-up emails, product recommendations, and promotional offers to each customer type.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Acquisition Funnel Recommendations</h3>
+  <ul class="recs">
+    <li><div class="rn">1</div><div><strong>Redesign email signup as a 3-step flow starting with First Name + Email</strong><span>Step 1 captures just first name and email — the minimum needed to deliver the welcome offer and start the relationship. Every additional required field at this stage reduces completion rates. Last Name, State, and any other fields from the current form should be removed entirely from Step 1.</span></div></li>
+    <li><div class="rn">2</div><div><strong>Welcome offer: 15% off first purchase on sign-up</strong><span>"Get insider access" is not a reason to sign up. 15% off your first order is. Frame the signup as joining DWC Rewards so it serves both acquisition and loyalty enrollment in a single action. The discount is applied immediately on the next purchase, giving new members instant gratification that the current Bronze tier (requiring $100 spend before any reward) doesn't provide.</span></div></li>
+    <li><div class="rn">3</div><div><strong>Step 2: Optional phone number for SMS after initial email capture</strong><span>Once the email is submitted and the welcome offer is confirmed, offer an optional second step: phone number for SMS alerts and exclusive text-only offers. Framing this as optional and benefit-led ("get text-only flash deals") after trust is established dramatically improves opt-in rates compared to requiring it upfront.</span></div></li>
+    <li><div class="rn">4</div><div><strong>Step 3: Customer profile questions for personalization</strong><span>After phone, present a brief profile step: (1) I am a: Dancer / Dance Parent / Dance Teacher or Studio Owner / Dance Team or Group. (2) Primary dance style: Ballet / Tap / Jazz / Contemporary / Hip-Hop / Multiple. (3) Age group shopping for: Child / Teen / Adult. This segmentation — modeled on DanceSupplies.com's approach — allows DWC to send targeted follow-up emails, personalized product recommendations, and relevant promotions to each customer type rather than broadcasting the same message to everyone. A dance teacher and a dance parent have completely different purchase triggers.</span></div></li>
+    <li><div class="rn">5</div><div><strong>Embed the signup form in the footer and as an exit-intent popup</strong><span>The signup should live as a compact inline form in the footer of every page — replace the current "Join the DWC list!" text link with an actual form. Additionally, trigger an exit-intent popup (mouse moving toward browser controls) for first-time visitors who haven't added to cart, showing the 15% off offer. Suppress for existing customers and Rewards members. Trigger once per session only.</span></div></li>
+    <li><div class="rn">6</div><div><strong>Implement the core 3 Shopify email automations</strong><span>(1) Cart abandonment sequence: email at 1hr, 24hr, 72hr. Include product image, price, and a reminder of the BOGO tights offer or Rewards points they'll earn. (2) Post-purchase review request: send 10–14 days after delivery confirmation, link directly to the product review form. (3) Win-back sequence: for customers inactive 9–11 months, send a "Your points are active — here's a reason to come back" email with a purchase incentive before the rolling 12-month window resets.</span></div></li>
+    <li><div class="rn">7</div><div><strong>Create targeted landing pages for paid acquisition campaigns</strong><span>For paid social/search targeting parents buying for beginner ballet students: a dedicated landing page "Everything your dancer needs for their first ballet class" (leotard + tights + ballet shoes + hair kit bundle). For pointe-shoe targeting: "Expert pointe shoe fitting — shop online or in-store in Orlando." Each page should have its own email capture tied to the 15% off welcome offer.</span></div></li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- ══════════════ S7: TO-DO LIST ══════════════ -->
+<div class="section" id="s7">
+  <div class="sec-label default">07 — Action To-Do List</div>
+  <h2>Action To-Do List</h2>
+  <p>All actions organized by category and effort level. Quick wins can be completed in a single focused day. Sprint items require 1–5 days. Projects require developer involvement and 1–3 weeks.</p>
+
+  <style>
+    .todo-group{margin-bottom:2.5rem}
+    .todo-group-title{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-lt);padding-bottom:.5rem;border-bottom:1.5px solid var(--gray-border);margin-bottom:1rem}
+    .todo-item{display:flex;align-items:flex-start;gap:.9rem;padding:.75rem 0;border-bottom:1px solid var(--gray-border)}
+    .todo-item:last-child{border-bottom:none}
+    .todo-cb{flex-shrink:0;width:18px;height:18px;border:2px solid var(--gray-border);border-radius:4px;margin-top:.15rem;cursor:pointer;appearance:none;-webkit-appearance:none;background:var(--white)}
+    .todo-cb:checked{background:var(--green);border-color:var(--green)}
+    .todo-cb:checked::after{content:'✓';display:block;color:#fff;font-size:11px;font-weight:700;text-align:center;line-height:14px}
+    .todo-text{flex:1}
+    .todo-text strong{display:block;font-size:.88rem;font-weight:600;color:var(--black);margin-bottom:.2rem}
+    .todo-text span{font-size:.82rem;color:var(--gray-md);line-height:1.55}
+    .todo-meta{display:flex;gap:.4rem;margin-top:.35rem;flex-wrap:wrap}
+    .t-area{font-size:.68rem;font-weight:600;padding:.15rem .5rem;border-radius:8px;background:var(--bg);color:var(--gray-lt);border:1px solid var(--gray-border)}
+    .t-effort{font-size:.68rem;font-weight:700;padding:.15rem .5rem;border-radius:8px}
+    .t-effort.quick{background:var(--green-lt);color:var(--green)}
+    .t-effort.sprint{background:var(--amber-lt);color:var(--amber)}
+    .t-effort.project{background:var(--red-lt);color:var(--red)}
+  </style>
+
+  <div class="todo-group">
+    <div class="todo-group-title">🏁 Trust & Messaging Fixes</div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Fix announcement bar Checkout+ language</strong><span>Change to "Add Checkout+ at checkout for free returns, exchanges & package protection." Remove the word "FREE" entirely.</span><div class="todo-meta"><span class="t-area">Marketing</span><span class="t-effort quick">15 min</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Remove or fix floating "Get X% Back" widget</strong><span>Remove the floating cashback widget entirely, or align its messaging with the actual Rewards rate. It currently contradicts on-page rewards callouts and creates confusion.</span><div class="todo-meta"><span class="t-area">Marketing</span><span class="t-effort quick">30 min</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add dollar value to rewards callout on all product pages</strong><span>Change "Earn 405 Rewards" to "Earn 405 pts (~$4 back on your next order)" across all product pages.</span><div class="todo-meta"><span class="t-area">Marketing</span><span class="t-effort quick">1–2 hrs</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add BOGO Tights to announcement bar rotation</strong><span>Replace the static single-line announcement bar with a 3-message rotating carousel: (1) Free shipping over $100, (2) Buy 2 Get 1 Free Tights, (3) Earn DWC Cash Back on every order.</span><div class="todo-meta"><span class="t-area">Marketing</span><span class="t-effort quick">30 min</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Fix Rewards tier structure to be strictly additive</strong><span>Silver currently loses the $5 coupon from Bronze. Every tier must include all perks from the tier below it, plus something new. Rebuild accordingly.</span><div class="todo-meta"><span class="t-area">Loyalty</span><span class="t-effort sprint">1 day</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add 15% off welcome offer to Rewards sign-up</strong><span>New members receive 15% off their first purchase on sign-up. Unify Rewards and email sign-up into a single action. Implement as footer embed and exit-intent popup for non-customers.</span><div class="todo-meta"><span class="t-area">Loyalty · Acquisition</span><span class="t-effort sprint">1 day</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add price to the Checkout+ info page</strong><span>The Checkout+ dedicated page explains benefits but never discloses the cost. Every customer who can't find the price assumes there's a catch. Add the price clearly.</span><div class="todo-meta"><span class="t-area">Marketing</span><span class="t-effort quick">15 min</span></div></div></div>
+  </div>
+
+  <div class="todo-group">
+    <div class="todo-group-title">🧭 Navigation</div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add Sale and New Arrivals as permanent top-level nav items</strong><span>Style Sale in a warm accent color, New in teal. These are the two most clicked nav items in dance and apparel retail and are currently absent entirely.</span><div class="todo-meta"><span class="t-area">Navigation</span><span class="t-effort quick">1 hr</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Move "Book a Fitting" from top-level nav into Pointe Shoes dropdown</strong><span>Replace the top-level text link with a styled CTA card inside the Pointe Shoes mega-menu. Free the nav slot for Sale or New Arrivals.</span><div class="todo-meta"><span class="t-area">Navigation</span><span class="t-effort quick">30 min</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Remove duplicate Pointe Shoes sub-item from Dance Shoes dropdown</strong><span>Pointe Shoes appears both as a top-level item and inside the Dance Shoes dropdown. Remove it from the dropdown.</span><div class="todo-meta"><span class="t-area">Navigation</span><span class="t-effort quick">15 min</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Fix letter spacing in dropdown navigation text</strong><span>The wide letter spacing in dropdown menu items makes text harder to scan. Tighten to a standard readable spacing in the theme CSS.</span><div class="todo-meta"><span class="t-area">Navigation</span><span class="t-effort quick">15 min</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add "Shop by Dance Style" columns to Dance Shoes and Dancewear dropdowns</strong><span>Add a style column: Ballet / Tap / Jazz / Hip-Hop & Street / Contemporary / Ballroom / Praise. Serves customers who navigate by discipline rather than product type.</span><div class="todo-meta"><span class="t-area">Navigation</span><span class="t-effort sprint">1–2 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Fix in-menu image block overlap on smaller browser windows</strong><span>The 3-image blocks in dropdown menus overlap with text when the browser window is not at full width. Review and fix responsive behavior in the theme.</span><div class="todo-meta"><span class="t-area">Navigation · UX</span><span class="t-effort sprint">Half day</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Surface BOGO Tights deal as a prominent promo panel in Dance Tights dropdown</strong><span>The BOGO deal is only visible on hover. Add it as a visible promo panel inside the Dance Tights dropdown so it reaches every visitor who opens the menu.</span><div class="todo-meta"><span class="t-area">Navigation · Marketing</span><span class="t-effort quick">30 min</span></div></div></div>
+  </div>
+
+  <div class="todo-group">
+    <div class="todo-group-title">📄 Product Pages & Metadata</div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Open product descriptions by default</strong><span>Remove collapsed accordion behavior from all product pages. Descriptions must be visible on page load for both SEO crawlability and conversion.</span><div class="todo-meta"><span class="t-area">SEO · UX</span><span class="t-effort quick">1 hr (theme edit)</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>De-emphasize SKU on all product pages</strong><span>Reduce SKU display to small secondary-color text or move to a collapsed technical details section. Currently shown at near-title weight, diluting SEO and confusing customers.</span><div class="todo-meta"><span class="t-area">Metadata · SEO</span><span class="t-effort quick">1 hr (theme edit)</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add size chart links next to SIZE selector on all products</strong><span>Link directly to the relevant guide (Bodywear, Adult Tights, Child Tights) from each product page. Resolves both missing size guidance and EU sizing confusion in a single fix.</span><div class="todo-meta"><span class="t-area">Metadata</span><span class="t-effort sprint">1–2 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add fabric composition to all apparel descriptions</strong><span>List fiber content with percentages (e.g. "82% Nylon, 18% Spandex") on all dancewear products. Required for FTC compliance and reduces returns.</span><div class="todo-meta"><span class="t-area">Metadata · Legal</span><span class="t-effort sprint">2–3 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add care instructions to all product descriptions</strong><span>Hand wash cold, lay flat dry — standard for dancewear. Not currently present on any product pages reviewed.</span><div class="todo-meta"><span class="t-area">Metadata</span><span class="t-effort sprint">2–3 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add structured spec attributes to Gaynor Minden product pages</strong><span>GM shoes require shank, box, vamp, and heel to be presented as selectable structured options — not just narrative copy. This is the expected format for GM retailers and a key buying decision point.</span><div class="todo-meta"><span class="t-area">Metadata</span><span class="t-effort sprint">2–3 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Update all product meta descriptions</strong><span>Formula: key spec + audience fit + DWC differentiator (fitting help, rewards, free shipping). Replace generic title-repetition metas across the catalog.</span><div class="todo-meta"><span class="t-area">SEO</span><span class="t-effort project">1–2 weeks</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add product videos to top 20 pointe shoe and leotard pages</strong><span>DWC has existing video content. Embed fit/movement videos on key product pages — a proven conversion driver for apparel and footwear.</span><div class="todo-meta"><span class="t-area">Conversion</span><span class="t-effort project">2–3 weeks</span></div></div></div>
+  </div>
+
+  <div class="todo-group">
+    <div class="todo-group-title">🔍 SEO & Technical</div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Fix homepage dual H1</strong><span>Demote the "Welcome to Dancewear Corner" heading in the SEO copy block from H1 to H2. A single H1 tag is required for SEO clarity.</span><div class="todo-meta"><span class="t-area">SEO</span><span class="t-effort quick">15 min</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Update homepage meta description</strong><span>Remove "liturgical." Add a value hook: top brands, fitting expertise, Rewards program, free shipping threshold.</span><div class="todo-meta"><span class="t-area">SEO</span><span class="t-effort quick">15 min</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Fix /collections/leotards redirect</strong><span>Create a Leotards collection in Shopify or 301-redirect to the correct collection URL. Currently redirects to the homepage, losing all inbound SEO value.</span><div class="todo-meta"><span class="t-area">SEO</span><span class="t-effort quick">30 min</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Fix collection page titles and meta descriptions</strong><span>Formula: [Primary keyword] — [Top brands] | Dancewear Corner. Meta: product type + brands + DWC differentiator. Apply across all main collection pages.</span><div class="todo-meta"><span class="t-area">SEO</span><span class="t-effort sprint">1 day</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Reduce VideoObject structured data on homepage to 3–5 entries</strong><span>30+ VideoObject entries on the homepage wastes crawl budget, sends a confusing signal to Google about the site's purpose, and weakens DWC's visibility in AI-generated recommendations (GEO). Prioritize Product, Review, and BreadcrumbList schema on product and collection pages instead.</span><div class="todo-meta"><span class="t-area">SEO · GEO</span><span class="t-effort sprint">Half day</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Audit and simplify collection page keyword copy blocks</strong><span>The large SEO copy blocks above product grids on collection pages are an outdated tactic that Google increasingly treats as low-quality content. Replace with shorter, naturally written introductions. Fix formatting: inconsistent line height and large gaps make these blocks difficult to read.</span><div class="todo-meta"><span class="t-area">SEO · UX</span><span class="t-effort sprint">1–2 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Enable faceted search with SEO-friendly URLs</strong><span>Once filters are added, configure the Shopify theme to generate crawlable canonical URLs for filter combinations (e.g. /collections/pointe-shoes?shank=medium&skill=beginner). These facet pages can rank for long-tail queries with no current DWC landing page.</span><div class="todo-meta"><span class="t-area">SEO · Filtering</span><span class="t-effort project">1 week</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Audit and update social proof placement</strong><span>Move the 25-year authority claim and key trust signals from the footer SEO block to near the hero and adjacent to primary CTAs. Add star ratings and review counts near add-to-cart buttons. Connect the UGC video carousel to a conversion action.</span><div class="todo-meta"><span class="t-area">SEO · Trust</span><span class="t-effort sprint">2–3 days</span></div></div></div>
+  </div>
+
+  <div class="todo-group">
+    <div class="todo-group-title">🗂️ Collection Filtering</div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add pointe shoe filters: Shank Strength, Box Shape, Skill Level, Vamp Height, Width</strong><span>The five most critical decision factors for every pointe shoe purchase. Implement as Shopify product metafields exposed as collection filter facets. Highest-ROI development project on this list.</span><div class="todo-meta"><span class="t-area">Filtering · SEO</span><span class="t-effort project">2–3 weeks</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add dancewear filters: Garment Type, Dance Style, Color, Age Group, Sleeve Length</strong><span>At minimum a Garment Type filter (Leotard / Top / Bottom / Skirt / Warm-Up) would cut relevant product count by ~80% for most shoppers across 559 products.</span><div class="todo-meta"><span class="t-area">Filtering · SEO</span><span class="t-effort project">1–2 weeks</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add dance shoe filters: Style, Sole Type, Closure, Material, Gender, Age</strong><span>Allows customers navigating by discipline or shoe type to narrow results without scrolling through the entire catalog.</span><div class="todo-meta"><span class="t-area">Filtering</span><span class="t-effort project">1 week</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add tights filters: Leg Style, Color/Skintone, Gender, Age, Fabric Weight</strong><span>Convertible vs. footed vs. footless is the primary decision point for tights buyers. Skintone options are increasingly important and a growing search category.</span><div class="todo-meta"><span class="t-area">Filtering</span><span class="t-effort project">1 week</span></div></div></div>
+  </div>
+
+  <div class="todo-group">
+    <div class="todo-group-title">📧 Email & Acquisition</div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Rebuild email signup as 3-step flow (Name + Email → Phone → Profile)</strong><span>Step 1: First name + email with 15% off welcome offer. Step 2: Optional phone for SMS. Step 3: Customer profile (role, dance style, age group) for segmentation and personalized follow-up.</span><div class="todo-meta"><span class="t-area">Acquisition</span><span class="t-effort sprint">1–2 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Embed signup form in footer and as exit-intent popup</strong><span>Replace the "Join the DWC list!" footer text link with an inline form. Add exit-intent popup for first-time visitors who haven't added to cart. Suppress for existing customers and Rewards members.</span><div class="todo-meta"><span class="t-area">Acquisition</span><span class="t-effort sprint">Half day</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Implement cart abandonment email sequence</strong><span>3-email sequence at 1hr, 24hr, and 72hr post-abandonment. Include product image, price, and Rewards points reminder.</span><div class="todo-meta"><span class="t-area">Acquisition</span><span class="t-effort project">3–5 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Implement post-purchase review request email</strong><span>Automated email sent 10–14 days after delivery confirmation, linking directly to the product review form. Primary driver of review volume for products currently showing no reviews.</span><div class="todo-meta"><span class="t-area">Social Proof</span><span class="t-effort project">2–3 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Implement win-back email sequence</strong><span>For customers inactive 9–11 months, send a "Your points are active — here's a reason to come back" email with a purchase incentive before the rolling 12-month window resets.</span><div class="todo-meta"><span class="t-area">Retention</span><span class="t-effort project">2–3 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Create targeted landing pages for paid campaigns</strong><span>"Everything for your dancer's first ballet class" for parent targeting. "Expert pointe shoe fitting — online or in-store in Orlando" for pointe targeting. Each with 15% off email capture.</span><div class="todo-meta"><span class="t-area">Acquisition</span><span class="t-effort project">1 week</span></div></div></div>
+  </div>
+
+  <div class="todo-group">
+    <div class="todo-group-title">🏠 Homepage & UX</div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Redesign homepage to customer-need-first structure</strong><span>Recommended order: (1) Hero with clear value proposition, (2) New Arrivals carousel, (3) Shop by Need (style / age group / skill level / occasion), (4) Brand logo strip, (5) Social proof. Replace the current brand-showcase-first scroll.</span><div class="todo-meta"><span class="t-area">UX · Acquisition</span><span class="t-effort project">1 week</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Differentiate announcement bar from nav bar visually</strong><span>Both are currently solid black, making it hard to distinguish where one ends and the other begins. Use a slightly different shade, a border, or a contrasting color for the announcement bar.</span><div class="todo-meta"><span class="t-area">UX</span><span class="t-effort quick">30 min</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Add cross-sell recommendations to product pages and cart</strong><span>Pointe shoe pages should prompt toe pads, ribbons, elastics. Leotard pages should suggest matching tights or warm-ups. Cross-sells at the consideration and cart stage are one of the most reliable AOV drivers in dance retail.</span><div class="todo-meta"><span class="t-area">AOV · UX</span><span class="t-effort project">1 week</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Create a "Why Shop DWC" landing page</strong><span>6 clear differentiators with proof points: 25+ years, Orlando fitting expertise, broadest pointe shoe selection, Rewards program, free shipping threshold, volume discounts. Currently these claims are buried in the footer.</span><div class="todo-meta"><span class="t-area">Acquisition · Trust</span><span class="t-effort sprint">2–3 days</span></div></div></div>
+    <div class="todo-item"><input type="checkbox" class="todo-cb"><div class="todo-text"><strong>Delay app install CTA until post-purchase or deep engagement</strong><span>The "GET OUR DWC APP" sticky button appears immediately to every first-time visitor before they've seen a product. Move this trigger to post-purchase confirmation or after a customer has browsed 3+ pages.</span><div class="todo-meta"><span class="t-area">UX</span><span class="t-effort quick">30 min</span></div></div></div>
+  </div>
+
+  <div class="callout green" style="margin-top:2rem">
+    <strong>Start with the Trust & Messaging fixes and Navigation quick wins</strong> — these require no development, can be done in a single day, and address the most immediately damaging issues: the misleading Checkout+ announcement bar, the invisible rewards value, the missing Sale and New nav items, and the duplicate Pointe Shoes menu entry.
+  </div>
+  <div class="callout blue" style="margin-top:1rem">
+    <strong>The highest-ROI development project is pointe shoe filtering.</strong> Adding Shank Strength, Box Shape, and Skill Level filters transforms the experience for the highest-intent, highest-AOV buyers on the site and simultaneously creates dozens of new rankable SEO pages for long-tail queries that DWC currently has no page to compete for.
+  </div>
+</div>
+
+<div class="doc-footer">
+  Dancewear Corner — Complete Site & Marketing Audit · April 2026 · Based on live review of dancewearcorner.com<br>
+  6 categories · 35 action items · Checkboxes enabled for progress tracking
+</div>
+
+</body>
+</html>
