@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
+<title>DanceWear Corner — B2C Channel Performance Report FY2026</title>
+<style>
+  :root {
+    --brand-blue: #1F4E79;
+    --accent-blue: #2E75B6;
+    --light-blue: #D6E4F0;
+    --pale-blue: #EBF3FA;
+    --red: #C00000;
+    --red-bg: #FFE0E0;
+    --green: #375623;
+    --green-bg: #E2EFDA;
+    --orange: #833C00;
+    --orange-bg: #FFF3CD;
+    --gray: #F2F2F2;
+    --mid-gray: #D9D9D9;
+    --text: #1a1a1a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    background: #ffffff;
+    line-height: 1.6;
+  }
+
+  /* ── HEADER BAR ── */
+  .doc-header {
+    background: var(--brand-blue);
+    color: white;
+    padding: 10px 40px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid var(--accent-blue);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .doc-header span { opacity: 0.75; }
+
+  /* ── TOC NAV ── */
+  .toc-nav {
+    background: var(--pale-blue);
+    border-bottom: 2px solid var(--light-blue);
+    padding: 12px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+  }
+  .toc-nav a {
+    color: var(--brand-blue);
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 3px;
+    border: 1px solid var(--accent-blue);
+    white-space: nowrap;
+  }
+  .toc-nav a:hover { background: var(--accent-blue); color: white; }
+
+  /* ── MAIN WRAPPER ── */
+  .report-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 40px 80px;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    padding: 50px 0 30px;
+    border-bottom: 6px solid var(--accent-blue);
+    margin-bottom: 40px;
+  }
+  .cover h1 {
+    font-size: 44px;
+    color: var(--brand-blue);
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .cover .subtitle {
+    font-size: 24px;
+    color: var(--accent-blue);
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  .cover .period {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .cover-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-top: 24px;
+  }
+  .cover-meta-item {
+    padding: 12px 16px;
+    border-left: 4px solid var(--accent-blue);
+    background: var(--pale-blue);
+  }
+  .cover-meta-item .meta-label { font-size: 11px; color: var(--accent-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .cover-meta-item .meta-val { font-size: 13px; color: var(--text); }
+  .cover-meta-item.warn .meta-label { color: var(--orange); }
+  .cover-meta-item.warn { border-color: var(--orange); background: var(--orange-bg); }
+
+  /* ── SECTION HEADINGS ── */
+  .section-h1 {
+    background: var(--brand-blue);
+    color: white;
+    padding: 14px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 50px 0 20px;
+    border-radius: 3px;
+  }
+  .section-h1 .sec-num { opacity: 0.6; margin-right: 8px; }
+
+  .section-h2 {
+    color: var(--brand-blue);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 30px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--accent-blue);
+  }
+
+  .section-h3 {
+    color: var(--accent-blue);
+    font-size: 14px;
+    font-weight: 700;
+    margin: 22px 0 8px;
+  }
+
+  p { margin-bottom: 12px; }
+  .note { font-style: italic; color: #555; font-size: 13px; }
+
+  /* ── KPI GRID ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .kpi-box {
+    background: var(--light-blue);
+    border: 1px solid #b0cce0;
+    border-radius: 5px;
+    padding: 16px 14px;
+    text-align: center;
+  }
+  .kpi-box.red { background: var(--red-bg); border-color: #f0b0b0; }
+  .kpi-box.orange { background: var(--orange-bg); border-color: #f0d080; }
+  .kpi-box .kpi-label { font-size: 11px; color: var(--brand-blue); font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 8px; }
+  .kpi-box .kpi-value { font-size: 26px; font-weight: 900; color: var(--brand-blue); line-height: 1.1; margin-bottom: 6px; }
+  .kpi-box .kpi-change { font-size: 13px; font-weight: 700; }
+  .kpi-box .kpi-change.up { color: var(--green); }
+  .kpi-box .kpi-change.down { color: var(--red); }
+  .kpi-box .kpi-change.warn { color: var(--orange); }
+
+  /* ── TABLES ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 8px;
+    font-size: 13px;
+  }
+  .data-table th {
+    background: var(--brand-blue);
+    color: white;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .data-table th.r, .data-table td.r { text-align: right; }
+  .data-table th.c, .data-table td.c { text-align: center; }
+  .data-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+  }
+  .data-table tr:nth-child(even) td { background: #fafafa; }
+  .data-table tr:hover td { background: var(--pale-blue); }
+  .data-table td.accent { background: var(--light-blue); color: var(--brand-blue); font-weight: 700; }
+  .data-table td.green { background: var(--green-bg); color: var(--green); font-weight: 700; text-align: center; }
+  .data-table td.red { background: var(--red-bg); color: var(--red); font-weight: 700; text-align: center; }
+  .data-table td.orange { background: var(--orange-bg); color: var(--orange); font-weight: 700; text-align: center; }
+  .data-table td.bold { font-weight: 700; }
+  .data-table .total-row td { background: var(--pale-blue); font-weight: 700; border-top: 2px solid var(--accent-blue); }
+
+  /* ── FLAG ITEMS ── */
+  .flags { list-style: none; margin: 10px 0; }
+  .flags li {
+    display: flex;
+    gap: 12px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border-left: 5px solid;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .flags li .flag-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .flags li .flag-body {}
+  .flags li .flag-label { font-weight: 700; }
+  .flags li.flag-red { background: var(--red-bg); border-color: var(--red); }
+  .flags li.flag-red .flag-label { color: var(--red); }
+  .flags li.flag-orange { background: var(--orange-bg); border-color: #d07000; }
+  .flags li.flag-orange .flag-label { color: var(--orange); }
+  .flags li.flag-green { background: var(--green-bg); border-color: var(--green); }
+  .flags li.flag-green .flag-label { color: var(--green); }
+  .flags li.flag-blue { background: var(--pale-blue); border-color: var(--accent-blue); }
+  .flags li.flag-blue .flag-label { color: var(--brand-blue); }
+
+  /* ── CALLOUT BOX ── */
+  .callout {
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-left: 6px solid;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+  .callout-title { font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+  .callout.warn { background: var(--orange-bg); border-color: #d07000; color: var(--orange); }
+  .callout.info { background: var(--pale-blue); border-color: var(--accent-blue); color: var(--brand-blue); }
+  .callout.danger { background: var(--red-bg); border-color: var(--red); color: var(--red); }
+  .callout.success { background: var(--green-bg); border-color: var(--green); color: var(--green); }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .stat-card {
+    background: var(--pale-blue);
+    border: 1px solid var(--light-blue);
+    border-radius: 5px;
+    padding: 14px;
+    text-align: center;
+  }
+  .stat-card .stat-label { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; }
+  .stat-card .stat-val { font-size: 22px; font-weight: 800; color: var(--brand-blue); }
+  .stat-card .stat-sub { font-size: 12px; color: #555; margin-top: 3px; }
+
+  /* ── FUNNEL ── */
+  .funnel {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 16px 0;
+    max-width: 700px;
+  }
+  .funnel-step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  .funnel-step:first-child { background: var(--brand-blue); color: white; border-radius: 4px 4px 0 0; }
+  .funnel-step:last-child { border-radius: 0 0 4px 4px; }
+  .funnel-bar-wrap { flex: 1; background: #eee; border-radius: 3px; height: 18px; overflow: hidden; }
+  .funnel-bar { height: 100%; background: var(--accent-blue); border-radius: 3px; transition: width 0.3s; }
+  .funnel-step:first-child .funnel-bar { background: rgba(255,255,255,0.4); }
+  .funnel-label { width: 200px; font-size: 13px; font-weight: 600; }
+  .funnel-val { width: 90px; font-size: 13px; text-align: right; font-weight: 700; }
+  .funnel-pct { width: 70px; font-size: 12px; text-align: right; }
+  .funnel-change { width: 80px; font-size: 12px; font-weight: 700; text-align: right; }
+
+  /* ── RECS SECTION ── */
+  .rec-group { margin-bottom: 24px; }
+  .rec-group h3 {
+    background: var(--light-blue);
+    color: var(--brand-blue);
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .rec-list { list-style: none; }
+  .rec-list li {
+    padding: 8px 14px 8px 36px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .rec-list li::before {
+    content: "→";
+    position: absolute;
+    left: 12px;
+    color: var(--accent-blue);
+    font-weight: 700;
+  }
+
+  /* ── HOMEPAGE RECS ── */
+  .homepage-rec {
+    background: var(--pale-blue);
+    border: 1px solid var(--light-blue);
+    border-radius: 5px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .homepage-rec .rec-num {
+    display: inline-block;
+    background: var(--brand-blue);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 13px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  .homepage-rec .rec-title { font-weight: 700; color: var(--brand-blue); font-size: 14px; display: flex; align-items: center; margin-bottom: 8px; }
+  .homepage-rec p { font-size: 13px; color: #333; margin: 0; line-height: 1.6; }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    background: var(--brand-blue);
+    color: rgba(255,255,255,0.7);
+    padding: 16px 40px;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 4px solid var(--accent-blue);
+    margin-top: 60px;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    .doc-header, .toc-nav { position: static; }
+    .section-h1 { break-before: page; }
+    body { font-size: 12px; }
+    .kpi-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  @media (max-width: 800px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .cover-meta { grid-template-columns: 1fr; }
+    .stat-row { grid-template-columns: 1fr; }
+    .report-body { padding: 20px 16px 60px; }
+    .data-table { font-size: 12px; }
+    .data-table th, .data-table td { padding: 7px 8px; }
+  }
+  /* ── PASSWORD GATE ── */
+  #pw-gate {
+    position: fixed;
+    inset: 0;
+    background: var(--brand-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    flex-direction: column;
+    gap: 0;
+  }
+  #pw-gate.hidden { display: none; }
+  .pw-box {
+    background: white;
+    border-radius: 10px;
+    padding: 48px 44px 40px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  }
+  .pw-logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--brand-blue);
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+  }
+  .pw-subtitle {
+    font-size: 13px;
+    color: var(--accent-blue);
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+  .pw-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .pw-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid var(--light-blue);
+    border-radius: 6px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    color: var(--brand-blue);
+    transition: border-color 0.2s;
+    margin-bottom: 16px;
+  }
+  .pw-input:focus { border-color: var(--accent-blue); }
+  .pw-input.error { border-color: var(--red); animation: shake 0.3s; }
+  .pw-btn {
+    width: 100%;
+    padding: 13px;
+    background: var(--brand-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+    letter-spacing: 0.3px;
+  }
+  .pw-btn:hover { background: var(--accent-blue); }
+  .pw-error {
+    color: var(--red);
+    font-size: 12px;
+    margin-top: 10px;
+    min-height: 18px;
+    font-weight: 600;
+  }
+  .pw-lock {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+  @keyframes shake {
+    0%,100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+  }
+  /* Hide report content until unlocked */
+  #report-content { display: none; }
+  #report-content.unlocked { display: block; }
+</style>
+</head>
+<body>
+
+<!-- PASSWORD GATE -->
+<div id="pw-gate">
+  <div class="pw-box">
+    <div class="pw-lock">🔒</div>
+    <div class="pw-logo">DanceWear Corner</div>
+    <div class="pw-subtitle">B2C Channel Performance Report — FY2026</div>
+    <div class="pw-label">Enter Password to Access</div>
+    <input type="password" id="pw-input" class="pw-input" placeholder="Password" autocomplete="off" />
+    <button class="pw-btn" onclick="checkPassword()">View Report</button>
+    <div class="pw-error" id="pw-error"></div>
+  </div>
+</div>
+
+<div id="report-content">
+
+<!-- STICKY HEADER -->
+<div class="doc-header">
+  <strong>DanceWear Corner &nbsp;|&nbsp; B2C Channel Performance Report</strong>
+  <span>Prepared: April 29, 2026 &nbsp;|&nbsp; Confidential</span>
+</div>
+
+<!-- TABLE OF CONTENTS NAV -->
+<nav class="toc-nav">
+  <a href="#exec-summary">1. Executive Summary</a>
+  <a href="#ecommerce">2. Ecommerce</a>
+  <a href="#email">3. Email Marketing</a>
+  <a href="#flows">4. Automated Flows</a>
+  <a href="#sms">5. SMS</a>
+  <a href="#paid">6. Paid Channels</a>
+  <a href="#social">7. Social Traffic</a>
+  <a href="#web">8. Web Analytics</a>
+  <a href="#homepage">9. Homepage Analysis</a>
+  <a href="#flags">10. Red Flags &amp; Benchmarks</a>
+  <a href="#recs">11. Recommendations</a>
+  <a href="#appendix">Appendix</a>
+</nav>
+
+<div class="report-body">
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 1: EXECUTIVE SUMMARY -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="exec-summary">
+    <div class="section-h1"><span class="sec-num">1</span>Executive Summary</div>
+
+    <p>DanceWear Corner delivered strong top-line growth in FY2026, with Klaviyo-attributed revenue up <strong>22.8% YOY to approximately $3.07M</strong> and Shopify gross sales of <strong>$2.91M for CY2025</strong> (+10% vs CY2024). Order volume and AOV both improved, and the Fondue Welcome Series and Abandoned Cart flow were standout automation performers.</p>
+
+    <p>However, three converging issues urgently require attention: <strong>(1)</strong> the site bounce rate has surged to 77.1% — driven in large part by suspected bot/crawler traffic from data centers in Ashburn, VA and Council Bluffs, IA; <strong>(2)</strong> the online store conversion rate has fallen to 1.53% (-21% YOY) with checkout completions down 24%; and <strong>(3)</strong> mobile sessions have declined 31% while desktop grew 38%, signaling a deteriorating mobile experience. Combined with a 54% collapse in email click rates and two broken automation flows, these represent the highest-priority recovery opportunities.</p>
+
+    <div class="section-h3">Top-Line KPIs: FY2026 vs FY2025 (Klaviyo)</div>
+    <div class="kpi-grid">
+      <div class="kpi-box">
+        <div class="kpi-label">Total Revenue</div>
+        <div class="kpi-value">$3.07M</div>
+        <div class="kpi-change up">▲ +22.8% YOY</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-label">Total Orders</div>
+        <div class="kpi-value">21,578</div>
+        <div class="kpi-change up">▲ +7.1% YOY</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-label">Avg Order Value</div>
+        <div class="kpi-value">$142.27</div>
+        <div class="kpi-change up">▲ +14.6% YOY</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-label">Flow Revenue</div>
+        <div class="kpi-value">$244,910</div>
+        <div class="kpi-change up">▲ +52.8% YOY</div>
+      </div>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi-box red">
+        <div class="kpi-label">Email Click Rate</div>
+        <div class="kpi-value">0.55%</div>
+        <div class="kpi-change down">▼ -54% YOY</div>
+      </div>
+      <div class="kpi-box red">
+        <div class="kpi-label">Bounce Rate</div>
+        <div class="kpi-value">77.1%</div>
+        <div class="kpi-change down">▼ +21% YOY (worse)</div>
+      </div>
+      <div class="kpi-box red">
+        <div class="kpi-label">CVR — Online Store</div>
+        <div class="kpi-value">1.53%</div>
+        <div class="kpi-change down">▼ -21% YOY</div>
+      </div>
+      <div class="kpi-box orange">
+        <div class="kpi-label">Returning Customers</div>
+        <div class="kpi-value">50.63%</div>
+        <div class="kpi-change warn">▼ -1.6% YOY</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 2: ECOMMERCE -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="ecommerce">
+    <div class="section-h1"><span class="sec-num">2</span>Ecommerce Performance</div>
+
+    <div class="section-h2">2.1 Revenue &amp; Orders — Klaviyo YOY Summary</div>
+    <table class="data-table">
+      <thead><tr><th>Metric</th><th class="r">FY2026</th><th class="r">FY2025</th><th class="c">Change</th><th class="c">YOY %</th></tr></thead>
+      <tbody>
+        <tr><td class="accent">Total Revenue</td><td class="r">$3,069,919</td><td class="r">$2,500,226</td><td class="green">+$569,693</td><td class="green">+22.8%</td></tr>
+        <tr><td class="accent">Total Orders</td><td class="r">21,578</td><td class="r">20,140</td><td class="green">+1,438</td><td class="green">+7.1%</td></tr>
+        <tr><td class="accent">Avg Order Value</td><td class="r">$142.27</td><td class="r">$124.14</td><td class="green">+$18.13</td><td class="green">+14.6%</td></tr>
+        <tr><td class="accent">Unique Buyers</td><td class="r">~19,839</td><td class="r">~18,302</td><td class="green">+1,537</td><td class="green">+8.4%</td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-h2">2.2 Shopify Financial Breakdown — CY2025 (Jan–Dec 2025)</div>
+    <p class="note">Note: Shopify financial data below covers January–December 2025 compared to the same period in 2024. Separate from Klaviyo's FY2026 window — provided for financial planning context.</p>
+    <table class="data-table">
+      <thead><tr><th>Line Item</th><th class="r">CY2025</th><th class="r">CY2024</th><th class="c">YOY</th></tr></thead>
+      <tbody>
+        <tr><td class="accent">Gross Sales</td><td class="r">$2,907,423</td><td class="r">~$2,643,112</td><td class="green">+10%</td></tr>
+        <tr><td class="accent">Discounts</td><td class="r red" style="color:var(--red)">−$227,829</td><td class="r" style="color:var(--red)">~−$183,734</td><td class="red">+24% (cost ↑)</td></tr>
+        <tr><td class="accent">Returns</td><td class="r">−$295,997</td><td class="r">~−$311,575</td><td class="green">−5% (improved)</td></tr>
+        <tr><td class="accent">Net Sales</td><td class="r">$2,383,597</td><td class="r">~$2,166,943</td><td class="green">+10%</td></tr>
+        <tr><td class="accent">Shipping Revenue</td><td class="r">$72,487</td><td class="r">~$69,699</td><td class="green">+4%</td></tr>
+        <tr class="total-row"><td><strong>Total Sales</strong></td><td class="r"><strong>$2,524,139</strong></td><td class="r"><strong>~$2,294,672</strong></td><td class="green">+10%</td></tr>
+        <tr><td class="accent">Orders</td><td class="r">21,004</td><td class="r">~20,941</td><td class="green">+0.3%</td></tr>
+        <tr><td class="accent">Avg Order Value (Shopify)</td><td class="r">$126.35</td><td class="r">~$116.00</td><td class="green">+9%</td></tr>
+        <tr><td class="accent">Returning Customer Rate</td><td class="r">50.63%</td><td class="r">~51.5%</td><td class="orange">−1.6%</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="flags">
+      <li class="flag-orange"><span class="flag-icon">⚠️</span><div class="flag-body"><span class="flag-label">Discount Costs Up 24% YOY <em style="font-weight:400;color:#555">(issue first identified in May 2025 data)</em>:</span> Discounts reached $227,829 — a 7.8% discount rate against gross sales, growing 2.4× faster than revenue. Audit which promotions are driving incremental sales vs subsidizing purchases that would have happened anyway.</div></li>
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Returns Improved 5% YOY:</span> Returns fell from ~$311K to $296K despite higher sales volume — a positive signal. The Free Returns + Package Protection add-on ($52.2K, #2 top product) is likely reducing net return costs by giving customers peace of mind pre-purchase.</div></li>
+    </ul>
+
+    <div class="section-h2">2.3 Sales by Channel — CY2025</div>
+    <table class="data-table">
+      <thead><tr><th>Channel</th><th class="r">CY2025 Revenue</th><th class="r">CY2024 Revenue</th><th class="c">YOY</th><th class="c">Share</th></tr></thead>
+      <tbody>
+        <tr><td class="accent">Online Store</td><td class="r">$1,290,000</td><td class="r">~$1,151,786</td><td class="green">+12%</td><td class="c">51.2%</td></tr>
+        <tr><td class="accent">Point of Sale (DWC Superstore)</td><td class="r">$881,100</td><td class="r">~$847,212</td><td class="green">+4%</td><td class="c">34.9%</td></tr>
+        <tr><td class="accent">Shop Channel</td><td class="r">$124,100</td><td class="r">~$62,676</td><td class="green">+98%</td><td class="c">4.9%</td></tr>
+        <tr><td class="accent">Draft Orders</td><td class="r">$120,700</td><td class="r">~$143,690</td><td class="red">−16%</td><td class="c">4.8%</td></tr>
+        <tr><td>Other Channels</td><td class="r">~$108,239</td><td class="r">—</td><td class="c">—</td><td class="c">4.3%</td></tr>
+      </tbody>
+    </table>
+    <p class="note">The Shop channel nearly doubled (+98%), suggesting Shopify's native Shop app is gaining traction as a discovery channel. POS remains 34.9% of total revenue — the physical Superstore location is a core revenue driver.</p>
+
+    <div class="section-h2">2.4 Top Products by Revenue — CY2025</div>
+    <table class="data-table">
+      <thead><tr><th>Product</th><th class="r">CY2025 Revenue</th><th class="r">CY2024 Revenue</th><th class="c">YOY</th></tr></thead>
+      <tbody>
+        <tr><td class="accent">Suffolk Stellar Pointe Shoe – Standard</td><td class="r">$94,300</td><td class="r">$77,600</td><td class="green">+21%</td></tr>
+        <tr><td class="accent">Free Returns + Package Protection (re:do)</td><td class="r">$52,200</td><td class="r">$20,200</td><td class="green">+158%</td></tr>
+        <tr><td class="accent">Nikolay StreamPointe – Hard Shank</td><td class="r">$48,600</td><td class="r">$44,500</td><td class="green">+9%</td></tr>
+        <tr><td class="accent">Bloch ES0162L Balance Lisse Pointe Shoes</td><td class="r">(Top 4)</td><td class="r">—</td><td class="c">—</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Insight: The Free Returns + Package Protection add-on (+158%) is a high-margin, zero-COGS revenue line growing rapidly — consider making it more prominent at checkout.</p>
+
+    <div class="section-h2">2.5 Monthly Revenue Trend — Klaviyo FY2026 vs FY2025</div>
+    <table class="data-table">
+      <thead><tr><th>Month</th><th class="r">FY26 Revenue</th><th class="r">FY26 Orders</th><th class="r">FY25 Revenue</th><th class="r">FY25 Orders</th><th class="c">Rev Change</th></tr></thead>
+      <tbody>
+        <tr><td>May 2025</td><td class="r">$233,661</td><td class="r">1,692</td><td class="r">$210,841</td><td class="r">1,741</td><td class="green">+10.8%</td></tr>
+        <tr><td>Jun 2025</td><td class="r">$208,596</td><td class="r">1,351</td><td class="r">$183,678</td><td class="r">1,449</td><td class="green">+13.6%</td></tr>
+        <tr><td>Jul 2025</td><td class="r">$196,211</td><td class="r">1,270</td><td class="r">$198,139</td><td class="r">1,398</td><td class="red">−1.0%</td></tr>
+        <tr><td>Aug 2025</td><td class="r">$308,675</td><td class="r">2,501</td><td class="r">$308,966</td><td class="r">2,569</td><td class="red">−0.1%</td></tr>
+        <tr><td>Sep 2025</td><td class="r">$230,069</td><td class="r">1,704</td><td class="r">$207,432</td><td class="r">1,595</td><td class="green">+10.9%</td></tr>
+        <tr><td>Oct 2025</td><td class="r">$266,359</td><td class="r">1,757</td><td class="r">$190,639</td><td class="r">1,443</td><td class="green">+39.7%</td></tr>
+        <tr><td>Nov 2025</td><td class="r">$313,059</td><td class="r">1,985</td><td class="r">$250,705</td><td class="r">1,879</td><td class="green">+24.9%</td></tr>
+        <tr><td>Dec 2025</td><td class="r">$236,078</td><td class="r">1,838</td><td class="r">$176,414</td><td class="r">1,638</td><td class="green">+33.8%</td></tr>
+        <tr><td>Jan 2026</td><td class="r">$301,585</td><td class="r">2,153</td><td class="r">$225,245</td><td class="r">1,928</td><td class="green">+33.9%</td></tr>
+        <tr><td>Feb 2026</td><td class="r">$243,621</td><td class="r">1,700</td><td class="r">$183,249</td><td class="r">1,574</td><td class="green">+32.9%</td></tr>
+        <tr><td>Mar 2026</td><td class="r">$261,621</td><td class="r">1,858</td><td class="r">$193,159</td><td class="r">1,631</td><td class="green">+35.4%</td></tr>
+        <tr><td>Apr 2026</td><td class="r">$270,384</td><td class="r">1,769</td><td class="r">$171,758</td><td class="r">1,295</td><td class="green">+57.4%</td></tr>
+        <tr class="total-row"><td><strong>Total</strong></td><td class="r"><strong>$3,069,919</strong></td><td class="r"><strong>21,578</strong></td><td class="r"><strong>$2,500,226</strong></td><td class="r"><strong>20,140</strong></td><td class="green">+22.8%</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Jul–Aug revenue is flat YOY, consistent with web data showing bot traffic spikes that depress conversion. Q4 FY26 (Oct–Apr) delivered +24–57% YOY growth consistently.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 3: EMAIL -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="email">
+    <div class="section-h1"><span class="sec-num">3</span>Email Marketing Performance</div>
+
+    <div class="section-h2">3.1 Aggregate Email Campaign Metrics</div>
+    <table class="data-table">
+      <thead><tr><th>Metric</th><th class="c">FY2026</th><th class="c">FY2025</th><th class="c">YOY Change</th><th class="c">Benchmark</th></tr></thead>
+      <tbody>
+        <tr><td class="accent">Campaigns Sent</td><td class="c">314</td><td class="c">283</td><td class="green">+11%</td><td class="c">—</td></tr>
+        <tr><td class="accent">Total Recipients</td><td class="c">4,524,712</td><td class="c">4,140,895</td><td class="green">+9.3%</td><td class="c">—</td></tr>
+        <tr><td class="accent">Delivery Rate</td><td class="c">99.57%</td><td class="c">99.58%</td><td class="c">Flat</td><td class="green">&gt;98%</td></tr>
+        <tr><td class="accent">Open Rate *</td><td class="c">63.35%</td><td class="c">59.38%</td><td class="c">+3.97pp</td><td class="c" style="color:#888">Unreliable (MPP)</td></tr>
+        <tr><td class="accent">Click Rate</td><td class="red">0.55%</td><td class="c">1.20%</td><td class="red">−54%</td><td class="c">2–3%</td></tr>
+        <tr><td class="accent">Click-to-Open Rate</td><td class="red">0.87%</td><td class="c">2.02%</td><td class="red">−57%</td><td class="c">10–15%</td></tr>
+        <tr><td class="accent">Conversions</td><td class="c">5,119</td><td class="c">4,242</td><td class="green">+20.7%</td><td class="c">—</td></tr>
+        <tr><td class="accent">Attributed Revenue</td><td class="c">$804,449</td><td class="c">$586,360</td><td class="green">+37.2%</td><td class="c">—</td></tr>
+        <tr><td class="accent">Revenue / Recipient</td><td class="c">$0.18</td><td class="c">$0.14</td><td class="green">+26.8%</td><td class="c">—</td></tr>
+        <tr><td class="accent">Avg Order Value</td><td class="c">$157.15</td><td class="c">$138.23</td><td class="green">+13.7%</td><td class="c">—</td></tr>
+      </tbody>
+    </table>
+    <p class="note">* Open rates inflated by Apple Mail Privacy Protection (MPP). Open rate is not a reliable engagement metric — use Click Rate and CTOR as primary indicators.</p>
+
+    <div class="section-h2">3.2 Top 10 Campaigns by Revenue — FY2026</div>
+    <table class="data-table">
+      <thead><tr><th>Campaign Name</th><th class="r">Revenue</th><th class="c">Open Rate</th><th class="c">Click Rate</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Buy More Pointe Shoes &amp; Save (Retarget 2)</td><td class="r">$19,747</td><td class="c">52.9%</td><td class="c">0.52%</td><td>Top revenue campaign</td></tr>
+        <tr><td>International Pointe Day</td><td class="r">$11,112</td><td class="c">51.0%</td><td class="c">0.74%</td><td>Key calendar moment</td></tr>
+        <tr><td>Worn Out Pointe Shoes</td><td class="r">$9,563</td><td class="c">54.4%</td><td class="c">0.30%</td><td>Product-need angle</td></tr>
+        <tr><td>International Pointe Day (clone)</td><td class="r">$8,886</td><td class="c">51.5%</td><td class="c">0.58%</td><td>Effective repeat send</td></tr>
+        <tr><td>Oh La La Feature</td><td class="r">$8,323</td><td class="c">65.4%</td><td class="c">0.44%</td><td>High engagement</td></tr>
+        <tr><td>Beyond the Basics</td><td class="r">$7,779</td><td class="c">69.1%</td><td class="c">0.46%</td><td>Highest open rate</td></tr>
+        <tr><td>Nutcracker Pointe Shoes</td><td class="r">$7,489</td><td class="c">73.0%</td><td class="c">0.68%</td><td>Seasonal performer</td></tr>
+        <tr><td>Rewards Reminder</td><td class="r">$6,969</td><td class="c">61.0%</td><td class="c bold" style="color:var(--green)">2.66%</td><td>Best click rate in top 10</td></tr>
+        <tr><td>Email 1 (clone)</td><td class="r">$6,649</td><td class="c">54.6%</td><td class="c">0.52%</td><td>Nurture sequence</td></tr>
+        <tr><td>Buy More Pointe Shoes &amp; Save (Retarget)</td><td class="r">$6,603</td><td class="c">54.6%</td><td class="c">0.56%</td><td>Strong retarget</td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-h2">3.3 Email Red Flags</div>
+    <ul class="flags">
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">Click Rate Down 54% YOY:</span> 0.55% vs 1.20% prior year — 78% below the 2–3% industry benchmark. Likely causes: list fatigue from 314 sends (vs 283 prior year), content not resonating, or deliverability routing to promotions tab. Audit send frequency, segmentation, and creative immediately.</div></li>
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">CTOR Down 57% YOY:</span> 0.87% vs 2.02%. People opening emails are not clicking through — a content and design problem. CTAs may be unclear, offers not compelling, or mobile layout is broken. Benchmark: 10–15%.</div></li>
+      <li class="flag-orange"><span class="flag-icon">⚠️</span><div class="flag-body"><span class="flag-label">Open Rate Inflated by Apple MPP:</span> The 63% open rate is misleading. Apple Mail Privacy Protection pre-fires open pixels. Shift all email KPIs to Click Rate and CTOR as the true engagement measures.</div></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 4: FLOWS -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="flows">
+    <div class="section-h1"><span class="sec-num">4</span>Automated Email Flows</div>
+
+    <div class="section-h2">4.1 Flow Performance — FY2026 vs FY2025</div>
+    <table class="data-table">
+      <thead><tr><th>Flow</th><th class="r">FY26 Recip.</th><th class="r">FY26 Revenue</th><th class="r">FY25 Recip.</th><th class="r">FY25 Revenue</th><th class="c">YOY Rev</th><th class="c">Conv Rate</th></tr></thead>
+      <tbody>
+        <tr><td class="accent">Abandoned Cart</td><td class="r">9,666</td><td class="r">$74,934</td><td class="r">9,115</td><td class="r">$44,230</td><td class="green">+69.4%</td><td class="c">4.0%</td></tr>
+        <tr><td class="accent">Fondue Welcome Series</td><td class="r">21,335</td><td class="r">$64,187</td><td class="r">2,024</td><td class="r">$8,973</td><td class="green">+615%</td><td class="c">1.83%</td></tr>
+        <tr><td class="accent">Welcome Series</td><td class="r">124,775</td><td class="r">$54,048</td><td class="r">72,594</td><td class="r">$67,240</td><td class="red">−19.6%</td><td class="c">0.35%</td></tr>
+        <tr><td class="accent">Browse Abandonment</td><td class="r">11,304</td><td class="r">$21,942</td><td class="r">10,932</td><td class="r">$12,877</td><td class="green">+70.4%</td><td class="c">0.98%</td></tr>
+        <tr><td class="accent">Customer Thank You</td><td class="r">11,888</td><td class="r">$10,992</td><td class="r">10,527</td><td class="r">$10,663</td><td class="green">+3.1%</td><td class="c">0.83%</td></tr>
+        <tr><td class="accent">Win Back Series</td><td class="r">19,459</td><td class="r">$5,494</td><td class="r">18,642</td><td class="r">$8,203</td><td class="red">−33.0%</td><td class="c">0.19%</td></tr>
+        <tr><td class="accent">Pointe Shoe Needs</td><td class="r">4,060</td><td class="r">$5,810</td><td class="r">3,472</td><td class="r">$2,757</td><td class="green">+110.7%</td><td class="c">0.69%</td></tr>
+        <tr><td class="accent">Point Redemption 2000</td><td class="r">962</td><td class="r">$3,071</td><td class="r">501</td><td class="r">$864</td><td class="green">+255%</td><td class="c">1.67%</td></tr>
+        <tr><td class="accent">Birthday Coupon</td><td class="r">1,599</td><td class="r">$1,726</td><td class="r">1,606</td><td class="r">$878</td><td class="green">+96.6%</td><td class="c">0.63%</td></tr>
+        <tr><td class="accent">Point Redemption 500</td><td class="r">3,314</td><td class="r">$1,662</td><td class="r">2,932</td><td class="r">$2,322</td><td class="red">−28.4%</td><td class="c">0.76%</td></tr>
+        <tr><td class="accent">Predictive Trending</td><td class="r">4,112</td><td class="r">$376</td><td class="r">3,995</td><td class="r">$310</td><td class="green">+21.3%</td><td class="c">0.12%</td></tr>
+        <tr><td class="accent" style="color:var(--red)">Back In Stock ⚠</td><td class="r red">2</td><td class="r red">$0</td><td class="r">15</td><td class="r">$521</td><td class="red">Broken</td><td class="c red">0%</td></tr>
+        <tr><td class="accent" style="color:var(--red)">Tights Replenishment ⚠</td><td class="r red">10</td><td class="r red">$0</td><td class="r">—</td><td class="r">—</td><td class="red">Broken</td><td class="c red">0%</td></tr>
+        <tr class="total-row"><td><strong>Total Flow Revenue</strong></td><td class="r"></td><td class="r"><strong>$244,910</strong></td><td class="r"></td><td class="r"><strong>$160,251</strong></td><td class="green"><strong>+52.8%</strong></td><td class="c"></td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-h2">4.2 Flow Highlights &amp; Issues</div>
+    <ul class="flags">
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Abandoned Cart — Top Performer:</span> $74,934 at 4.0% conversion, +69% YOY. Industry benchmark is 5–10% — a 3rd email at 24–48hrs could push this toward 6–8%.</div></li>
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Fondue Welcome Series — Breakout Flow:</span> $64,187 in its first partial year at 1.83% conversion. The key discount email achieved 13.7% conversion and $54,332 revenue alone — outstanding.</div></li>
+      <li class="flag-orange"><span class="flag-icon">⚠️</span><div class="flag-body"><span class="flag-label">Welcome Series Revenue Down 19.6%:</span> $54,048 vs $67,240 despite 72% more recipients. Revenue per recipient dropped sharply. Deliverability 89–94% (benchmark: 95%+). Implement double opt-in and review list source quality.</div></li>
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">Win Back Series Down 33% — Needs Rebuild:</span> $5,494 from 19,459 recipients at 0.19% conversion. Benchmark: 1–3%. Rebuild with 3-step offer escalation (10% → 15% → 20%), stronger subject lines, and tighter audience segmentation.</div></li>
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">Back In Stock — Effectively Inactive:</span> Only 2 recipients in FY2026. Prior year achieved 6.67% conversion. Trigger/catalog sync is broken. Fix urgently — this flow could generate $10K–$30K/year given business scale.</div></li>
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">Tights Replenishment — Not Functioning:</span> Only 10 recipients, $0 revenue. The purchase trigger is not firing correctly. Investigate Ordered Product event sync in Klaviyo.</div></li>
+      <li class="flag-orange"><span class="flag-icon">⚠️</span><div class="flag-body"><span class="flag-label">Predictive Trending — Near-Zero ROI:</span> 4,112 recipients → $376 revenue, 0.12% conversion. Pause this flow — it consumes deliverability with near-zero return. Replace with purchase-history personalization.</div></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 5: SMS -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="sms">
+    <div class="section-h1"><span class="sec-num">5</span>SMS Marketing</div>
+    <p class="note">Note: Only partial FY2026 SMS data was retrieved due to API rate limiting (4 campaigns). Data is directionally representative.</p>
+
+    <table class="data-table" style="margin-top:12px">
+      <thead><tr><th>Campaign</th><th class="c">Recipients</th><th class="c">Deliv Rate</th><th class="c">Click Rate</th><th class="c">Conv Rate</th><th class="r">Revenue</th><th class="c">Unsub Rate</th></tr></thead>
+      <tbody>
+        <tr><td>SMS Win Back</td><td class="c">3,304</td><td class="c">97.6%</td><td class="c bold" style="color:var(--green)">14.3%</td><td class="c">0.09%</td><td class="r">$436.52</td><td class="c orange">2.0%</td></tr>
+        <tr><td>International Pointe Day SMS</td><td class="c">2,460</td><td class="c">98.7%</td><td class="c bold" style="color:var(--green)">15.5%</td><td class="c">0.08%</td><td class="r">$355.16</td><td class="c">0.9%</td></tr>
+        <tr><td>Prima Days SMS</td><td class="c">630</td><td class="c">99.4%</td><td class="c bold" style="color:var(--green)">16.6%</td><td class="c">0%</td><td class="r">$0</td><td class="c">1.0%</td></tr>
+        <tr><td>SMS BOGO 4th USH</td><td class="c">713</td><td class="c">99.3%</td><td class="c bold" style="color:var(--green)">10.0%</td><td class="c">0%</td><td class="r">$0</td><td class="c">1.1%</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="flags" style="margin-top:16px">
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Strong Click-Through Rates:</span> 10–17% SMS CTR is well above the 6–10% industry benchmark. The audience is highly engaged when they receive texts.</div></li>
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">SMS List Far Too Small:</span> Maximum 3,304 subscribers for a $3M+ revenue business. Target: 20K+ subscribers. Add SMS opt-in at checkout, website pop-up, and post-purchase flow.</div></li>
+      <li class="flag-orange"><span class="flag-icon">⚠️</span><div class="flag-body"><span class="flag-label">Low SMS Conversion Rate:</span> 0.08–0.09% vs 0.5–2% benchmark. Review post-click landing page experience and offer alignment.</div></li>
+      <li class="flag-orange"><span class="flag-icon">⚠️</span><div class="flag-body"><span class="flag-label">Elevated Unsubscribe Rate on Win Back SMS:</span> 2.0% vs &lt;1% benchmark. Sending to cold/lapsed subscribers via SMS carries higher unsubscribe risk — ensure audience is properly segmented before sending.</div></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 6: PAID CHANNELS -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="paid">
+    <div class="section-h1"><span class="sec-num">6</span>Paid Channels (Google Ads &amp; Meta Ads)</div>
+
+    <div class="callout warn">
+      <div class="callout-title">DATA NOT AVAILABLE — ACTION REQUIRED</div>
+      Google Ads and Meta Ads accounts are not yet authenticated in Supermetrics. ROAS, CPA, impression share, and paid campaign performance cannot be reported. Authenticate these to unlock paid channel analysis.
+    </div>
+
+    <div class="section-h2">What We Can Infer from Shopify Referral Data — CY2025</div>
+    <table class="data-table">
+      <thead><tr><th>Traffic Source</th><th class="r">CY2025 Revenue</th><th class="r">CY2024 Revenue</th><th class="c">YOY / Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="accent">Direct / None</td><td class="r">$1,880,000</td><td class="r">~$1,634,783</td><td class="green">+15%</td></tr>
+        <tr><td class="accent">Search · Google</td><td class="r">$258,600</td><td class="r">~$281,400</td><td class="red">−8% ⚠ Declining</td></tr>
+        <tr><td class="accent">None · Shopify</td><td class="r">$158,600</td><td class="r">~$169,300</td><td class="red">−6% ⚠ Declining</td></tr>
+        <tr><td class="accent">DanceWearCorner (direct app)</td><td class="r">$157,600</td><td class="r">~$141,200</td><td class="green">+12%</td></tr>
+        <tr><td class="accent">Search · Bing</td><td class="r">$12,100</td><td class="r">~$19,200</td><td class="red">−37% ⚠ Declining</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="flags">
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">Google Search Revenue Declining 8% YOY:</span> Revenue from Google fell from ~$281K to $258K. Bing declined 37%. Search-driven revenue is under pressure across both engines. This could mean lower organic rankings, increased competition on branded terms, or paid search issues. Once Google Ads is connected, investigate immediately.</div></li>
+    </ul>
+    <p>Once paid channels are connected, this section will cover: Google Ads ROAS, CPA, Quality Score; Meta Ads reach/ROAS/CPM; industry benchmarks (apparel Google ROAS: 3–5x; Meta ROAS: 2–4x).</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 7: SOCIAL TRAFFIC -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="social">
+    <div class="section-h1"><span class="sec-num">7</span>Social Media Traffic &amp; Revenue</div>
+    <p>Social traffic sourced from Shopify Analytics (Jan 2025–Apr 2026). Note: this reflects sessions and revenue attributed to social referrals — it does not include follower counts, post reach, or engagement metrics, which require connecting Instagram/Facebook/YouTube in Supermetrics.</p>
+
+    <div class="section-h2">7.1 Sessions by Social Platform</div>
+    <div class="kpi-grid">
+      <div class="kpi-box">
+        <div class="kpi-label">Facebook</div>
+        <div class="kpi-value">30,436</div>
+        <div class="kpi-change up">55.7% of social</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-label">Pinterest</div>
+        <div class="kpi-value">13,230</div>
+        <div class="kpi-change up">24.2% of social</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-label">Instagram</div>
+        <div class="kpi-value">9,283</div>
+        <div class="kpi-change up">17.0% of social</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-label">YouTube</div>
+        <div class="kpi-value">1,363</div>
+        <div class="kpi-change up">2.5% of social</div>
+      </div>
+    </div>
+    <p class="note">Total social sessions Jan 2025–Apr 2026: 54,628. Minor sources: Reddit (151), GitHub (84), Twitter/X (55), TikTok (18).</p>
+
+    <div class="section-h2">7.2 Revenue by Social Platform — CY2025</div>
+    <table class="data-table">
+      <thead><tr><th>Platform</th><th class="c">CY25 Sessions</th><th class="r">Revenue CY25</th><th class="r">Revenue CY24</th><th class="c">YOY Revenue</th><th class="c">Rev / Session</th></tr></thead>
+      <tbody>
+        <tr><td class="accent">Facebook</td><td class="c">18,700</td><td class="r">$9,700</td><td class="r">$2,100</td><td class="green">+358%</td><td class="c">$0.52</td></tr>
+        <tr><td class="accent">Instagram</td><td class="c">5,700</td><td class="r">$2,100</td><td class="r">$418</td><td class="green">+411%</td><td class="c">$0.37</td></tr>
+        <tr><td class="accent">Pinterest</td><td class="c">9,800</td><td class="r">$532</td><td class="r">$999</td><td class="red">−47%</td><td class="c red">$0.05</td></tr>
+        <tr><td class="accent">YouTube</td><td class="c">1,200</td><td class="r">$174</td><td class="r">$0</td><td class="green">New</td><td class="c">$0.14</td></tr>
+        <tr><td>Reddit</td><td class="c">80</td><td class="r">$0</td><td class="r">$86</td><td class="red">−100%</td><td class="c">$0</td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-h2">7.3 Social Analysis &amp; Flags</div>
+    <ul class="flags">
+      <li class="flag-orange"><span class="flag-icon">⚠️</span><div class="flag-body"><span class="flag-label">Social Revenue Very Low Relative to Traffic:</span> 54,628 sessions → ~$12,506 total revenue. That's an implied CVR of ~0.02–0.05% vs the site's 1.53% average. Social is bringing low-intent browsers rather than purchase-ready shoppers. Focus content on creating purchase intent, not just discovery.</div></li>
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">Pinterest Revenue Down 47% Despite Being #2 Traffic Source:</span> 13,230 sessions → only $532 revenue. Revenue-per-session of $0.05 suggests pins are not deep-linking to specific product pages or the landing experience is poor. Audit all Pinterest pins — ensure they link directly to products with current pricing and in-stock status.</div></li>
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Facebook &amp; Instagram Revenue Growing Strongly:</span> +358% and +411% YOY revenue growth from social referrals. These channels are improving conversion quality. If paid Meta Ads are driving this, ROAS could be strong — connecting Meta Ads in Supermetrics will confirm.</div></li>
+      <li class="flag-orange"><span class="flag-icon">⚠️</span><div class="flag-body"><span class="flag-label">TikTok Nearly Absent (18 sessions):</span> The dance and performing arts community is extremely active on TikTok. Dance students, competition moms, and studios are a core TikTok demographic. A content strategy here is a significant untapped growth opportunity.</div></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 8: WEB ANALYTICS -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="web">
+    <div class="section-h1"><span class="sec-num">8</span>Web Analytics &amp; Site Performance</div>
+    <p>Data sourced from Shopify Analytics (screenshots provided April 29, 2026). Primary period: January 2025–April 2026 vs prior equivalent period (September 2023–December 2024). CY2025 detail also provided where applicable.</p>
+
+    <div class="section-h2">8.1 Key Site Metrics — Overview</div>
+    <div class="kpi-grid">
+      <div class="kpi-box orange">
+        <div class="kpi-label">Sessions (Jan25–Apr26)</div>
+        <div class="kpi-value">657,985</div>
+        <div class="kpi-change warn">▼ −3% vs prior period</div>
+      </div>
+      <div class="kpi-box red">
+        <div class="kpi-label">Conversion Rate</div>
+        <div class="kpi-value">1.53%</div>
+        <div class="kpi-change down">▼ −21% YOY</div>
+      </div>
+      <div class="kpi-box red">
+        <div class="kpi-label">Bounce Rate</div>
+        <div class="kpi-value">77.1%</div>
+        <div class="kpi-change down">▼ +21% worse YOY</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-label">AOV (Shopify CY2025)</div>
+        <div class="kpi-value">$126.35</div>
+        <div class="kpi-change up">▲ +9% YOY</div>
+      </div>
+    </div>
+
+    <div class="section-h2">8.2 Conversion Funnel — Full Analysis</div>
+    <p>The funnel reveals a critical drop-off between reaching checkout and completing checkout — sessions reaching checkout fell 27% and completions fell 24%.</p>
+
+    <table class="data-table">
+      <thead><tr><th>Funnel Stage</th><th class="c">Current Period</th><th class="c">Prior Period</th><th class="c">YOY Change</th><th>Drop-off / Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="accent bold">Total Sessions</td><td class="c bold">657,985</td><td class="c">680,853</td><td class="red">−3%</td><td>Slight traffic decline</td></tr>
+        <tr><td class="accent">Added to Cart</td><td class="c">33,667</td><td class="c">35,451</td><td class="red">−5%</td><td>94.9% bounce pre-cart</td></tr>
+        <tr><td class="accent">Reached Checkout</td><td class="c">19,701</td><td class="c">27,139</td><td class="red">−27%</td><td style="color:var(--orange);font-weight:700">41.5% cart abandonment rate</td></tr>
+        <tr><td class="accent">Completed Checkout</td><td class="c">10,090</td><td class="c">13,238</td><td class="red">−24%</td><td style="color:var(--red);font-weight:700">48.8% checkout abandonment</td></tr>
+        <tr><td class="accent">Conversion Rate</td><td class="red">1.53%</td><td class="c">1.94%</td><td class="red">−21%</td><td>Benchmark: 2–4%</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="flags" style="margin-top:14px">
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">Checkout Completions Down 24%:</span> 48.8% of sessions that reach checkout are abandoning. Sessions reaching checkout also fell 27%. Something is interrupting the cart-to-checkout journey. Likely causes: shipping cost surprise, mandatory account creation, payment options, or slow mobile checkout. Audit the checkout flow on both desktop and mobile urgently.</div></li>
+    </ul>
+
+    <div class="section-h2">8.3 Bounce Rate by Month — Bot Traffic Analysis</div>
+    <p>The monthly breakdown reveals the problem is concentrated in specific months with massive session spikes — a pattern consistent with bot/crawler traffic rather than real shoppers.</p>
+
+    <table class="data-table">
+      <thead><tr><th>Month</th><th class="c">Sessions</th><th class="c">Bounce Rate</th><th class="c">Conv Rate</th><th class="c">Prior Bounce</th><th>Assessment</th></tr></thead>
+      <tbody>
+        <tr><td>Jan 2025</td><td class="c">37,112</td><td class="c">66.54%</td><td class="c">2.33%</td><td class="c">59.71%</td><td>Elevated — manageable</td></tr>
+        <tr><td>Feb 2025</td><td class="c">31,154</td><td class="c">65.59%</td><td class="c">2.47%</td><td class="c">60.69%</td><td>Elevated — manageable</td></tr>
+        <tr><td>Mar 2025</td><td class="c">16,500</td><td class="c">57.32%</td><td class="c">2.95%</td><td class="c">62.35%</td><td style="color:var(--green)">Good — near benchmark</td></tr>
+        <tr><td>Apr 2025</td><td class="c">16,032</td><td class="c">58.55%</td><td class="c">2.74%</td><td class="c">63.22%</td><td style="color:var(--green)">Good — near benchmark</td></tr>
+        <tr><td>May 2025</td><td class="c">16,888</td><td class="c">58.94%</td><td class="c bold" style="color:var(--green)">3.09%</td><td class="c">61.49%</td><td style="color:var(--green)">Best CVR of the period</td></tr>
+        <tr><td>Jun 2025</td><td class="c">20,037</td><td class="c">64.73%</td><td class="c">1.80%</td><td class="c">64.16%</td><td>Watch CVR drop</td></tr>
+        <tr style="background:var(--red-bg)"><td><strong>Jul 2025</strong></td><td class="c"><strong>67,431</strong></td><td class="red"><strong>88.75%</strong></td><td class="red"><strong>0.57%</strong></td><td class="c">66.58%</td><td style="color:var(--red);font-weight:700">🤖 BOT TRAFFIC SUSPECTED</td></tr>
+        <tr style="background:var(--red-bg)"><td><strong>Aug 2025</strong></td><td class="c"><strong>68,428</strong></td><td class="red"><strong>85.54%</strong></td><td class="red"><strong>0.85%</strong></td><td class="c">68.44%</td><td style="color:var(--red);font-weight:700">🤖 BOT TRAFFIC SUSPECTED</td></tr>
+        <tr><td>Sep 2025</td><td class="c">36,979</td><td class="c">75.62%</td><td class="c">1.54%</td><td class="c">66.31%</td><td style="color:var(--orange)">Elevated — partial bot</td></tr>
+        <tr style="background:var(--red-bg)"><td><strong>Oct 2025</strong></td><td class="c"><strong>79,016</strong></td><td class="red"><strong>88.88%</strong></td><td class="red"><strong>0.79%</strong></td><td class="c">64.11%</td><td style="color:var(--red);font-weight:700">🤖 BOT TRAFFIC SUSPECTED</td></tr>
+        <tr><td>Nov 2025</td><td class="c">38,630</td><td class="c">69.16%</td><td class="c">2.16%</td><td class="c">60.78%</td><td>Recovering</td></tr>
+        <tr><td>Dec 2025</td><td class="c">37,159</td><td class="c">69.74%</td><td class="c">2.09%</td><td class="c">63.68%</td><td>Recovering</td></tr>
+        <tr style="background:var(--red-bg)"><td><strong>Jan 2026</strong></td><td class="c"><strong>78,450</strong></td><td class="red"><strong>84.34%</strong></td><td class="red"><strong>1.01%</strong></td><td class="c">64.87%</td><td style="color:var(--red);font-weight:700">🤖 BOT TRAFFIC SUSPECTED</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="flags" style="margin-top:14px">
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">Bot/Crawler Traffic is Destroying Your Analytics:</span> July, August, October 2025, and January 2026 all show sessions spiking to 67K–79K (vs 16K–37K in normal months) while bounce rate hits 85–89% and CVR collapses to 0.57–1.01%. This perfectly matches bot/scraper behavior. Shopify location data confirms it: Virginia Ashburn (+1,500% sessions) and Iowa Council Bluffs (+704% sessions) are two of the largest cloud/datacenter hubs in the US (Amazon AWS, Azure). These are not real shoppers. Action: Enable Shopify bot protection and consider Cloudflare Bot Management. Once bots are filtered, true bounce rate is likely 62–68% — still elevated but far more manageable, and CVR should recover to 2.5–3.0%+.</div></li>
+    </ul>
+
+    <div class="section-h2">8.4 Sessions by Device — CY2025</div>
+    <table class="data-table">
+      <thead><tr><th>Device</th><th class="c">CY2025 Sessions</th><th class="c">CY2024 Sessions</th><th class="c">YOY Change</th><th class="c">Share</th></tr></thead>
+      <tbody>
+        <tr><td class="accent">Desktop</td><td class="c">255,700</td><td class="c">~185,290</td><td class="green">+38%</td><td class="c">54.9%</td></tr>
+        <tr><td class="accent" style="color:var(--red)">Mobile</td><td class="c red">206,100</td><td class="c">~298,696</td><td class="red">−31%</td><td class="c">44.3%</td></tr>
+        <tr><td class="accent">Tablet</td><td class="c">2,900</td><td class="c">~5,686</td><td class="red">−49%</td><td class="c">0.6%</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="flags">
+      <li class="flag-red"><span class="flag-icon">🚨</span><div class="flag-body"><span class="flag-label">Mobile Sessions Down 31% — Critical UX Signal:</span> Mobile fell from ~299K to 206K while desktop grew 38%. In ecommerce, mobile typically accounts for 60–70% of traffic. This reversal signals a mobile experience problem: slow load times, layout issues on small screens, or a broken mobile checkout flow. Run Google PageSpeed Insights on mobile immediately. Core Web Vitals (LCP &lt;2.5s, CLS &lt;0.1, INP &lt;200ms) must be addressed.</div></li>
+    </ul>
+
+    <div class="section-h2">8.5 Top Landing Pages — CY2025</div>
+    <table class="data-table">
+      <thead><tr><th>Landing Page</th><th class="c">Sessions</th><th class="c">YOY Change</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Homepage /</td><td class="c">77,487</td><td class="red">−29%</td><td>Losing homepage entry traffic</td></tr>
+        <tr><td>Search /search</td><td class="c">4,537</td><td class="red">−31%</td><td>Declining search usage</td></tr>
+        <tr><td>Cart /cart</td><td class="c">4,202</td><td class="red">−29%</td><td>Declining direct cart entries</td></tr>
+        <tr><td>Collection /collections/pointe-shoes</td><td class="c">3,775</td><td class="green">+3,800%</td><td>Massive surge in direct arrivals</td></tr>
+        <tr><td>Product: Bullet Pointe Short Pull-On Ballet Skirt</td><td class="c">2,920</td><td class="green">+45%</td><td>Strong product-page entry</td></tr>
+        <tr><td>Product: Bloch S0181LA Raffine Enhanced Arch Pointe Shoes</td><td class="c">2,794</td><td class="green">+3,500%</td><td>Massive surge</td></tr>
+        <tr><td>Collection /collections/year-ending-blowout-collection</td><td class="c">2,618</td><td class="green">+19%</td><td>Promo traffic working</td></tr>
+        <tr><td>Collection /collections/dance-bags</td><td class="c">2,239</td><td class="green">+30%</td><td>Growing category</td></tr>
+        <tr><td>Blog: /blogs/dance/understanding…</td><td class="c">2,053</td><td class="green">+61%</td><td>Content marketing delivering</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Pointe shoe collection and product pages are surging while homepage traffic declines — customers are arriving via search/email deep links rather than browsing from the homepage. This is healthy for conversion, but the homepage still needs to perform for new visitor orientation.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 9: HOMEPAGE ANALYSIS -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="homepage">
+    <div class="section-h1"><span class="sec-num">9</span>Homepage Analysis &amp; Bounce Rate Reduction Strategy</div>
+    <p>This section provides a data-driven assessment of the homepage's performance and specific recommendations. Note: a full UX audit requires direct inspection — the analysis below is based on session data, conversion metrics, device trends, and ecommerce best practices for dance apparel.</p>
+
+    <div class="section-h2">9.1 What the Data Tells Us About the Current Homepage</div>
+    <ul class="flags">
+      <li class="flag-blue"><span class="flag-icon">📊</span><div class="flag-body"><span class="flag-label">Homepage is Losing Traffic (−29% YOY):</span> 77,487 homepage sessions, down from prior year. More customers arrive via direct product links from email or search — good for conversion but fewer brand-discovery journeys start at the homepage. The homepage must serve two audiences: first-time visitors (brand introduction) and returning customers (quick access).</div></li>
+      <li class="flag-red"><span class="flag-icon">📱</span><div class="flag-body"><span class="flag-label">Mobile Experience Is Likely Broken or Friction-Heavy:</span> Mobile sessions down 31% is the single biggest red flag. Dance apparel customers skew young — students, competition parents — and are predominantly mobile users. When mobile sessions decline this sharply, it typically means: slow load time, layout issues on small screens, difficult navigation, or mobile checkout friction. Run Google PageSpeed Insights on a mobile connection — anything below 60/100 requires urgent remediation.</div></li>
+      <li class="flag-blue"><span class="flag-icon">🎯</span><div class="flag-body"><span class="flag-label">Pointe Shoes Are #1 — Is That Clear on the Homepage?:</span> Your top 4 revenue products are pointe shoes. The pointe shoes collection page surged +3,800% in landing page traffic. If the homepage doesn't prominently feature pointe shoes, visitors bounce to find them elsewhere. Pointe shoes should be the hero of your homepage.</div></li>
+      <li class="flag-orange"><span class="flag-icon">🔄</span><div class="flag-body"><span class="flag-label">50.63% Returning Customers — Homepage Doesn't Serve Them:</span> Half your customers are returning buyers who know exactly what they want. A static homepage treating every visitor the same causes loyal customers to bounce. A shop-by-category quick-access section above the fold can significantly reduce bounce for returning visitors.</div></li>
+    </ul>
+
+    <div class="section-h2">9.2 Specific Recommendations to Lower Bounce Rate &amp; Improve Conversion</div>
+
+    <div class="homepage-rec">
+      <div class="rec-title"><span class="rec-num">1</span>Fix Bot Traffic First — Biggest Single Impact</div>
+      <p>Before redesigning anything, address the bot traffic problem. Enable Cloudflare Bot Management or Shopify's built-in bot detection. Block/challenge known datacenter IP ranges (Ashburn VA / AWS us-east-1, Council Bluffs IA). Once bots are filtered, the real bounce rate likely improves by 8–12 percentage points immediately, and CVR metrics become meaningful again. This is the highest-ROI action with zero design work required.</p>
+    </div>
+
+    <div class="homepage-rec">
+      <div class="rec-title"><span class="rec-num">2</span>Mobile-First Redesign Audit</div>
+      <p>Run Google PageSpeed Insights and Shopify's built-in Theme Performance tool on the homepage from a mobile connection. Target: LCP under 2.5 seconds, CLS under 0.1, INP under 200ms. Common culprits: large uncompressed hero banner images, third-party apps loading JavaScript on page load (loyalty widgets, live chat, reviews), and autoplay video. Compress all hero images to WebP format, lazy-load below-fold imagery, and defer non-critical scripts. A 1-second improvement in mobile load time typically improves conversion rate by 15–20%.</p>
+    </div>
+
+    <div class="homepage-rec">
+      <div class="rec-title"><span class="rec-num">3</span>Redesign the Hero Section Around Pointe Shoes</div>
+      <p>Based on your data, the hero banner should lead with pointe shoes. A static or rotating hero featuring your top pointe shoe brands with a clear "Shop Pointe Shoes" CTA should be the primary message. If you currently run a generic welcome banner or seasonal promotion as the primary hero, replace it with category-led content. Include a sub-headline addressing the core customer need: e.g., "Professional Pointe Shoes · Expert Fit Guidance · Free Returns."</p>
+    </div>
+
+    <div class="homepage-rec">
+      <div class="rec-title"><span class="rec-num">4</span>Add a "Shop by Category" Navigation Bar</div>
+      <p>A horizontal category strip (Pointe Shoes | Ballet | Tap | Jazz | Bags | Accessories) visible above the fold on both desktop and mobile lets returning customers navigate instantly without scrolling or using the main menu. Consider adding small category images or icons rather than text-only links. This single addition typically reduces bounce rate for returning visitors by 8–15%.</p>
+    </div>
+
+    <div class="homepage-rec">
+      <div class="rec-title"><span class="rec-num">5</span>Surface Trust Signals Prominently</div>
+      <p>Your Free Returns + Package Protection add-on is the 2nd-bestselling product ($52.2K, +158% YOY) — customers clearly value this. Display "Free Returns Available" prominently near the top of the homepage. Add star-rating social proof (e.g., "50,000+ happy dancers · 4.9★") near the hero. Trust signals directly reduce bounce by lowering perceived purchase risk for first-time visitors, which is the primary audience that currently bounces.</p>
+    </div>
+
+    <div class="homepage-rec">
+      <div class="rec-title"><span class="rec-num">6</span>Review Pop-Up Timing and Trigger</div>
+      <p>If an SMS or email capture pop-up fires immediately on page load (within 0–5 seconds), it is a significant bounce driver — visitors who haven't yet engaged will leave rather than dismiss a pop-up from a site they just arrived on. Delay pop-ups to trigger after 20–30 seconds of on-page time, on exit-intent, or after the visitor has scrolled 50% down the page. A/B test delayed vs. immediate trigger and measure bounce rate impact directly.</p>
+    </div>
+
+    <div class="homepage-rec">
+      <div class="rec-title"><span class="rec-num">7</span>Personalize for Returning Visitors</div>
+      <p>Use Shopify customer tags or a personalization app (Rebuy, LimeSpot) to serve returning customers a "Welcome back" experience featuring recently viewed products, or a prompt based on their purchase history (e.g., "Ready for new pointe shoes?"). Even a simple "Recently Viewed" module on the homepage reduces bounce for the 50%+ returning customer segment by giving them immediate on-ramp to what they need.</p>
+    </div>
+
+    <div class="homepage-rec">
+      <div class="rec-title"><span class="rec-num">8</span>Fix the Checkout Drop-Off (48.8% Checkout Abandonment)</div>
+      <p>The funnel shows 48.8% of sessions that reach checkout are abandoning — the most impactful checkout improvements are: (1) Enable Shop Pay and Apple Pay — single-tap checkout improves mobile conversion by 15–20%; (2) Show a clear order summary with free shipping threshold on the checkout page; (3) Remove mandatory account creation — offer guest checkout prominently; (4) Display a security badge and return policy reminder at checkout. These changes address the revenue leak at the very bottom of your funnel where purchase intent is highest.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 10: FLAGS & BENCHMARKS -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="flags">
+    <div class="section-h1"><span class="sec-num">10</span>Issues, Red Flags &amp; Benchmark Gaps</div>
+
+    <div class="section-h2">10.1 Critical Issues — Immediate Action Required</div>
+    <ul class="flags">
+      <li class="flag-red"><span class="flag-icon">🔴</span><div class="flag-body"><span class="flag-label">Bot Traffic Inflating Bounce Rate &amp; Destroying CVR Data:</span> Ashburn VA (+1,500%) and Council Bluffs IA (+704%) location spikes = datacenter bots. Jul/Aug/Oct sessions double or triple while bounce hits 85–89% and CVR collapses to 0.57–0.79%. Block bots immediately to restore data accuracy. True bounce rate is likely 62–68%.</div></li>
+      <li class="flag-red"><span class="flag-icon">🔴</span><div class="flag-body"><span class="flag-label">Checkout Completions Down 24% — Funnel Broken:</span> Sessions reaching checkout fell 27%, completions fell 24%. 48.8% checkout abandonment is significantly above the 35–40% benchmark. Enable Shop Pay/Apple Pay and audit the full checkout UX on mobile.</div></li>
+      <li class="flag-red"><span class="flag-icon">🔴</span><div class="flag-body"><span class="flag-label">Mobile Sessions Down 31% YOY:</span> Mobile traffic declining while desktop grows is a serious UX signal. Run PageSpeed audit, fix Core Web Vitals, and conduct a full mobile checkout audit.</div></li>
+      <li class="flag-red"><span class="flag-icon">🔴</span><div class="flag-body"><span class="flag-label">Email Click Rate Down 54% YOY:</span> 0.55% vs 1.20% prior year — 78% below the 2–3% industry benchmark. Audit email creative, CTA design, and send frequency immediately.</div></li>
+      <li class="flag-red"><span class="flag-icon">🔴</span><div class="flag-body"><span class="flag-label">Back In Stock &amp; Tights Replenishment Flows Broken:</span> Combined: 12 recipients, $0 revenue across both flows. Both need immediate trigger audit and repair in Klaviyo.</div></li>
+      <li class="flag-red"><span class="flag-icon">🔴</span><div class="flag-body"><span class="flag-label">Google Search Revenue Declining 8%:</span> Fell from $281K to $259K. Bing declined 37%. Investigate organic ranking changes and review paid search once Google Ads is connected.</div></li>
+    </ul>
+
+    <div class="section-h2">10.2 Warning Flags — Resolve Within 30 Days</div>
+    <ul class="flags">
+      <li class="flag-orange"><span class="flag-icon">🟠</span><div class="flag-body"><span class="flag-label">Bounce Rate 77.1% vs 40–55% Benchmark:</span> Even after bot filtering, likely 62–68% — still above benchmark. Homepage redesign and mobile UX improvements needed.</div></li>
+      <li class="flag-orange"><span class="flag-icon">🟠</span><div class="flag-body"><span class="flag-label">Discount Costs Growing 2.4× Faster Than Revenue <em style="font-weight:400;color:#555">(issue first identified in May 2025 data)</em>:</span> Discounts +24% vs revenue +10%. Audit which promotions are cannibalizing full-price revenue vs. driving incremental sales.</div></li>
+      <li class="flag-orange"><span class="flag-icon">🟠</span><div class="flag-body"><span class="flag-label">Pinterest Revenue Down 47% Despite #2 Traffic Position:</span> 13,230 sessions → $532 revenue. Fix product pins to deep-link to correct product pages with current inventory.</div></li>
+      <li class="flag-orange"><span class="flag-icon">🟠</span><div class="flag-body"><span class="flag-label">Win Back Flow 0.19% Conversion vs 1–3% Benchmark:</span> 19,459 sends → $5,494. Rebuild with 3-step offer escalation and stronger subject lines.</div></li>
+      <li class="flag-orange"><span class="flag-icon">🟠</span><div class="flag-body"><span class="flag-label">SMS List Too Small (Max 3,304 Subscribers):</span> For a $3M+ business the SMS list should be 20K+. Add opt-in at checkout, website pop-up, and post-purchase flow.</div></li>
+      <li class="flag-orange"><span class="flag-icon">🟠</span><div class="flag-body"><span class="flag-label">Welcome Series Deliverability 89–94% vs &gt;95% Benchmark:</span> Implement double opt-in and review new subscriber acquisition source quality.</div></li>
+      <li class="flag-orange"><span class="flag-icon">🟠</span><div class="flag-body"><span class="flag-label">CTOR 0.87% vs 10–15% Benchmark:</span> People opening emails but not clicking. Audit CTA design, mobile email layout, and offer relevance.</div></li>
+    </ul>
+
+    <div class="section-h2">10.3 Strong Performers to Scale</div>
+    <ul class="flags">
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Revenue &amp; AOV Growth:</span> +22.8% Klaviyo revenue and +14.6% AOV YOY. Shopify CY2025 gross sales +10%. Strong top-line execution.</div></li>
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Abandoned Cart Flow:</span> $74,934 at 4.0% conversion, +69% YOY. Add a 3rd reminder email to push toward the 6–8% benchmark.</div></li>
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Fondue Welcome Series:</span> $64,187 in first partial year at 1.83% conversion. Key email: 13.7% conversion and $54,332 revenue from a single email.</div></li>
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Returns Improved 5%:</span> Returns fell while sales grew — better sizing guidance is working.</div></li>
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Facebook &amp; Instagram Revenue Growth:</span> +358% and +411% YOY social revenue. Strong conversion improvement signal on these channels.</div></li>
+      <li class="flag-green"><span class="flag-icon">✅</span><div class="flag-body"><span class="flag-label">Shop Channel Doubling:</span> +98% YOY on Shopify's Shop app. An emerging channel worth continued investment.</div></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 11: RECOMMENDATIONS -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="recs">
+    <div class="section-h1"><span class="sec-num">11</span>Recommendations &amp; Next Steps</div>
+
+    <div class="rec-group">
+      <h3>🔥 Immediate — This Week</h3>
+      <ul class="rec-list">
+        <li>Enable Shopify bot protection / Cloudflare Bot Management to block Ashburn VA and Council Bluffs IA datacenter traffic — this single action recovers 8–12pp of bounce rate and restores meaningful CVR data immediately</li>
+        <li>Enable Shop Pay and Apple Pay in Shopify checkout — highest-ROI single action for mobile checkout abandonment</li>
+        <li>Fix the Back In Stock flow trigger and Tights Replenishment trigger in Klaviyo — both are inactive and represent recoverable automation revenue</li>
+        <li>Run Google PageSpeed Insights on the homepage from mobile — identify and fix the top 3 Core Web Vitals issues</li>
+        <li>Pull the 5 most recent email campaigns and test on mobile — verify CTAs are visible above the fold and buttons are working</li>
+        <li>Authenticate Google Ads, Meta Ads, and GA4 in Supermetrics to unlock paid channel ROAS analysis</li>
+      </ul>
+    </div>
+
+    <div class="rec-group">
+      <h3>📅 Short-Term — 30 Days</h3>
+      <ul class="rec-list">
+        <li>Redesign homepage hero to feature pointe shoes prominently with a direct "Shop Pointe Shoes" CTA — align with your #1 revenue driver</li>
+        <li>Add a "Shop by Category" bar below the hero with visual icons for rapid navigation by returning customers</li>
+        <li>Delay email/SMS capture pop-ups to 20–30 seconds or exit-intent to stop pop-up-triggered bounce</li>
+        <li>Rebuild Win Back Series with 3-step offer escalation (10% → 15% → 20%) and stronger subject lines</li>
+        <li>Launch SMS subscriber growth push: add opt-in at checkout, post-purchase, and as a homepage bar — target 10K subscribers by end of CY2026</li>
+        <li>Fix Pinterest product pins — deep-link directly to product pages with current pricing and in-stock inventory</li>
+        <li>Implement double opt-in for new email subscribers to improve Welcome Series deliverability from 89–94% → 95%+</li>
+        <li>Add guest checkout option prominently if not already available — remove any mandatory account creation</li>
+        <li><strong>Fix attribution overlap:</strong> Configure GA4 with UTM parameters on every Klaviyo link (campaigns and flows). Currently Klaviyo claims ~$1.05M in email-attributed revenue while Shopify credits only $157.6K to email clicks — the ~$890K gap is being misclassified as Direct traffic. Proper UTM tagging will give you accurate cross-channel attribution and reveal the true incremental contribution of email vs organic/paid channels.</li>
+        <li><strong>Launch Bing PPC with a minimal test budget ($300–500/month):</strong> Bing search revenue declined 37% YOY ($12.1K → $12.1K from ~$19.2K prior) — the channel is underinvested. Bing Ads reach an older, higher-income demographic that over-indexes for dance parents and teachers. CPC on Bing is typically 30–50% lower than Google for the same keywords, making it an efficient low-risk test.</li>
+        <li><strong>Launch Pinterest Ads with a minimal test budget ($300–500/month):</strong> Pinterest is your #2 social traffic source (13,230 sessions) but revenue collapsed 47% YOY to only $532. Pinterest Shopping Ads can target users actively searching for dance apparel and link directly to product pages — the organic traffic proves the audience exists, but organic pins alone are not converting. A small Pinterest Ads budget with Shopping catalog integration will test whether paid Pinterest can unlock this dormant audience.</li>
+      </ul>
+    </div>
+
+    <div class="rec-group">
+      <h3>📆 Medium-Term — 60–90 Days</h3>
+      <ul class="rec-list">
+        <li>Conduct a full mobile UX audit: test checkout on 5 common device sizes, audit tap targets, page load speed, and form usability</li>
+        <li>Build a formal Pointe Shoe marketing calendar — map key dance dates (International Pointe Day, Nutcracker season, competition season) and pre-schedule campaigns 4 weeks out</li>
+        <li><strong>Audit discount strategy</strong> <em>(issue first identified in May 2025 data)</em> — the 24% increase in discount costs requires clear ROI justification; compare full-price vs discount-driven order volume and margins to determine whether promotions are driving incremental revenue or cannibalizing full-price sales</li>
+        <li>Add a 3rd Abandoned Cart email at 24–48 hours post-abandonment to push from 4.0% toward the 6–8% benchmark</li>
+        <li>Explore homepage personalization for returning customers: Rebuy or LimeSpot apps can serve dynamic product recommendations based on purchase history</li>
+        <li>Pause the Predictive Trending flow ($376 revenue from 4,112 sends) and replace with purchase-history-based product recommendations</li>
+      </ul>
+    </div>
+
+    <div class="rec-group">
+      <h3>🚀 Long-Term — 90+ Days</h3>
+      <ul class="rec-list">
+        <li><strong>Develop a TikTok Go-To-Market (GTM) strategy — significant missed opportunity:</strong> TikTok currently drives only 18 sessions to the site, yet the dance and performing arts community is one of the most active and organically engaged audiences on the platform. Dance students, competition parents, studio owners, and dance teachers are a core TikTok demographic. A structured GTM strategy should include: (1) organic content pillars (pointe shoe fitting tips, behind-the-scenes at DWC Superstore, dancer spotlights, product reviews by real dancers); (2) TikTok Shop integration to enable in-app purchasing; (3) creator/influencer partnerships with dance accounts; and (4) TikTok Ads targeting dance-related interest categories. This channel has the potential to become a top-3 traffic source within 12 months given the right content investment.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- APPENDIX -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <div id="appendix">
+    <div class="section-h1">Appendix: Data Sources &amp; Methodology</div>
+
+    <div class="section-h3">Revenue Attribution Notes</div>
+    <p style="font-size:13px">Klaviyo-attributed revenue represents orders placed within Klaviyo's attribution window (typically 5-day click, 1-day open) following an email send or flow trigger. Shopify total sales figures represent gross transaction value net of discounts and returns, before taxes and shipping. These figures may differ from Klaviyo attributed revenue as Klaviyo attributes revenue to the last email touchpoint.</p>
+
+    <div class="section-h3">Bot Traffic Note</div>
+    <p style="font-size:13px">Shopify session data includes all HTTP traffic, including crawlers, scrapers, and automated bots. The anomalous session spikes from Ashburn VA (+1,500%) and Council Bluffs IA (+704%) are consistent with AWS datacenter traffic. Bounce rate and CVR metrics are materially distorted during these months. True performance is better represented by months without anomalies (Mar–Jun 2025 and Nov–Dec 2025).</p>
+
+    <div class="section-h3">Open Rate Caveat</div>
+    <p style="font-size:13px">Klaviyo open rates are inflated by Apple Mail Privacy Protection (MPP, iOS 15+), which pre-fires open pixels. Open rate should be treated as directional only. Click Rate and CTOR are the reliable primary engagement metrics.</p>
+
+    <div class="section-h3">Benchmarks</div>
+    <p style="font-size:13px">Email benchmarks from Klaviyo 2025 Ecommerce Benchmarks report. Ecommerce conversion rate and bounce rate benchmarks from Littledata 2025 Shopify Benchmarks. Use as directional guides — benchmarks vary by industry, audience size, and seasonal factors.</p>
+
+    <div class="section-h3">Pending Data</div>
+    <p style="font-size:13px">Google Ads, Meta Ads (ROAS, paid CPA), Google Analytics 4 (detailed web behavior, organic search), Instagram Insights, Facebook Page Insights, and YouTube Analytics are pending Supermetrics authentication. ROAS and paid channel analysis will be added in a follow-up report once these connections are established.</p>
+  </div>
+
+</div><!-- end report-body -->
+
+<!-- FOOTER -->
+<div class="doc-footer">
+  <span>DanceWear Corner &nbsp;|&nbsp; B2C Channel Performance Report &nbsp;|&nbsp; Confidential</span>
+  <span>Data Sources: Klaviyo + Shopify Analytics &nbsp;|&nbsp; Prepared: April 29, 2026</span>
+</div>
+
+</div><!-- end report-content -->
+
+<script>
+  const CORRECT = "DWC2026";
+
+  // Check if already unlocked this session
+  if (sessionStorage.getItem("dwc_auth") === "true") {
+    document.getElementById("pw-gate").classList.add("hidden");
+    document.getElementById("report-content").classList.add("unlocked");
+  }
+
+  function checkPassword() {
+    const input = document.getElementById("pw-input");
+    const error = document.getElementById("pw-error");
+    if (input.value === CORRECT) {
+      sessionStorage.setItem("dwc_auth", "true");
+      document.getElementById("pw-gate").classList.add("hidden");
+      document.getElementById("report-content").classList.add("unlocked");
+      error.textContent = "";
+    } else {
+      input.classList.add("error");
+      error.textContent = "Incorrect password. Please try again.";
+      input.value = "";
+      setTimeout(() => input.classList.remove("error"), 400);
+    }
+  }
+
+  // Allow Enter key to submit
+  document.getElementById("pw-input").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") checkPassword();
+  });
+</script>
+
+</body>
+</html>
