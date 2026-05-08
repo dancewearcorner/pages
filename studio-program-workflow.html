@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DWC Studio Program — Full Workflow</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --bg: #0f0f10;
+    --surface: #16161a;
+    --border: #2a2a30;
+    --border-light: #3a3a44;
+    --text: #e8e6f0;
+    --text-dim: #8885a0;
+    --text-muted: #5a5870;
+
+    --purple: #a78bfa;
+    --purple-dim: #7c5fd4;
+    --purple-bg: #1e1a2e;
+    --green: #6ee7b7;
+    --green-dim: #059669;
+    --green-bg: #0d2318;
+    --amber: #fcd34d;
+    --amber-dim: #d97706;
+    --amber-bg: #231c08;
+    --rose: #fb7185;
+    --rose-dim: #e11d48;
+    --rose-bg: #250a10;
+    --blue: #7dd3fc;
+    --blue-dim: #0369a1;
+    --blue-bg: #0a1e2e;
+    --teal: #5eead4;
+    --teal-dim: #0d9488;
+    --teal-bg: #0a1e1c;
+
+    --connector: #3a3a44;
+    --arrow: #5a5870;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 40px 24px 80px;
+    min-height: 100vh;
+  }
+
+  /* ─── Header ─── */
+  .wf-header {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+  .wf-header__eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 12px;
+  }
+  .wf-header h1 {
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: -.02em;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .wf-header h1 strong { font-weight: 600; }
+  .wf-header__sub {
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+
+  /* ─── Phase label ─── */
+  .phase {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 36px 0 16px;
+  }
+  .phase__label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    white-space: nowrap;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+  }
+  .phase__line { flex: 1; height: 1px; background: var(--border); }
+
+  /* ─── Flow row ─── */
+  .flow-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .flow-row--center { justify-content: center; }
+
+  /* ─── Node base ─── */
+  .node {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    min-width: 180px;
+    max-width: 240px;
+    position: relative;
+    background: var(--surface);
+    flex-shrink: 0;
+  }
+  .node__tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    opacity: .7;
+  }
+  .node__title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .node__detail {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.55;
+  }
+  .node__detail li {
+    list-style: none;
+    padding-left: 12px;
+    position: relative;
+  }
+  .node__detail li::before {
+    content: '·';
+    position: absolute;
+    left: 2px;
+    color: var(--text-muted);
+  }
+  .node__badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-top: 8px;
+    margin-right: 4px;
+  }
+  .node__note {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    padding-top: 6px;
+  }
+
+  /* ─── Node color variants ─── */
+  .node--purple  { border-color: var(--purple-dim); background: var(--purple-bg); }
+  .node--purple .node__tag { color: var(--purple); }
+  .node--purple .node__title { color: var(--purple); }
+
+  .node--green   { border-color: var(--green-dim); background: var(--green-bg); }
+  .node--green .node__tag { color: var(--green); }
+  .node--green .node__title { color: var(--green); }
+
+  .node--amber   { border-color: var(--amber-dim); background: var(--amber-bg); }
+  .node--amber .node__tag { color: var(--amber); }
+  .node--amber .node__title { color: var(--amber); }
+
+  .node--rose    { border-color: var(--rose-dim); background: var(--rose-bg); }
+  .node--rose .node__tag { color: var(--rose); }
+  .node--rose .node__title { color: var(--rose); }
+
+  .node--blue    { border-color: var(--blue-dim); background: var(--blue-bg); }
+  .node--blue .node__tag { color: var(--blue); }
+  .node--blue .node__title { color: var(--blue); }
+
+  .node--teal    { border-color: var(--teal-dim); background: var(--teal-bg); }
+  .node--teal .node__tag { color: var(--teal); }
+  .node--teal .node__title { color: var(--teal); }
+
+  .node--dim     { opacity: .5; }
+
+  /* badge color */
+  .badge--insider  { background: #2a1a4a; color: var(--purple); border: 1px solid var(--purple-dim); }
+  .badge--partner  { background: #1a2a1a; color: var(--green); border: 1px solid var(--green-dim); }
+  .badge--referral { background: #2a1a0a; color: var(--amber); border: 1px solid var(--amber-dim); }
+  .badge--manual   { background: #2a1a10; color: var(--rose); border: 1px solid var(--rose-dim); }
+  .badge--auto     { background: #0a1a2a; color: var(--blue); border: 1px solid var(--blue-dim); }
+  .badge--shopify  { background: #0a2020; color: var(--teal); border: 1px solid var(--teal-dim); }
+
+  /* ─── Arrow / connector ─── */
+  .arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    color: var(--arrow);
+    font-size: 18px;
+    align-self: center;
+    flex-shrink: 0;
+  }
+  .arrow--down {
+    justify-content: center;
+    padding: 4px 0;
+    width: 100%;
+    font-size: 16px;
+    color: var(--arrow);
+    text-align: center;
+  }
+  .arrow--label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 6px;
+  }
+
+  /* ─── Branch block ─── */
+  .branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    margin: 4px 0;
+  }
+  .branch__header {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border-light);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .branch__row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .branch__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    flex: 1;
+    min-width: 180px;
+    max-width: 240px;
+  }
+
+  /* ─── Decision diamond ─── */
+  .decision {
+    width: 120px;
+    height: 50px;
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-dim);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--amber);
+    transform: rotate(0deg);
+    margin: 4px auto;
+    padding: 6px 12px;
+  }
+
+  /* ─── Connector vertical line ─── */
+  .vline {
+    width: 1px;
+    height: 20px;
+    background: var(--border-light);
+    margin: 0 auto;
+  }
+  .vline--long { height: 32px; }
+
+  /* ─── Horizontal connector ─── */
+  .hline {
+    height: 1px;
+    background: var(--border-light);
+    flex: 1;
+    align-self: center;
+    min-width: 8px;
+  }
+
+  /* ─── Full-width wrapper ─── */
+  .wf-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wf-wrap > * { width: 100%; }
+
+  /* ─── Shopify Function callout ─── */
+  .callout {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 8px 0;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .callout--teal {
+    background: var(--teal-bg);
+    border: 1px solid var(--teal-dim);
+    color: var(--teal);
+  }
+  .callout--teal strong { color: #fff; }
+  .callout--blue {
+    background: var(--blue-bg);
+    border: 1px solid var(--blue-dim);
+    color: var(--blue);
+  }
+  .callout--blue strong { color: #fff; }
+  .callout--rose {
+    background: var(--rose-bg);
+    border: 1px solid var(--rose-dim);
+    color: var(--rose);
+  }
+  .callout--rose strong { color: #fff; }
+
+  .callout__title {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    opacity: .8;
+  }
+
+  /* ─── Two col layout ─── */
+  .two-col {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .two-col > * { flex: 1; min-width: 220px; }
+
+  /* ─── Legend ─── */
+  .legend {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 48px 0 0;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+  }
+  .legend__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .legend__dot {
+    width: 10px; height: 10px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  /* ─── Tag column ─── */
+  .tag-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+  }
+
+  /* centered vline wrapper */
+  .center-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<div class="wf-wrap">
+
+  <!-- HEADER -->
+  <div class="wf-header">
+    <div class="wf-header__eyebrow">DanceWear Corner · Studio Program</div>
+    <h1><strong>Full System Workflow</strong></h1>
+    <div class="wf-header__sub">Landing Page → Application → Review → Approval → Login → Personalized Portal → Checkout</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PHASE 1 — DISCOVERY
+  ══════════════════════════════════════════════════════════ -->
+  <div class="phase"><div class="phase__label">Phase 1 — Discovery</div><div class="phase__line"></div></div>
+
+  <div class="flow-row flow-row--center">
+    <div class="node node--purple" style="max-width:280px; text-align:center;">
+      <div class="node__tag">Shopify Page</div>
+      <div class="node__title">/pages/dance-studio-program</div>
+      <div class="node__detail" style="margin-top:6px;">
+        Landing page with program overview<br>
+        Studio Insider · Studio Partner · Studio Referral
+      </div>
+      <div style="margin-top:10px; display:flex; gap:6px; flex-wrap:wrap; justify-content:center;">
+        <span class="node__badge badge--insider">Insider</span>
+        <span class="node__badge badge--partner">Partner</span>
+        <span class="node__badge badge--referral">Referral</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="center-col">
+    <div class="vline"></div>
+    <div class="branch__header">User clicks one of two CTAs</div>
+  </div>
+
+  <div class="branch">
+    <div class="branch__row">
+
+      <div class="branch__col">
+        <div class="node node--green" style="text-align:center;">
+          <div class="node__tag">CTA Path A</div>
+          <div class="node__title">"Apply in 2 minutes"</div>
+          <div class="node__detail">Generic Apply button<br>No program pre-selected</div>
+          <div class="node__note">→ Goes to Step 1 of form<br>(program selection screen)</div>
+        </div>
+      </div>
+
+      <div class="branch__col">
+        <div class="node node--purple" style="text-align:center;">
+          <div class="node__tag">CTA Path B</div>
+          <div class="node__title">Program-Specific Button</div>
+          <div class="node__detail">Insider / Partner / Referral<br>top nav or section buttons</div>
+          <div class="node__note">→ Deep-links via ?program=<br>Skips Step 1, lands on Step 2</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PHASE 2 — APPLICATION FORM
+  ══════════════════════════════════════════════════════════ -->
+  <div class="phase"><div class="phase__label">Phase 2 — Application Form</div><div class="phase__line"></div></div>
+
+  <div class="center-col">
+    <div class="node node--blue" style="max-width:500px; width:100%;">
+      <div class="node__tag">Shopify Page · /pages/dance-studio-apply</div>
+      <div class="node__title">Studio Program Application Form</div>
+      <div class="node__detail" style="margin-top:8px;">
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+          <div>
+            <div style="font-weight:600; color:var(--blue); margin-bottom:4px; font-size:11px;">Step 1 — Program</div>
+            <ul class="node__detail">
+              <li>Select: Insider / Partner / Referral</li>
+              <li>(skipped if ?program= param set)</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-weight:600; color:var(--blue); margin-bottom:4px; font-size:11px;">Step 2 — Your Info</div>
+            <ul class="node__detail">
+              <li>Name, Email, Phone</li>
+              <li>Studio name, State</li>
+              <li>Website or social URL</li>
+              <li># of students</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-weight:600; color:var(--blue); margin-bottom:4px; font-size:11px;">Step 3 — Verify</div>
+            <ul class="node__detail">
+              <li>Insider: Studio URL / faculty listing</li>
+              <li>Partner: Doc upload <em>(⚠ Justin to configure)</em></li>
+              <li>Referral: No docs needed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="node__note">⚠ Document upload field on Step 3 (Partner only) — requires Shopify app or embedded form tool. Justin to decide implementation.</div>
+    </div>
+    <div class="vline"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PHASE 3 — KLAVIYO
+  ══════════════════════════════════════════════════════════ -->
+  <div class="phase"><div class="phase__label">Phase 3 — Klaviyo Intake</div><div class="phase__line"></div></div>
+
+  <div class="center-col">
+    <div class="two-col" style="width:100%;">
+      <div class="node node--purple">
+        <div class="node__tag">Klaviyo · Form Submit</div>
+        <div class="node__title">Profile Created / Updated</div>
+        <div class="node__detail" style="margin-top:6px;">
+          <ul>
+            <li>All form fields stored as properties</li>
+            <li>Added to Studio Program list</li>
+          </ul>
+        </div>
+        <div class="tag-col" style="margin-top:8px;">
+          <div style="font-size:10px; color:var(--text-muted); font-family:'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; margin-bottom:4px;">Customer Type Tag Applied</div>
+          <span class="node__badge badge--insider">studio_insider</span>
+          <span class="node__badge badge--partner">studio_partner</span>
+          <span class="node__badge badge--referral">studio_referral</span>
+        </div>
+      </div>
+
+      <div class="node node--green">
+        <div class="node__tag">Klaviyo · Auto-Flow Fires</div>
+        <div class="node__title">Thank You Email</div>
+        <div class="node__detail" style="margin-top:6px;">
+          <ul>
+            <li>Confirms application received</li>
+            <li>Sets expectation: 1–5 business days</li>
+            <li>Personalized by Customer Type</li>
+            <li>Partner: Reminds to email verification doc</li>
+          </ul>
+        </div>
+        <div class="node__note">Trigger: Profile added to list with studio_type property set</div>
+      </div>
+    </div>
+    <div class="vline vline--long"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PHASE 4 — MANUAL REVIEW
+  ══════════════════════════════════════════════════════════ -->
+  <div class="phase"><div class="phase__label">Phase 4 — Manual Review</div><div class="phase__line"></div></div>
+
+  <div class="center-col">
+    <div class="node node--rose" style="max-width:420px; width:100%;">
+      <div class="node__tag">Manual Step · DWC Team</div>
+      <div class="node__title">Application Review</div>
+      <div class="node__detail" style="margin-top:8px;">
+        <ul>
+          <li>Team receives Klaviyo notification email</li>
+          <li>Reviews application data in Klaviyo or inbox</li>
+          <li>For Partner: verifies uploaded document</li>
+          <li>Decision: Approve or Hold</li>
+        </ul>
+      </div>
+      <span class="node__badge badge--manual">Manual Action Required</span>
+    </div>
+
+    <div class="vline"></div>
+    <div class="decision">Approved?</div>
+    <div class="vline"></div>
+
+    <div class="branch__row" style="width:100%;">
+      <div class="branch__col">
+        <div class="node node--green" style="text-align:center;">
+          <div class="node__tag">Yes — Approved</div>
+          <div class="node__title">Shopify Admin</div>
+          <div class="node__detail" style="margin-top:6px;">Team manually adds customer tag in Shopify:<br><br></div>
+          <div class="tag-col" style="align-items:center;">
+            <span class="node__badge badge--insider">studio-insider</span>
+            <span class="node__badge badge--partner">studio-partner</span>
+            <span class="node__badge badge--referral">studio-referral</span>
+          </div>
+          <div class="node__note">If no Shopify account yet → send "Create Account" invite from Shopify Admin first</div>
+        </div>
+      </div>
+
+      <div class="branch__col">
+        <div class="node node--dim" style="text-align:center;">
+          <div class="node__tag">No — Hold / Reject</div>
+          <div class="node__title">No action taken</div>
+          <div class="node__detail">Profile stays in Klaviyo.<br>Team sends manual note if needed.<br>(No automated reject flow defined yet)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vline vline--long"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PHASE 5 — APPROVAL EMAIL
+  ══════════════════════════════════════════════════════════ -->
+  <div class="phase"><div class="phase__label">Phase 5 — Approval</div><div class="phase__line"></div></div>
+
+  <div class="center-col">
+    <div class="two-col" style="width:100%;">
+      <div class="node node--green">
+        <div class="node__tag">Manual · DWC Team</div>
+        <div class="node__title">Approval Email Sent</div>
+        <div class="node__detail" style="margin-top:6px;">
+          <ul>
+            <li>Sent manually from Klaviyo or email</li>
+            <li>Personalized by Customer Type</li>
+            <li>Includes link to Welcome Portal</li>
+            <li>Includes "Create Account" link if needed</li>
+            <li>Explains discount is auto-applied at checkout</li>
+          </ul>
+        </div>
+        <span class="node__badge badge--manual">Manual Send</span>
+      </div>
+
+      <div class="node node--teal">
+        <div class="node__tag">Shopify Function · Auto-Active</div>
+        <div class="node__title">Discount Now Live</div>
+        <div class="node__detail" style="margin-top:6px;">
+          The moment the customer tag is applied, the<br>Shopify Function is active for that customer.
+          <br><br>
+          <strong style="color:var(--teal);">No code needed at checkout — it just works.</strong>
+        </div>
+        <span class="node__badge badge--auto">Automated via Shopify Function</span>
+      </div>
+    </div>
+
+    <div class="vline vline--long"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PHASE 6 — SHOPIFY FUNCTION (PRICING)
+  ══════════════════════════════════════════════════════════ -->
+  <div class="phase"><div class="phase__label">Phase 6 — Pricing Engine</div><div class="phase__line"></div></div>
+
+  <div class="center-col" style="width:100%;">
+    <div class="callout callout--teal" style="width:100%;">
+      <div class="callout__title">Shopify Function · Automatic Discount · Customer Tag Based</div>
+      <div style="display:flex; gap:24px; flex-wrap:wrap; margin-top:6px;">
+        <div>
+          <strong>Studio Insider · Flat 15% (cap)</strong><br>
+          Customer tag: <code>studio-insider</code><br>
+          Discount: <strong>15% off — always</strong><br>
+          This is the maximum rate for Insider members.<br>
+          Does not increase with spend volume.
+        </div>
+        <div>
+          <strong>Studio Partner · Tiered by Annual Spend</strong><br>
+          Tag: <code>studio-partner</code> → <strong>15% off</strong><br>
+          Tag: <code>studio-partner-pro</code> → <strong>20% off</strong><br>
+          <br>
+          Threshold: $1,500 cumulative spend within the year<br>
+          When crossed → tag upgrades to <code>studio-partner-pro</code><br>
+          20% applies automatically on all subsequent orders
+        </div>
+        <div>
+          <strong>Implementation Note</strong><br>
+          Shopify Function reads customer tag at checkout.<br>
+          Order webhook tracks annual cumulative spend<br>
+          in a customer metafield. When spend ≥ $1,500,<br>
+          tag is upgraded to <code>studio-partner-pro</code>.<br>
+          Resets annually on account anniversary date.
+        </div>
+      </div>
+    </div>
+
+    <div class="vline vline--long"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PHASE 7 — LOGIN + WELCOME PORTAL
+  ══════════════════════════════════════════════════════════ -->
+  <div class="phase"><div class="phase__label">Phase 7 — Logged-In Experience</div><div class="phase__line"></div></div>
+
+  <div class="center-col">
+    <div class="node node--blue" style="max-width:340px; text-align:center;">
+      <div class="node__tag">Shopify · /account/login</div>
+      <div class="node__title">Customer Logs In</div>
+      <div class="node__detail">Standard Shopify login<br>System reads customer.tags</div>
+    </div>
+
+    <div class="vline"></div>
+    <div class="decision" style="width:160px;">Customer Type?</div>
+    <div class="vline"></div>
+
+    <div class="branch__row" style="width:100%; gap:8px;">
+
+      <div class="branch__col" style="min-width:160px;">
+        <div class="node node--purple" style="text-align:center;">
+          <div class="node__tag">studio-insider</div>
+          <div class="node__title">Welcome, Insider</div>
+          <div class="node__detail">Educator-focused landing page<br>Leotards, shoes, tights<br>15% discount (flat, no tiers)</div>
+          <span class="node__badge badge--insider">Insider Portal</span>
+        </div>
+      </div>
+
+      <div class="branch__col" style="min-width:160px;">
+        <div class="node node--green" style="text-align:center;">
+          <div class="node__tag">studio-partner</div>
+          <div class="node__title">Welcome, Partner</div>
+          <div class="node__detail">Studio-focused landing page<br>Class uniforms, bulk, dress code<br>15% → 20% after $1,500 annual spend</div>
+          <span class="node__badge badge--partner">Partner Portal</span>
+        </div>
+      </div>
+
+      <div class="branch__col" style="min-width:160px;">
+        <div class="node node--dim" style="text-align:center;">
+          <div class="node__tag">studio-referral</div>
+          <div class="node__title">Standard B2C Experience</div>
+          <div class="node__detail">No separate portal.<br>Directed to regular storefront.<br>Referral link managed separately.</div>
+          <span class="node__badge badge--referral">B2C Homepage</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="vline vline--long"></div>
+  </div>
+
+  <!-- WELCOME PAGE DETAIL -->
+  <div class="center-col">
+    <div class="callout callout--blue" style="width:100%;">
+      <div class="callout__title">Welcome Portal Page · /pages/studio-welcome</div>
+      <div style="display:flex; gap:24px; flex-wrap:wrap; margin-top:6px; font-size:12px;">
+        <div>
+          <strong>Customer Type Detection</strong><br>
+          <code>{% if customer.tags contains 'studio-partner' %}</code><br>
+          Renders Partner content block<br>
+          <code>{% elsif customer.tags contains 'studio-insider' %}</code><br>
+          Renders Insider content block<br>
+          Falls back to generic if no tag
+        </div>
+        <div>
+          <strong>Page Sections</strong><br>
+          · Personalized welcome headline<br>
+          · Your current discount tier (15% or 20%)<br>
+          · Featured product collections<br>
+          · Shop by category<br>
+          · Your referral link (if applicable)
+        </div>
+        <div>
+          <strong>Discount Display</strong><br>
+          · Show member price vs. retail price<br>
+          · "Your 15% discount is active" banner (Insider)<br>
+          · Partner: progress bar toward $1,500 for 20% tier<br>
+          · No code needed — auto-applies at checkout
+        </div>
+      </div>
+    </div>
+
+    <div class="vline vline--long"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PHASE 8 — CHECKOUT
+  ══════════════════════════════════════════════════════════ -->
+  <div class="phase"><div class="phase__label">Phase 8 — Checkout</div><div class="phase__line"></div></div>
+
+  <div class="center-col">
+    <div class="node node--teal" style="max-width:460px; width:100%;">
+      <div class="node__tag">Shopify Checkout · Automatic</div>
+      <div class="node__title">Discount Auto-Applied</div>
+      <div class="node__detail" style="margin-top:8px; display:flex; gap:24px; flex-wrap:wrap;">
+        <div>
+          <ul>
+            <li>Customer logs in (or is already logged in)</li>
+            <li>Shopify Function fires on checkout</li>
+            <li>Reads customer tags</li>
+            <li>Applies 15% or 20% automatically</li>
+            <li>No code entry needed by customer</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Discount shown as line item in cart</li>
+            <li>Order recorded → cumulative spend updated</li>
+            <li>If spend crosses $1,500 → tag upgraded</li>
+            <li>Next order gets 20% automatically</li>
+          </ul>
+        </div>
+      </div>
+      <span class="node__badge badge--shopify">Shopify Function</span>
+      <span class="node__badge badge--auto">No Customer Action</span>
+    </div>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="legend">
+    <div class="legend__item"><div class="legend__dot" style="background:var(--purple-dim)"></div> Shopify Page / Template</div>
+    <div class="legend__item"><div class="legend__dot" style="background:var(--green-dim)"></div> Klaviyo / Email Flow</div>
+    <div class="legend__item"><div class="legend__dot" style="background:var(--rose-dim)"></div> Manual Team Action</div>
+    <div class="legend__item"><div class="legend__dot" style="background:var(--teal-dim)"></div> Shopify Function (Auto)</div>
+    <div class="legend__item"><div class="legend__dot" style="background:var(--blue-dim)"></div> Logged-In Experience</div>
+    <div class="legend__item"><div class="legend__dot" style="background:var(--amber-dim)"></div> Decision Point</div>
+  </div>
+
+</div>
+</body>
+</html>
